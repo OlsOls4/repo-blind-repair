@@ -1,0 +1,30 @@
+Repo-Blind Repair — corpus data licence
+=========================================
+
+The corpus data files in this repository (data/train_records_20k_provenance.jsonl
+and the records file distributed with the companion Kaggle dataset,
+train_records_20k.jsonl, plus dev_tasks_heldout.jsonl and
+pilot_records.jsonl) are released under the
+
+    Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+You are free to share and adapt the data for any purpose, including
+commercially, provided you give appropriate credit: cite the paper
+"Repo-Blind Repair: Fixing Python Bugs Without Ever Seeing a Real Fix"
+(McBride, 2026) and link to the repository. See CITATION.cff.
+
+What the data is: 20,000 synthetic Python bug-fix records produced by
+deterministic AST mutation of toy programs written for this task. No
+real human bug fix, no teacher-model output, and no third-party code
+was used in the corpus, so no third-party licence applies to it. The
+provenance sidecar (source_index, operators, seed per record) lets
+anyone regenerate every record byte-identically; see
+data_generation/README.md.
+
+Copyright 2026 Olly McBride.
+
+Note: code in this repository is under the Apache License 2.0 (see
+LICENSE). Data is under CC BY 4.0 (this file). The two licences are
+separate by design: code and data have different reuse rules.

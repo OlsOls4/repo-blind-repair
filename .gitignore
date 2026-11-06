@@ -1,0 +1,29 @@
+# Byte-compiled / cached Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Test / packaging artefacts
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+
+# Trained adapter weights are NEVER committed to this repo.
+# The v18 LoRA adapter is a failed artefact (0/18 held-out, never emits
+# EOS) and lives only in a Kaggle notebook version output. If a future
+# adapter passes the pre-registered kill test, ship it as a GitHub
+# Release asset with its evaluation numbers, not in the git tree.
+*.safetensors
+*.bin
+*.pt
+*.onnx

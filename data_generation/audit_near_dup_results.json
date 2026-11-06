@@ -1,0 +1,5520 @@
+{
+  "corpus_note": "The generator rebuilt 2,126 unique sources (generate_scaled_dataset.py build_sources()); the 20,000 records draw from 1,166 of them (distinct source_index in the provenance sidecar, indices 0..1573). The audit compares against the 1,166 sources actually present, deduplicated by exact fixed_code string.",
+  "distribution_buggy": {
+    "count_ge_0.5": 0,
+    "count_ge_0.8": 0,
+    "count_ge_0.9": 0,
+    "count_ge_1.0": 0,
+    "max": 0.3889,
+    "median": 0.1622
+  },
+  "distribution_fixed": {
+    "count_ge_0.5": 0,
+    "count_ge_0.8": 0,
+    "count_ge_0.9": 0,
+    "count_ge_1.0": 0,
+    "max": 0.3784,
+    "median": 0.1607
+  },
+  "exact_match_heldout_vs_buggy": 0,
+  "exact_match_heldout_vs_fixed": 0,
+  "heldout_path": "dev_tasks_heldout.jsonl",
+  "method": "token-trigram containment (tokenize NAME/NUMBER/OP/STRING; containment = shared trigrams / held-out task trigrams)",
+  "n_heldout_tasks": 116,
+  "n_train_records": 20000,
+  "n_unique_buggy_sources": 20000,
+  "n_unique_fixed_sources": 1166,
+  "per_task": [
+    {
+      "best_buggy": [
+        {
+          "containment": 0.35,
+          "doc_index": 13038,
+          "doc_trigrams": 110,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13040,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13041,
+          "doc_trigrams": 111,
+          "shared_trigrams": 14
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.35,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 498,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.35,
+      "max_containment_fixed": 0.35,
+      "n_trigrams": 40,
+      "task_id": "heldout-compound-off_by_one-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.35,
+          "doc_index": 13038,
+          "doc_trigrams": 110,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13040,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13041,
+          "doc_trigrams": 111,
+          "shared_trigrams": 14
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.35,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 498,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.35,
+      "max_containment_fixed": 0.35,
+      "n_trigrams": 40,
+      "task_id": "heldout-compound-wrong_constant-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.35,
+          "doc_index": 13038,
+          "doc_trigrams": 110,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13040,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13041,
+          "doc_trigrams": 111,
+          "shared_trigrams": 14
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.35,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 498,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.35,
+      "max_containment_fixed": 0.35,
+      "n_trigrams": 40,
+      "task_id": "heldout-compound-wrong_constant-2"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.35,
+          "doc_index": 13038,
+          "doc_trigrams": 110,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13040,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13041,
+          "doc_trigrams": 111,
+          "shared_trigrams": 14
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.35,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 498,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.35,
+      "max_containment_fixed": 0.35,
+      "n_trigrams": 40,
+      "task_id": "heldout-compound-wrong_constant-4"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.35,
+          "doc_index": 13038,
+          "doc_trigrams": 110,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13040,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13041,
+          "doc_trigrams": 111,
+          "shared_trigrams": 14
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.35,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 498,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.35,
+      "max_containment_fixed": 0.35,
+      "n_trigrams": 40,
+      "task_id": "heldout-compound-wrong_constant-6"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.35,
+          "doc_index": 13038,
+          "doc_trigrams": 110,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13040,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.35,
+          "doc_index": 13041,
+          "doc_trigrams": 111,
+          "shared_trigrams": 14
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.35,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.325,
+          "doc_index": 498,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.35,
+      "max_containment_fixed": 0.35,
+      "n_trigrams": 40,
+      "task_id": "heldout-compound-wrong_constant-8"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3889,
+          "doc_index": 13038,
+          "doc_trigrams": 110,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.3889,
+          "doc_index": 13042,
+          "doc_trigrams": 114,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.3611,
+          "doc_index": 13037,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3611,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3333,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 12
+        },
+        {
+          "containment": 0.3333,
+          "doc_index": 498,
+          "doc_trigrams": 116,
+          "shared_trigrams": 12
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.3889,
+      "max_containment_fixed": 0.3611,
+      "n_trigrams": 36,
+      "task_id": "heldout-compound-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3784,
+          "doc_index": 4955,
+          "doc_trigrams": 113,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.3784,
+          "doc_index": 4958,
+          "doc_trigrams": 113,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.3784,
+          "doc_index": 4959,
+          "doc_trigrams": 113,
+          "shared_trigrams": 14
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3784,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.3514,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3514,
+          "doc_index": 498,
+          "doc_trigrams": 116,
+          "shared_trigrams": 13
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.3784,
+      "max_containment_fixed": 0.3784,
+      "n_trigrams": 37,
+      "task_id": "heldout-compound-removed_assignment-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3714,
+          "doc_index": 4930,
+          "doc_trigrams": 112,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3714,
+          "doc_index": 4955,
+          "doc_trigrams": 113,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3714,
+          "doc_index": 4958,
+          "doc_trigrams": 113,
+          "shared_trigrams": 13
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3429,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 12
+        },
+        {
+          "containment": 0.3429,
+          "doc_index": 498,
+          "doc_trigrams": 116,
+          "shared_trigrams": 12
+        },
+        {
+          "containment": 0.3429,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 12
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.3714,
+      "max_containment_fixed": 0.3429,
+      "n_trigrams": 35,
+      "task_id": "heldout-compound-removed_assignment-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0682,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0682,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.0682,
+      "max_containment_fixed": 0.0682,
+      "n_trigrams": 44,
+      "task_id": "heldout-loan-off_by_one-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-off_by_one-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-off_by_one-2"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0682,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0682,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.0682,
+      "max_containment_fixed": 0.0682,
+      "n_trigrams": 44,
+      "task_id": "heldout-loan-swapped_operands-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-swapped_operands-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0667,
+          "doc_index": 4921,
+          "doc_trigrams": 117,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0667,
+          "doc_index": 4925,
+          "doc_trigrams": 118,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0667,
+          "doc_index": 8627,
+          "doc_trigrams": 34,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0444,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 2
+        },
+        {
+          "containment": 0.0444,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 2
+        },
+        {
+          "containment": 0.0444,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 2
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.0667,
+      "max_containment_fixed": 0.0444,
+      "n_trigrams": 45,
+      "task_id": "heldout-loan-swapped_operands-3"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-swapped_operands-6"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0682,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0682,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0682,
+      "max_containment_fixed": 0.0682,
+      "n_trigrams": 44,
+      "task_id": "heldout-loan-wrong_constant-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-wrong_constant-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-wrong_constant-2"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0682,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0682,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0682,
+      "max_containment_fixed": 0.0682,
+      "n_trigrams": 44,
+      "task_id": "heldout-loan-wrong_constant-4"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-wrong_constant-5"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-wrong_constant-6"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0682,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0682,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0682,
+      "max_containment_fixed": 0.0682,
+      "n_trigrams": 44,
+      "task_id": "heldout-loan-wrong_constant-8"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-wrong_constant-9"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-wrong_constant-10"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0682,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0682,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0682,
+      "max_containment_fixed": 0.0682,
+      "n_trigrams": 44,
+      "task_id": "heldout-loan-wrong_constant-12"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-wrong_constant-13"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-wrong_constant-14"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0682,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0682,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0682,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0682,
+      "max_containment_fixed": 0.0682,
+      "n_trigrams": 44,
+      "task_id": "heldout-loan-wrong_constant-16"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-wrong_constant-17"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0698,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0698,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0698,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "wrong_constant",
+      "max_containment_buggy": 0.0698,
+      "max_containment_fixed": 0.0698,
+      "n_trigrams": 43,
+      "task_id": "heldout-loan-wrong_constant-18"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0625,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 2
+        },
+        {
+          "containment": 0.0625,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 2
+        },
+        {
+          "containment": 0.0625,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 2
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0625,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 2
+        },
+        {
+          "containment": 0.0625,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 2
+        },
+        {
+          "containment": 0.0625,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 2
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.0625,
+      "max_containment_fixed": 0.0625,
+      "n_trigrams": 32,
+      "task_id": "heldout-loan-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1,
+          "doc_index": 4911,
+          "doc_trigrams": 115,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1,
+          "doc_index": 4955,
+          "doc_trigrams": 113,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1,
+          "doc_index": 4958,
+          "doc_trigrams": 113,
+          "shared_trigrams": 4
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.075,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.075,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.075,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.1,
+      "max_containment_fixed": 0.075,
+      "n_trigrams": 40,
+      "task_id": "heldout-loan-removed_assignment-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0857,
+          "doc_index": 4882,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0857,
+          "doc_index": 4883,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0857,
+          "doc_index": 4884,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0857,
+          "doc_index": 291,
+          "doc_trigrams": 116,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0857,
+          "doc_index": 361,
+          "doc_trigrams": 134,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0857,
+          "doc_index": 495,
+          "doc_trigrams": 36,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.0857,
+      "max_containment_fixed": 0.0857,
+      "n_trigrams": 35,
+      "task_id": "heldout-loan-removed_assignment-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2571,
+          "doc_index": 9615,
+          "doc_trigrams": 145,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2571,
+          "doc_index": 9616,
+          "doc_trigrams": 145,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2571,
+          "doc_index": 9617,
+          "doc_trigrams": 145,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2571,
+          "doc_index": 558,
+          "doc_trigrams": 146,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2571,
+          "doc_index": 892,
+          "doc_trigrams": 133,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2,
+          "doc_index": 85,
+          "doc_trigrams": 151,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.2571,
+      "max_containment_fixed": 0.2571,
+      "n_trigrams": 35,
+      "task_id": "heldout-circle-off_by_one-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2,
+          "doc_index": 4735,
+          "doc_trigrams": 119,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.2,
+          "doc_index": 8622,
+          "doc_trigrams": 37,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.2,
+          "doc_index": 9156,
+          "doc_trigrams": 37,
+          "shared_trigrams": 7
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1714,
+          "doc_index": 162,
+          "doc_trigrams": 142,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 169,
+          "doc_trigrams": 149,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 277,
+          "doc_trigrams": 121,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.2,
+      "max_containment_fixed": 0.1714,
+      "n_trigrams": 35,
+      "task_id": "heldout-circle-off_by_one-3"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2353,
+          "doc_index": 4725,
+          "doc_trigrams": 122,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2353,
+          "doc_index": 4732,
+          "doc_trigrams": 118,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1765,
+          "doc_index": 1955,
+          "doc_trigrams": 134,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1765,
+          "doc_index": 277,
+          "doc_trigrams": 121,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1765,
+          "doc_index": 558,
+          "doc_trigrams": 146,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1765,
+          "doc_index": 840,
+          "doc_trigrams": 144,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.2353,
+      "max_containment_fixed": 0.1765,
+      "n_trigrams": 34,
+      "task_id": "heldout-circle-off_by_one-4"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2,
+          "doc_index": 2838,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.2,
+          "doc_index": 2839,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.2,
+          "doc_index": 2849,
+          "doc_trigrams": 138,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2,
+          "doc_index": 162,
+          "doc_trigrams": 142,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.2,
+          "doc_index": 169,
+          "doc_trigrams": 149,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.2,
+          "doc_index": 277,
+          "doc_trigrams": 121,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "dropped_condition",
+      "max_containment_buggy": 0.2,
+      "max_containment_fixed": 0.2,
+      "n_trigrams": 30,
+      "task_id": "heldout-circle-dropped_condition-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2353,
+          "doc_index": 4703,
+          "doc_trigrams": 121,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2353,
+          "doc_index": 4708,
+          "doc_trigrams": 120,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2353,
+          "doc_index": 4709,
+          "doc_trigrams": 116,
+          "shared_trigrams": 8
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2353,
+          "doc_index": 277,
+          "doc_trigrams": 121,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2353,
+          "doc_index": 840,
+          "doc_trigrams": 144,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2059,
+          "doc_index": 169,
+          "doc_trigrams": 149,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "swapped_boolean",
+      "max_containment_buggy": 0.2353,
+      "max_containment_fixed": 0.2353,
+      "n_trigrams": 34,
+      "task_id": "heldout-circle-swapped_boolean-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2121,
+          "doc_index": 14682,
+          "doc_trigrams": 143,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.2121,
+          "doc_index": 14683,
+          "doc_trigrams": 143,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.2121,
+          "doc_index": 14684,
+          "doc_trigrams": 143,
+          "shared_trigrams": 7
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1818,
+          "doc_index": 277,
+          "doc_trigrams": 121,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1818,
+          "doc_index": 558,
+          "doc_trigrams": 146,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1818,
+          "doc_index": 840,
+          "doc_trigrams": 144,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.2121,
+      "max_containment_fixed": 0.1818,
+      "n_trigrams": 33,
+      "task_id": "heldout-circle-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3,
+          "doc_index": 14700,
+          "doc_trigrams": 139,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2667,
+          "doc_index": 4703,
+          "doc_trigrams": 121,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2667,
+          "doc_index": 4708,
+          "doc_trigrams": 120,
+          "shared_trigrams": 8
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2667,
+          "doc_index": 277,
+          "doc_trigrams": 121,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2667,
+          "doc_index": 840,
+          "doc_trigrams": 144,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2333,
+          "doc_index": 169,
+          "doc_trigrams": 149,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.3,
+      "max_containment_fixed": 0.2667,
+      "n_trigrams": 30,
+      "task_id": "heldout-circle-removed_return-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1944,
+          "doc_index": 1423,
+          "doc_trigrams": 157,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1944,
+          "doc_index": 1437,
+          "doc_trigrams": 157,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1944,
+          "doc_index": 1438,
+          "doc_trigrams": 157,
+          "shared_trigrams": 7
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1944,
+          "doc_index": 85,
+          "doc_trigrams": 151,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1944,
+          "doc_index": 139,
+          "doc_trigrams": 157,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1944,
+          "doc_index": 185,
+          "doc_trigrams": 119,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1944,
+      "max_containment_fixed": 0.1944,
+      "n_trigrams": 36,
+      "task_id": "heldout-kinetic-off_by_one-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1714,
+          "doc_index": 430,
+          "doc_trigrams": 179,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 454,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 476,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1714,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1714,
+      "max_containment_fixed": 0.1714,
+      "n_trigrams": 35,
+      "task_id": "heldout-kinetic-off_by_one-2"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1714,
+          "doc_index": 1955,
+          "doc_trigrams": 134,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 4725,
+          "doc_trigrams": 122,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 4732,
+          "doc_trigrams": 118,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1143,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1143,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1143,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1714,
+      "max_containment_fixed": 0.1143,
+      "n_trigrams": 35,
+      "task_id": "heldout-kinetic-off_by_one-4"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1714,
+          "doc_index": 430,
+          "doc_trigrams": 179,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 454,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 476,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1714,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1714,
+      "max_containment_fixed": 0.1714,
+      "n_trigrams": 35,
+      "task_id": "heldout-kinetic-off_by_one-5"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1842,
+          "doc_index": 5031,
+          "doc_trigrams": 28,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1842,
+          "doc_index": 5032,
+          "doc_trigrams": 24,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1842,
+          "doc_index": 5033,
+          "doc_trigrams": 30,
+          "shared_trigrams": 7
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1579,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1579,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1579,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.1842,
+      "max_containment_fixed": 0.1579,
+      "n_trigrams": 38,
+      "task_id": "heldout-kinetic-swapped_operands-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.129,
+          "doc_index": 343,
+          "doc_trigrams": 134,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.129,
+          "doc_index": 430,
+          "doc_trigrams": 179,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.129,
+          "doc_index": 454,
+          "doc_trigrams": 180,
+          "shared_trigrams": 4
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.129,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.129,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.129,
+          "doc_index": 33,
+          "doc_trigrams": 148,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "dropped_condition",
+      "max_containment_buggy": 0.129,
+      "max_containment_fixed": 0.129,
+      "n_trigrams": 31,
+      "task_id": "heldout-kinetic-dropped_condition-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1714,
+          "doc_index": 430,
+          "doc_trigrams": 179,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 454,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 476,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1714,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "swapped_boolean",
+      "max_containment_buggy": 0.1714,
+      "max_containment_fixed": 0.1714,
+      "n_trigrams": 35,
+      "task_id": "heldout-kinetic-swapped_boolean-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1471,
+          "doc_index": 628,
+          "doc_trigrams": 180,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.1471,
+          "doc_index": 640,
+          "doc_trigrams": 176,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.1471,
+          "doc_index": 649,
+          "doc_trigrams": 180,
+          "shared_trigrams": 5
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1176,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1176,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1176,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.1471,
+      "max_containment_fixed": 0.1176,
+      "n_trigrams": 34,
+      "task_id": "heldout-kinetic-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2333,
+          "doc_index": 1568,
+          "doc_trigrams": 139,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.2333,
+          "doc_index": 1578,
+          "doc_trigrams": 133,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.2333,
+          "doc_index": 1579,
+          "doc_trigrams": 137,
+          "shared_trigrams": 7
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.2,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.2,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.2333,
+      "max_containment_fixed": 0.2,
+      "n_trigrams": 30,
+      "task_id": "heldout-kinetic-removed_return-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1552,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1552,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1552,
+      "max_containment_fixed": 0.1552,
+      "n_trigrams": 58,
+      "task_id": "heldout-days-off_by_one-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1552,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1552,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1552,
+      "max_containment_fixed": 0.1552,
+      "n_trigrams": 58,
+      "task_id": "heldout-days-off_by_one-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1552,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1552,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1552,
+      "max_containment_fixed": 0.1552,
+      "n_trigrams": 58,
+      "task_id": "heldout-days-off_by_one-2"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1552,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1552,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1552,
+      "max_containment_fixed": 0.1552,
+      "n_trigrams": 58,
+      "task_id": "heldout-days-off_by_one-3"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1552,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1552,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1552,
+      "max_containment_fixed": 0.1552,
+      "n_trigrams": 58,
+      "task_id": "heldout-days-off_by_one-4"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1552,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1552,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1552,
+      "max_containment_fixed": 0.1552,
+      "n_trigrams": 58,
+      "task_id": "heldout-days-off_by_one-5"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1552,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1552,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1552,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1207,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1552,
+      "max_containment_fixed": 0.1552,
+      "n_trigrams": 58,
+      "task_id": "heldout-days-off_by_one-6"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1607,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1607,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1607,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1607,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.125,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.125,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1607,
+      "max_containment_fixed": 0.1607,
+      "n_trigrams": 56,
+      "task_id": "heldout-days-off_by_one-7"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1636,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1636,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1636,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1636,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1273,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1273,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "off_by_one",
+      "max_containment_buggy": 0.1636,
+      "max_containment_fixed": 0.1636,
+      "n_trigrams": 55,
+      "task_id": "heldout-days-off_by_one-8"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1455,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1455,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1455,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 8
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1455,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1273,
+          "doc_index": 325,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1091,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.1455,
+      "max_containment_fixed": 0.1455,
+      "n_trigrams": 55,
+      "task_id": "heldout-days-swapped_operands-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1481,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1481,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1481,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 8
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1481,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1111,
+          "doc_index": 10,
+          "doc_trigrams": 122,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1111,
+          "doc_index": 43,
+          "doc_trigrams": 161,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.1481,
+      "max_containment_fixed": 0.1481,
+      "n_trigrams": 54,
+      "task_id": "heldout-days-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1429,
+          "doc_index": 1547,
+          "doc_trigrams": 110,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1429,
+          "doc_index": 1549,
+          "doc_trigrams": 108,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1429,
+          "doc_index": 1551,
+          "doc_trigrams": 110,
+          "shared_trigrams": 8
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1429,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.125,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.125,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.1429,
+      "max_containment_fixed": 0.1429,
+      "n_trigrams": 56,
+      "task_id": "heldout-days-removed_assignment-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1509,
+          "doc_index": 15872,
+          "doc_trigrams": 104,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1509,
+          "doc_index": 15874,
+          "doc_trigrams": 104,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1509,
+          "doc_index": 15882,
+          "doc_trigrams": 105,
+          "shared_trigrams": 8
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1509,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1321,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1321,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.1509,
+      "max_containment_fixed": 0.1509,
+      "n_trigrams": 53,
+      "task_id": "heldout-days-removed_assignment-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.125,
+          "doc_index": 1549,
+          "doc_trigrams": 108,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.125,
+          "doc_index": 1552,
+          "doc_trigrams": 108,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.125,
+          "doc_index": 1555,
+          "doc_trigrams": 110,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1042,
+          "doc_index": 915,
+          "doc_trigrams": 105,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.0625,
+          "doc_index": 79,
+          "doc_trigrams": 120,
+          "shared_trigrams": 3
+        },
+        {
+          "containment": 0.0625,
+          "doc_index": 100,
+          "doc_trigrams": 108,
+          "shared_trigrams": 3
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.125,
+      "max_containment_fixed": 0.1042,
+      "n_trigrams": 48,
+      "task_id": "heldout-days-removed_assignment-2"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.32,
+          "doc_index": 1726,
+          "doc_trigrams": 132,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.32,
+          "doc_index": 1739,
+          "doc_trigrams": 132,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.32,
+          "doc_index": 1740,
+          "doc_trigrams": 132,
+          "shared_trigrams": 16
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.32,
+          "doc_index": 118,
+          "doc_trigrams": 136,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.32,
+          "doc_index": 325,
+          "doc_trigrams": 120,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 15
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.32,
+      "max_containment_fixed": 0.32,
+      "n_trigrams": 50,
+      "task_id": "heldout-variance-swapped_operands-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3077,
+          "doc_index": 5405,
+          "doc_trigrams": 121,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3077,
+          "doc_index": 5406,
+          "doc_trigrams": 122,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3077,
+          "doc_index": 5407,
+          "doc_trigrams": 113,
+          "shared_trigrams": 16
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3077,
+          "doc_index": 325,
+          "doc_trigrams": 120,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.2885,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 15
+        },
+        {
+          "containment": 0.2885,
+          "doc_index": 118,
+          "doc_trigrams": 136,
+          "shared_trigrams": 15
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.3077,
+      "max_containment_fixed": 0.3077,
+      "n_trigrams": 52,
+      "task_id": "heldout-variance-swapped_operands-3"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3269,
+          "doc_index": 11576,
+          "doc_trigrams": 135,
+          "shared_trigrams": 17
+        },
+        {
+          "containment": 0.3077,
+          "doc_index": 5405,
+          "doc_trigrams": 121,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3077,
+          "doc_index": 5406,
+          "doc_trigrams": 122,
+          "shared_trigrams": 16
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3077,
+          "doc_index": 325,
+          "doc_trigrams": 120,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3077,
+          "doc_index": 659,
+          "doc_trigrams": 129,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.2885,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 15
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.3269,
+      "max_containment_fixed": 0.3077,
+      "n_trigrams": 52,
+      "task_id": "heldout-variance-swapped_operands-4"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3265,
+          "doc_index": 5405,
+          "doc_trigrams": 121,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3265,
+          "doc_index": 5406,
+          "doc_trigrams": 122,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3265,
+          "doc_index": 5407,
+          "doc_trigrams": 113,
+          "shared_trigrams": 16
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3265,
+          "doc_index": 325,
+          "doc_trigrams": 120,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3061,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 15
+        },
+        {
+          "containment": 0.3061,
+          "doc_index": 118,
+          "doc_trigrams": 136,
+          "shared_trigrams": 15
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.3265,
+      "max_containment_fixed": 0.3265,
+      "n_trigrams": 49,
+      "task_id": "heldout-variance-swapped_operands-5"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3478,
+          "doc_index": 5405,
+          "doc_trigrams": 121,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3478,
+          "doc_index": 5406,
+          "doc_trigrams": 122,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3478,
+          "doc_index": 5407,
+          "doc_trigrams": 113,
+          "shared_trigrams": 16
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3478,
+          "doc_index": 325,
+          "doc_trigrams": 120,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3261,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 15
+        },
+        {
+          "containment": 0.3261,
+          "doc_index": 118,
+          "doc_trigrams": 136,
+          "shared_trigrams": 15
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.3478,
+      "max_containment_fixed": 0.3478,
+      "n_trigrams": 46,
+      "task_id": "heldout-variance-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3478,
+          "doc_index": 1869,
+          "doc_trigrams": 133,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3478,
+          "doc_index": 1874,
+          "doc_trigrams": 133,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3478,
+          "doc_index": 1875,
+          "doc_trigrams": 133,
+          "shared_trigrams": 16
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3478,
+          "doc_index": 325,
+          "doc_trigrams": 120,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3261,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 15
+        },
+        {
+          "containment": 0.3261,
+          "doc_index": 118,
+          "doc_trigrams": 136,
+          "shared_trigrams": 15
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.3478,
+      "max_containment_fixed": 0.3478,
+      "n_trigrams": 46,
+      "task_id": "heldout-variance-removed_assignment-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3556,
+          "doc_index": 1869,
+          "doc_trigrams": 133,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3556,
+          "doc_index": 1874,
+          "doc_trigrams": 133,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3556,
+          "doc_index": 1875,
+          "doc_trigrams": 133,
+          "shared_trigrams": 16
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3556,
+          "doc_index": 325,
+          "doc_trigrams": 120,
+          "shared_trigrams": 16
+        },
+        {
+          "containment": 0.3333,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 15
+        },
+        {
+          "containment": 0.3333,
+          "doc_index": 118,
+          "doc_trigrams": 136,
+          "shared_trigrams": 15
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.3556,
+      "max_containment_fixed": 0.3556,
+      "n_trigrams": 45,
+      "task_id": "heldout-variance-removed_assignment-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2766,
+          "doc_index": 1858,
+          "doc_trigrams": 135,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.2766,
+          "doc_index": 1970,
+          "doc_trigrams": 119,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.2766,
+          "doc_index": 1988,
+          "doc_trigrams": 111,
+          "shared_trigrams": 13
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2766,
+          "doc_index": 325,
+          "doc_trigrams": 120,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.2553,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 12
+        },
+        {
+          "containment": 0.2553,
+          "doc_index": 118,
+          "doc_trigrams": 136,
+          "shared_trigrams": 12
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.2766,
+      "max_containment_fixed": 0.2766,
+      "n_trigrams": 47,
+      "task_id": "heldout-variance-removed_assignment-2"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3684,
+          "doc_index": 1845,
+          "doc_trigrams": 134,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.3684,
+          "doc_index": 1859,
+          "doc_trigrams": 134,
+          "shared_trigrams": 14
+        },
+        {
+          "containment": 0.3684,
+          "doc_index": 1993,
+          "doc_trigrams": 110,
+          "shared_trigrams": 14
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3158,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 12
+        },
+        {
+          "containment": 0.3158,
+          "doc_index": 118,
+          "doc_trigrams": 136,
+          "shared_trigrams": 12
+        },
+        {
+          "containment": 0.3158,
+          "doc_index": 122,
+          "doc_trigrams": 114,
+          "shared_trigrams": 12
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.3684,
+      "max_containment_fixed": 0.3158,
+      "n_trigrams": 38,
+      "task_id": "heldout-variance-removed_assignment-3"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1607,
+          "doc_index": 14497,
+          "doc_trigrams": 107,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1607,
+          "doc_index": 14501,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1607,
+          "doc_index": 14503,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1607,
+          "doc_index": 826,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1429,
+          "doc_index": 46,
+          "doc_trigrams": 183,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1429,
+          "doc_index": 74,
+          "doc_trigrams": 141,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.1607,
+      "max_containment_fixed": 0.1607,
+      "n_trigrams": 56,
+      "task_id": "heldout-isbn-swapped_operands-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1765,
+          "doc_index": 14497,
+          "doc_trigrams": 107,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1765,
+          "doc_index": 14501,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1765,
+          "doc_index": 14503,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1765,
+          "doc_index": 826,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1569,
+          "doc_index": 46,
+          "doc_trigrams": 183,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1569,
+          "doc_index": 74,
+          "doc_trigrams": 141,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.1765,
+      "max_containment_fixed": 0.1765,
+      "n_trigrams": 51,
+      "task_id": "heldout-isbn-swapped_operands-3"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1765,
+          "doc_index": 14497,
+          "doc_trigrams": 107,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1765,
+          "doc_index": 14501,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1765,
+          "doc_index": 14503,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1765,
+          "doc_index": 826,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1569,
+          "doc_index": 46,
+          "doc_trigrams": 183,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1569,
+          "doc_index": 74,
+          "doc_trigrams": 141,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.1765,
+      "max_containment_fixed": 0.1765,
+      "n_trigrams": 51,
+      "task_id": "heldout-isbn-swapped_operands-4"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1765,
+          "doc_index": 14497,
+          "doc_trigrams": 107,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1765,
+          "doc_index": 14501,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1765,
+          "doc_index": 14503,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1765,
+          "doc_index": 826,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1569,
+          "doc_index": 46,
+          "doc_trigrams": 183,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1569,
+          "doc_index": 74,
+          "doc_trigrams": 141,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.1765,
+      "max_containment_fixed": 0.1765,
+      "n_trigrams": 51,
+      "task_id": "heldout-isbn-swapped_operands-5"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1667,
+          "doc_index": 14497,
+          "doc_trigrams": 107,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1667,
+          "doc_index": 14501,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1667,
+          "doc_index": 14503,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1667,
+          "doc_index": 826,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1481,
+          "doc_index": 46,
+          "doc_trigrams": 183,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1481,
+          "doc_index": 74,
+          "doc_trigrams": 141,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "wrong_comparator",
+      "max_containment_buggy": 0.1667,
+      "max_containment_fixed": 0.1667,
+      "n_trigrams": 54,
+      "task_id": "heldout-isbn-wrong_comparator-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2143,
+          "doc_index": 14497,
+          "doc_trigrams": 107,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2143,
+          "doc_index": 14501,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2143,
+          "doc_index": 14503,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2143,
+          "doc_index": 826,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1905,
+          "doc_index": 46,
+          "doc_trigrams": 183,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1905,
+          "doc_index": 74,
+          "doc_trigrams": 141,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.2143,
+      "max_containment_fixed": 0.2143,
+      "n_trigrams": 42,
+      "task_id": "heldout-isbn-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2037,
+          "doc_index": 14497,
+          "doc_trigrams": 107,
+          "shared_trigrams": 11
+        },
+        {
+          "containment": 0.2037,
+          "doc_index": 14518,
+          "doc_trigrams": 107,
+          "shared_trigrams": 11
+        },
+        {
+          "containment": 0.1852,
+          "doc_index": 2025,
+          "doc_trigrams": 126,
+          "shared_trigrams": 10
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1667,
+          "doc_index": 826,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1481,
+          "doc_index": 46,
+          "doc_trigrams": 183,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1481,
+          "doc_index": 74,
+          "doc_trigrams": 141,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.2037,
+      "max_containment_fixed": 0.1667,
+      "n_trigrams": 54,
+      "task_id": "heldout-isbn-removed_assignment-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1852,
+          "doc_index": 14497,
+          "doc_trigrams": 107,
+          "shared_trigrams": 10
+        },
+        {
+          "containment": 0.1852,
+          "doc_index": 14503,
+          "doc_trigrams": 105,
+          "shared_trigrams": 10
+        },
+        {
+          "containment": 0.1852,
+          "doc_index": 14518,
+          "doc_trigrams": 107,
+          "shared_trigrams": 10
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1667,
+          "doc_index": 826,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1481,
+          "doc_index": 46,
+          "doc_trigrams": 183,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1481,
+          "doc_index": 74,
+          "doc_trigrams": 141,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.1852,
+      "max_containment_fixed": 0.1667,
+      "n_trigrams": 54,
+      "task_id": "heldout-isbn-removed_assignment-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1698,
+          "doc_index": 6683,
+          "doc_trigrams": 120,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1698,
+          "doc_index": 11582,
+          "doc_trigrams": 130,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1698,
+          "doc_index": 14497,
+          "doc_trigrams": 107,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1698,
+          "doc_index": 826,
+          "doc_trigrams": 105,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.1509,
+          "doc_index": 46,
+          "doc_trigrams": 183,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1509,
+          "doc_index": 74,
+          "doc_trigrams": 141,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.1698,
+      "max_containment_fixed": 0.1698,
+      "n_trigrams": 53,
+      "task_id": "heldout-isbn-removed_assignment-2"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.049,
+          "doc_index": 3461,
+          "doc_trigrams": 112,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.049,
+          "doc_index": 3470,
+          "doc_trigrams": 113,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.049,
+          "doc_index": 7229,
+          "doc_trigrams": 112,
+          "shared_trigrams": 7
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.028,
+          "doc_index": 77,
+          "doc_trigrams": 136,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.028,
+          "doc_index": 103,
+          "doc_trigrams": 116,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.028,
+          "doc_index": 123,
+          "doc_trigrams": 110,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.049,
+      "max_containment_fixed": 0.028,
+      "n_trigrams": 143,
+      "task_id": "heldout-roman-swapped_operands-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0423,
+          "doc_index": 1095,
+          "doc_trigrams": 132,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.0423,
+          "doc_index": 1181,
+          "doc_trigrams": 133,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.0423,
+          "doc_index": 1215,
+          "doc_trigrams": 133,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0282,
+          "doc_index": 67,
+          "doc_trigrams": 131,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0282,
+          "doc_index": 81,
+          "doc_trigrams": 128,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0282,
+          "doc_index": 188,
+          "doc_trigrams": 127,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.0423,
+      "max_containment_fixed": 0.0282,
+      "n_trigrams": 142,
+      "task_id": "heldout-roman-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1053,
+          "doc_index": 1378,
+          "doc_trigrams": 130,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1053,
+          "doc_index": 1381,
+          "doc_trigrams": 128,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1053,
+          "doc_index": 1394,
+          "doc_trigrams": 121,
+          "shared_trigrams": 8
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0658,
+          "doc_index": 81,
+          "doc_trigrams": 128,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.0658,
+          "doc_index": 189,
+          "doc_trigrams": 111,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.0658,
+          "doc_index": 273,
+          "doc_trigrams": 152,
+          "shared_trigrams": 5
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.1053,
+      "max_containment_fixed": 0.0658,
+      "n_trigrams": 76,
+      "task_id": "heldout-roman-removed_assignment-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0355,
+          "doc_index": 1378,
+          "doc_trigrams": 130,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.0355,
+          "doc_index": 1381,
+          "doc_trigrams": 128,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.0355,
+          "doc_index": 1383,
+          "doc_trigrams": 129,
+          "shared_trigrams": 5
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0355,
+          "doc_index": 81,
+          "doc_trigrams": 128,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.0355,
+          "doc_index": 189,
+          "doc_trigrams": 111,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.0355,
+          "doc_index": 273,
+          "doc_trigrams": 152,
+          "shared_trigrams": 5
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.0355,
+      "max_containment_fixed": 0.0355,
+      "n_trigrams": 141,
+      "task_id": "heldout-roman-removed_assignment-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0522,
+          "doc_index": 1378,
+          "doc_trigrams": 130,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.0522,
+          "doc_index": 1381,
+          "doc_trigrams": 128,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.0522,
+          "doc_index": 1383,
+          "doc_trigrams": 129,
+          "shared_trigrams": 7
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0373,
+          "doc_index": 81,
+          "doc_trigrams": 128,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.0373,
+          "doc_index": 189,
+          "doc_trigrams": 111,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.0373,
+          "doc_index": 273,
+          "doc_trigrams": 152,
+          "shared_trigrams": 5
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.0522,
+      "max_containment_fixed": 0.0373,
+      "n_trigrams": 134,
+      "task_id": "heldout-roman-removed_assignment-2"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0438,
+          "doc_index": 1390,
+          "doc_trigrams": 114,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.0438,
+          "doc_index": 3462,
+          "doc_trigrams": 111,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.0438,
+          "doc_index": 3468,
+          "doc_trigrams": 110,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0292,
+          "doc_index": 77,
+          "doc_trigrams": 136,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0292,
+          "doc_index": 103,
+          "doc_trigrams": 116,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0292,
+          "doc_index": 123,
+          "doc_trigrams": 110,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.0438,
+      "max_containment_fixed": 0.0292,
+      "n_trigrams": 137,
+      "task_id": "heldout-roman-removed_assignment-3"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1944,
+          "doc_index": 1945,
+          "doc_trigrams": 128,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1944,
+          "doc_index": 3400,
+          "doc_trigrams": 122,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1944,
+          "doc_index": 3413,
+          "doc_trigrams": 121,
+          "shared_trigrams": 7
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1944,
+          "doc_index": 277,
+          "doc_trigrams": 121,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1944,
+          "doc_index": 444,
+          "doc_trigrams": 133,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1944,
+          "doc_index": 499,
+          "doc_trigrams": 95,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.1944,
+      "max_containment_fixed": 0.1944,
+      "n_trigrams": 36,
+      "task_id": "heldout-pagination-swapped_operands-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2051,
+          "doc_index": 8916,
+          "doc_trigrams": 133,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2051,
+          "doc_index": 8918,
+          "doc_trigrams": 128,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2051,
+          "doc_index": 8919,
+          "doc_trigrams": 134,
+          "shared_trigrams": 8
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2051,
+          "doc_index": 514,
+          "doc_trigrams": 132,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1795,
+          "doc_index": 277,
+          "doc_trigrams": 121,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1795,
+          "doc_index": 444,
+          "doc_trigrams": 133,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.2051,
+      "max_containment_fixed": 0.2051,
+      "n_trigrams": 39,
+      "task_id": "heldout-pagination-swapped_operands-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2857,
+          "doc_index": 8626,
+          "doc_trigrams": 89,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.25,
+          "doc_index": 1945,
+          "doc_trigrams": 128,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.25,
+          "doc_index": 2190,
+          "doc_trigrams": 125,
+          "shared_trigrams": 7
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.25,
+          "doc_index": 277,
+          "doc_trigrams": 121,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.25,
+          "doc_index": 444,
+          "doc_trigrams": 133,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.25,
+          "doc_index": 499,
+          "doc_trigrams": 95,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.2857,
+      "max_containment_fixed": 0.25,
+      "n_trigrams": 28,
+      "task_id": "heldout-pagination-removed_return-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3023,
+          "doc_index": 1093,
+          "doc_trigrams": 160,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3023,
+          "doc_index": 1179,
+          "doc_trigrams": 161,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3023,
+          "doc_index": 1213,
+          "doc_trigrams": 161,
+          "shared_trigrams": 13
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3023,
+          "doc_index": 65,
+          "doc_trigrams": 161,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3023,
+          "doc_index": 437,
+          "doc_trigrams": 143,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3023,
+          "doc_index": 945,
+          "doc_trigrams": 159,
+          "shared_trigrams": 13
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.3023,
+      "max_containment_fixed": 0.3023,
+      "n_trigrams": 43,
+      "task_id": "heldout-recipe-swapped_operands-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.3611,
+          "doc_index": 1093,
+          "doc_trigrams": 160,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3611,
+          "doc_index": 1179,
+          "doc_trigrams": 161,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3611,
+          "doc_index": 1213,
+          "doc_trigrams": 161,
+          "shared_trigrams": 13
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.3611,
+          "doc_index": 65,
+          "doc_trigrams": 161,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3611,
+          "doc_index": 437,
+          "doc_trigrams": 143,
+          "shared_trigrams": 13
+        },
+        {
+          "containment": 0.3611,
+          "doc_index": 945,
+          "doc_trigrams": 159,
+          "shared_trigrams": 13
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.3611,
+      "max_containment_fixed": 0.3611,
+      "n_trigrams": 36,
+      "task_id": "heldout-recipe-removed_return-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1463,
+          "doc_index": 486,
+          "doc_trigrams": 149,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1463,
+          "doc_index": 487,
+          "doc_trigrams": 149,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1463,
+          "doc_index": 508,
+          "doc_trigrams": 148,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1463,
+          "doc_index": 33,
+          "doc_trigrams": 148,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1463,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1463,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.1463,
+      "max_containment_fixed": 0.1463,
+      "n_trigrams": 41,
+      "task_id": "heldout-dilution-swapped_operands-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1622,
+          "doc_index": 430,
+          "doc_trigrams": 179,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1622,
+          "doc_index": 454,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1622,
+          "doc_index": 476,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1622,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1622,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1622,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "wrong_comparator",
+      "max_containment_buggy": 0.1622,
+      "max_containment_fixed": 0.1622,
+      "n_trigrams": 37,
+      "task_id": "heldout-dilution-wrong_comparator-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1212,
+          "doc_index": 343,
+          "doc_trigrams": 134,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1212,
+          "doc_index": 430,
+          "doc_trigrams": 179,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1212,
+          "doc_index": 454,
+          "doc_trigrams": 180,
+          "shared_trigrams": 4
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1212,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1212,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1212,
+          "doc_index": 33,
+          "doc_trigrams": 148,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "dropped_condition",
+      "max_containment_buggy": 0.1212,
+      "max_containment_fixed": 0.1212,
+      "n_trigrams": 33,
+      "task_id": "heldout-dilution-dropped_condition-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1622,
+          "doc_index": 486,
+          "doc_trigrams": 149,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1622,
+          "doc_index": 487,
+          "doc_trigrams": 149,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1622,
+          "doc_index": 508,
+          "doc_trigrams": 148,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1622,
+          "doc_index": 33,
+          "doc_trigrams": 148,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1622,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1622,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "swapped_boolean",
+      "max_containment_buggy": 0.1622,
+      "max_containment_fixed": 0.1622,
+      "n_trigrams": 37,
+      "task_id": "heldout-dilution-swapped_boolean-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1389,
+          "doc_index": 628,
+          "doc_trigrams": 180,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.1389,
+          "doc_index": 640,
+          "doc_trigrams": 176,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.1389,
+          "doc_index": 649,
+          "doc_trigrams": 180,
+          "shared_trigrams": 5
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1111,
+          "doc_index": 33,
+          "doc_trigrams": 148,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1111,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1111,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.1389,
+      "max_containment_fixed": 0.1111,
+      "n_trigrams": 36,
+      "task_id": "heldout-dilution-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2,
+          "doc_index": 2190,
+          "doc_trigrams": 125,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.2,
+          "doc_index": 2194,
+          "doc_trigrams": 121,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.2,
+          "doc_index": 6228,
+          "doc_trigrams": 129,
+          "shared_trigrams": 7
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1714,
+          "doc_index": 33,
+          "doc_trigrams": 148,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.2,
+      "max_containment_fixed": 0.1714,
+      "n_trigrams": 35,
+      "task_id": "heldout-dilution-removed_return-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1714,
+          "doc_index": 486,
+          "doc_trigrams": 149,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 487,
+          "doc_trigrams": 149,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 508,
+          "doc_trigrams": 148,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1714,
+          "doc_index": 33,
+          "doc_trigrams": 148,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "swapped_operands",
+      "max_containment_buggy": 0.1714,
+      "max_containment_fixed": 0.1714,
+      "n_trigrams": 35,
+      "task_id": "heldout-pressure-swapped_operands-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1714,
+          "doc_index": 430,
+          "doc_trigrams": 179,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 454,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 476,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1714,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "wrong_comparator",
+      "max_containment_buggy": 0.1714,
+      "max_containment_fixed": 0.1714,
+      "n_trigrams": 35,
+      "task_id": "heldout-pressure-wrong_comparator-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.129,
+          "doc_index": 343,
+          "doc_trigrams": 134,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.129,
+          "doc_index": 430,
+          "doc_trigrams": 179,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.129,
+          "doc_index": 454,
+          "doc_trigrams": 180,
+          "shared_trigrams": 4
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.129,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.129,
+          "doc_index": 24,
+          "doc_trigrams": 180,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.129,
+          "doc_index": 33,
+          "doc_trigrams": 148,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "dropped_condition",
+      "max_containment_buggy": 0.129,
+      "max_containment_fixed": 0.129,
+      "n_trigrams": 31,
+      "task_id": "heldout-pressure-dropped_condition-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1714,
+          "doc_index": 486,
+          "doc_trigrams": 149,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 487,
+          "doc_trigrams": 149,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 508,
+          "doc_trigrams": 148,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1714,
+          "doc_index": 33,
+          "doc_trigrams": 148,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1714,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "swapped_boolean",
+      "max_containment_buggy": 0.1714,
+      "max_containment_fixed": 0.1714,
+      "n_trigrams": 35,
+      "task_id": "heldout-pressure-swapped_boolean-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1471,
+          "doc_index": 628,
+          "doc_trigrams": 180,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.1471,
+          "doc_index": 640,
+          "doc_trigrams": 176,
+          "shared_trigrams": 5
+        },
+        {
+          "containment": 0.1471,
+          "doc_index": 649,
+          "doc_trigrams": 180,
+          "shared_trigrams": 5
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1176,
+          "doc_index": 33,
+          "doc_trigrams": 148,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1176,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.1176,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.1471,
+      "max_containment_fixed": 0.1176,
+      "n_trigrams": 34,
+      "task_id": "heldout-pressure-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2188,
+          "doc_index": 2190,
+          "doc_trigrams": 125,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.2188,
+          "doc_index": 2194,
+          "doc_trigrams": 121,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.2188,
+          "doc_index": 6228,
+          "doc_trigrams": 129,
+          "shared_trigrams": 7
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1875,
+          "doc_index": 33,
+          "doc_trigrams": 148,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1875,
+          "doc_index": 39,
+          "doc_trigrams": 141,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1875,
+          "doc_index": 42,
+          "doc_trigrams": 181,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.2188,
+      "max_containment_fixed": 0.1875,
+      "n_trigrams": 32,
+      "task_id": "heldout-pressure-removed_return-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1111,
+          "doc_index": 96,
+          "doc_trigrams": 152,
+          "shared_trigrams": 2
+        },
+        {
+          "containment": 0.1111,
+          "doc_index": 425,
+          "doc_trigrams": 131,
+          "shared_trigrams": 2
+        },
+        {
+          "containment": 0.1111,
+          "doc_index": 440,
+          "doc_trigrams": 126,
+          "shared_trigrams": 2
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0556,
+          "doc_index": 0,
+          "doc_trigrams": 64,
+          "shared_trigrams": 1
+        },
+        {
+          "containment": 0.0556,
+          "doc_index": 1,
+          "doc_trigrams": 136,
+          "shared_trigrams": 1
+        },
+        {
+          "containment": 0.0556,
+          "doc_index": 2,
+          "doc_trigrams": 157,
+          "shared_trigrams": 1
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.1111,
+      "max_containment_fixed": 0.0556,
+      "n_trigrams": 18,
+      "task_id": "heldout-ohm-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1429,
+          "doc_index": 96,
+          "doc_trigrams": 152,
+          "shared_trigrams": 2
+        },
+        {
+          "containment": 0.1429,
+          "doc_index": 425,
+          "doc_trigrams": 131,
+          "shared_trigrams": 2
+        },
+        {
+          "containment": 0.1429,
+          "doc_index": 440,
+          "doc_trigrams": 126,
+          "shared_trigrams": 2
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0714,
+          "doc_index": 0,
+          "doc_trigrams": 64,
+          "shared_trigrams": 1
+        },
+        {
+          "containment": 0.0714,
+          "doc_index": 1,
+          "doc_trigrams": 136,
+          "shared_trigrams": 1
+        },
+        {
+          "containment": 0.0714,
+          "doc_index": 2,
+          "doc_trigrams": 157,
+          "shared_trigrams": 1
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.1429,
+      "max_containment_fixed": 0.0714,
+      "n_trigrams": 14,
+      "task_id": "heldout-kelvin-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2571,
+          "doc_index": 15650,
+          "doc_trigrams": 135,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2571,
+          "doc_index": 15651,
+          "doc_trigrams": 134,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2571,
+          "doc_index": 15652,
+          "doc_trigrams": 130,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2571,
+          "doc_index": 892,
+          "doc_trigrams": 133,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2286,
+          "doc_index": 185,
+          "doc_trigrams": 119,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2286,
+          "doc_index": 549,
+          "doc_trigrams": 144,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "dropped_condition",
+      "max_containment_buggy": 0.2571,
+      "max_containment_fixed": 0.2571,
+      "n_trigrams": 35,
+      "task_id": "heldout-taxi-dropped_condition-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2308,
+          "doc_index": 15650,
+          "doc_trigrams": 135,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2308,
+          "doc_index": 15651,
+          "doc_trigrams": 134,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2308,
+          "doc_index": 15652,
+          "doc_trigrams": 130,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2308,
+          "doc_index": 892,
+          "doc_trigrams": 133,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2051,
+          "doc_index": 185,
+          "doc_trigrams": 119,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2051,
+          "doc_index": 549,
+          "doc_trigrams": 144,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "swapped_boolean",
+      "max_containment_buggy": 0.2308,
+      "max_containment_fixed": 0.2308,
+      "n_trigrams": 39,
+      "task_id": "heldout-taxi-swapped_boolean-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2105,
+          "doc_index": 15650,
+          "doc_trigrams": 135,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2105,
+          "doc_index": 15651,
+          "doc_trigrams": 134,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2105,
+          "doc_index": 15652,
+          "doc_trigrams": 130,
+          "shared_trigrams": 8
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2105,
+          "doc_index": 892,
+          "doc_trigrams": 133,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.1842,
+          "doc_index": 185,
+          "doc_trigrams": 119,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1842,
+          "doc_index": 433,
+          "doc_trigrams": 152,
+          "shared_trigrams": 7
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.2105,
+      "max_containment_fixed": 0.2105,
+      "n_trigrams": 38,
+      "task_id": "heldout-taxi-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2432,
+          "doc_index": 1869,
+          "doc_trigrams": 133,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2432,
+          "doc_index": 1874,
+          "doc_trigrams": 133,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2432,
+          "doc_index": 1875,
+          "doc_trigrams": 133,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1892,
+          "doc_index": 892,
+          "doc_trigrams": 133,
+          "shared_trigrams": 7
+        },
+        {
+          "containment": 0.1622,
+          "doc_index": 81,
+          "doc_trigrams": 128,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1622,
+          "doc_index": 87,
+          "doc_trigrams": 144,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.2432,
+      "max_containment_fixed": 0.1892,
+      "n_trigrams": 37,
+      "task_id": "heldout-taxi-removed_assignment-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.2727,
+          "doc_index": 15650,
+          "doc_trigrams": 135,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2727,
+          "doc_index": 15651,
+          "doc_trigrams": 134,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2727,
+          "doc_index": 15652,
+          "doc_trigrams": 130,
+          "shared_trigrams": 9
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.2727,
+          "doc_index": 892,
+          "doc_trigrams": 133,
+          "shared_trigrams": 9
+        },
+        {
+          "containment": 0.2424,
+          "doc_index": 185,
+          "doc_trigrams": 119,
+          "shared_trigrams": 8
+        },
+        {
+          "containment": 0.2424,
+          "doc_index": 549,
+          "doc_trigrams": 144,
+          "shared_trigrams": 8
+        }
+      ],
+      "bug_class": "removed_assignment",
+      "max_containment_buggy": 0.2727,
+      "max_containment_fixed": 0.2727,
+      "n_trigrams": 33,
+      "task_id": "heldout-taxi-removed_assignment-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.1395,
+          "doc_index": 0,
+          "doc_trigrams": 162,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1395,
+          "doc_index": 3,
+          "doc_trigrams": 159,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1395,
+          "doc_index": 4,
+          "doc_trigrams": 159,
+          "shared_trigrams": 6
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.1395,
+          "doc_index": 2,
+          "doc_trigrams": 157,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1395,
+          "doc_index": 10,
+          "doc_trigrams": 122,
+          "shared_trigrams": 6
+        },
+        {
+          "containment": 0.1395,
+          "doc_index": 19,
+          "doc_trigrams": 133,
+          "shared_trigrams": 6
+        }
+      ],
+      "bug_class": "removed_return",
+      "max_containment_buggy": 0.1395,
+      "max_containment_fixed": 0.1395,
+      "n_trigrams": 43,
+      "task_id": "heldout-gpa-removed_return-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0851,
+          "doc_index": 2217,
+          "doc_trigrams": 51,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 2218,
+          "doc_trigrams": 51,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 2351,
+          "doc_trigrams": 51,
+          "shared_trigrams": 4
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0851,
+          "doc_index": 183,
+          "doc_trigrams": 153,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 444,
+          "doc_trigrams": 133,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "wrong_comparator",
+      "max_containment_buggy": 0.0851,
+      "max_containment_fixed": 0.0851,
+      "n_trigrams": 47,
+      "task_id": "heldout-tax-wrong_comparator-0"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0851,
+          "doc_index": 2217,
+          "doc_trigrams": 51,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 2218,
+          "doc_trigrams": 51,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 2351,
+          "doc_trigrams": 51,
+          "shared_trigrams": 4
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0851,
+          "doc_index": 183,
+          "doc_trigrams": 153,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 444,
+          "doc_trigrams": 133,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "wrong_comparator",
+      "max_containment_buggy": 0.0851,
+      "max_containment_fixed": 0.0851,
+      "n_trigrams": 47,
+      "task_id": "heldout-tax-wrong_comparator-1"
+    },
+    {
+      "best_buggy": [
+        {
+          "containment": 0.0851,
+          "doc_index": 2217,
+          "doc_trigrams": 51,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 2218,
+          "doc_trigrams": 51,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 2351,
+          "doc_trigrams": 51,
+          "shared_trigrams": 4
+        }
+      ],
+      "best_fixed": [
+        {
+          "containment": 0.0851,
+          "doc_index": 183,
+          "doc_trigrams": 153,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 444,
+          "doc_trigrams": 133,
+          "shared_trigrams": 4
+        },
+        {
+          "containment": 0.0851,
+          "doc_index": 730,
+          "doc_trigrams": 115,
+          "shared_trigrams": 4
+        }
+      ],
+      "bug_class": "wrong_comparator",
+      "max_containment_buggy": 0.0851,
+      "max_containment_fixed": 0.0851,
+      "n_trigrams": 47,
+      "task_id": "heldout-tax-wrong_comparator-2"
+    }
+  ],
+  "runtime_seconds": 6.6,
+  "top_pairs": [
+    {
+      "containment": 0.3889,
+      "doc_index": 13038,
+      "kind": "buggy",
+      "shared_trigrams": 14,
+      "task_id": "heldout-compound-removed_return-0"
+    },
+    {
+      "containment": 0.3784,
+      "doc_index": 730,
+      "kind": "fixed",
+      "shared_trigrams": 14,
+      "task_id": "heldout-compound-removed_assignment-0"
+    },
+    {
+      "containment": 0.3784,
+      "doc_index": 4955,
+      "kind": "buggy",
+      "shared_trigrams": 14,
+      "task_id": "heldout-compound-removed_assignment-0"
+    },
+    {
+      "containment": 0.3714,
+      "doc_index": 4930,
+      "kind": "buggy",
+      "shared_trigrams": 13,
+      "task_id": "heldout-compound-removed_assignment-1"
+    },
+    {
+      "containment": 0.3684,
+      "doc_index": 1845,
+      "kind": "buggy",
+      "shared_trigrams": 14,
+      "task_id": "heldout-variance-removed_assignment-3"
+    }
+  ],
+  "train_path": "train_records_20k.jsonl"
+}

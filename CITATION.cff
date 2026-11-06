@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+# STAGING ONLY — repository-code and url below are PROPOSED slugs, not live
+# URLs. Replace them with the live links after the repo and dataset are public.
+message: "If you use this resource, please cite it as below."
+title: "Repo-Blind Repair: a synthetic, byte-exactly regenerable corpus for contamination-controlled Python bug repair"
+authors:
+  - family-names: McBride
+    given-names: Olly
+date-released: 2026-11-05
+version: 1.0.0
+license: Apache-2.0
+repository-code: "https://github.com/OlsOls4/repo-blind-repair"
+url: "https://www.kaggle.com/datasets/olsols4/repo-blind-repair-corpus"
+keywords:
+  - synthetic bug-fix corpus
+  - AST mutation
+  - contamination-controlled evaluation
+  - Python program repair
