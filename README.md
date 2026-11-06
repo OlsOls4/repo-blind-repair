@@ -62,8 +62,8 @@ layout, or a Kaggle dataset download placed alongside the repo).
 
 ## Get the records without regenerating
 
-Companion Kaggle dataset (CC BY 4.0) — **STAGING PLACEHOLDER, not yet live**:
-`https://www.kaggle.com/datasets/olsols4/repo-blind-repair-corpus`
+Companion Kaggle dataset (CC BY 4.0):
+`https://www.kaggle.com/datasets/olsols4/repo-blind-repair-synthetic-corpus-20k`
 — `train_records_20k.jsonl` (20,000 records),
 `train_records_20k_provenance.jsonl`,
 `dev_tasks_heldout.jsonl` (116 tasks, **evaluation-only: never train on it**),
