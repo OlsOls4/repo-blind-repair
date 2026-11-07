@@ -1,0 +1,36 @@
+# Frozen kill-test task set (n=32) — pre-registered 2026-11-05.
+# Derivation: first 4 singles per operator in file order from
+# kaggle/dev_tasks_heldout.jsonl (see kaggle/KILL_TEST_READINESS.md).
+# One ID per line; the comma-joined form is in kaggle/FIRST_GPU_RUNBOOK.md.
+heldout-loan-off_by_one-0
+heldout-loan-off_by_one-1
+heldout-loan-off_by_one-2
+heldout-circle-off_by_one-1
+heldout-loan-swapped_operands-0
+heldout-loan-swapped_operands-1
+heldout-loan-swapped_operands-3
+heldout-loan-swapped_operands-6
+heldout-isbn-wrong_comparator-0
+heldout-dilution-wrong_comparator-0
+heldout-pressure-wrong_comparator-0
+heldout-tax-wrong_comparator-0
+heldout-circle-dropped_condition-1
+heldout-kinetic-dropped_condition-1
+heldout-dilution-dropped_condition-1
+heldout-pressure-dropped_condition-1
+heldout-circle-swapped_boolean-0
+heldout-kinetic-swapped_boolean-0
+heldout-dilution-swapped_boolean-0
+heldout-pressure-swapped_boolean-0
+heldout-loan-wrong_constant-0
+heldout-loan-wrong_constant-1
+heldout-loan-wrong_constant-2
+heldout-loan-wrong_constant-4
+heldout-loan-removed_return-0
+heldout-circle-removed_return-0
+heldout-circle-removed_return-1
+heldout-kinetic-removed_return-0
+heldout-loan-removed_assignment-0
+heldout-loan-removed_assignment-1
+heldout-days-removed_assignment-0
+heldout-days-removed_assignment-1
