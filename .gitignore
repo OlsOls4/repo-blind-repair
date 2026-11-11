@@ -19,10 +19,12 @@ dist/
 Thumbs.db
 
 # Trained adapter weights are NEVER committed to this repo.
-# The v18 LoRA adapter is a failed artefact (0/18 held-out, never emits
-# EOS) and lives only in a Kaggle notebook version output. If a future
-# adapter passes the pre-registered kill test, ship it as a GitHub
-# Release asset with its evaluation numbers, not in the git tree.
+# The v1 LoRA adapter is a failed artefact (0/18 held-out, never emitted
+# EOS); the v19 retrain also failed the pre-registered kill test (0/32,
+# 7 Nov 2026). Neither ships; both live only in Kaggle notebook version
+# outputs. If a future adapter passes the pre-registered kill test, ship
+# it as a GitHub Release asset with its evaluation numbers, not in the
+# git tree.
 *.safetensors
 *.bin
 *.pt

@@ -6,8 +6,12 @@ synthetic, deterministically injected bugs, repairing hidden Python bugs
 inside a scope ladder with a minimal-diff regression gate.
 
 **No Kaggle joining, no training, no paid anything happens here.**
-No paid API or teacher model is ever called. Patch generation is a
-clearly-marked placeholder until the Gemma LoRA generator exists.
+No paid API or teacher model is ever called. `patcher_stub.generate_patch`
+is the inference-only candidate generator (first candidate through the
+regression gate; the full loop is `inference_agent.run_inference_only`).
+It is not a placeholder, and it is not the trained LoRA: no trained
+adapter exists (v1 0/18 held-out, v19 0/32 on the pre-registered kill
+test, 7 Nov 2026).
 
 ## Layout
 
@@ -18,7 +22,7 @@ clearly-marked placeholder until the Gemma LoRA generator exists.
 | `test_runner.py` | Run unittest ids in subprocesses with hard timeouts; capped regression suite (default max 15 tests / 90 s, abort on first failure). |
 | `scope_ladder.py` | Ladder controller: rung 1 = trace files, rung 2 = imports/callers (AST), rung 3 = wider repo search; each rung time-boxed (30/60/120 s defaults). |
 | `regression_gate.py` | Accept a patch only if the failing test passes AND the capped regression suite stays green; otherwise roll back. Reports diff size (lines/files). |
-| `patcher_stub.py` | `FileEdit` (exact old→new text), apply/rollback, and `generate_patch` — the PLACEHOLDER for the Gemma LoRA. |
+| `patcher_stub.py` | `FileEdit` (exact old→new text), apply/rollback, and `generate_patch` — inference-only candidate generator (first candidate, or `None` when there is none; full loop in `inference_agent.py`). |
 | `demo.py` | Runnable demo against a temp copy of `demo_repo/`. |
 | `demo_repo/` | Toy buggy repo: `calculator.add` subtracts instead of adding; `test_add` fails, `test_multiply`/`test_subtract` pass. |
 | `tests/test_harness.py` | Unit tests for all of the above (stdlib unittest). |
@@ -41,10 +45,12 @@ result = run_ladder(
 ```
 
 `patch_fn` signature: `(context_text: str, rung: int) -> list[FileEdit] | None`.
-Return `None` for "no patch at this rung". Until the LoRA generator
-exists, pass your own `patch_fn` (as `demo.py` does) or accept the
-`NotImplementedError` from `patcher_stub.generate_patch` — a missing
-model is never silently treated as "no patch needed".
+Return `None` for "no patch at this rung". Pass your own `patch_fn`
+(as `demo.py` does), or use `patcher_stub.generate_patch` — it returns
+`None` when it has no candidate, so a missing model is never silently
+treated as "no patch needed". (History: `generate_patch` used to raise
+`NotImplementedError` as a placeholder for the future trained LoRA
+generator; it no longer does — see `patcher_stub.py`.)
 
 Patch application rule: `old_text` must occur **exactly once** in the
 file, otherwise the patch is rejected atomically (nothing half-applied).

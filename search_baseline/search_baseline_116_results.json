@@ -1,0 +1,4085 @@
+{
+  "method": "inverse-operator search baseline, NOT learned repair: for each of the 116 held-out tasks (107 singles + 9 compounds, in file order), every single-operator inverse is tried exhaustively over every candidate site in task.py (seed-blind); a candidate counts as a fix only if the failing test passes under harness/test_runner.run_one_test. dropped_condition and removed_assignment have no deterministic inverse (information destroyed) and were not attempted; removed_return has no true inverse \u2014 a labelled reconstruction guess (return last assigned local) was tried separately and is never counted as an inverse fix.",
+  "heldout_file": "kaggle/dev_tasks_heldout.jsonl",
+  "task_set": "all116",
+  "task_set_rule": "all 116 tasks in file order from kaggle/dev_tasks_heldout.jsonl",
+  "task_ids": [
+    "heldout-compound-off_by_one-0",
+    "heldout-compound-wrong_constant-0",
+    "heldout-compound-wrong_constant-2",
+    "heldout-compound-wrong_constant-4",
+    "heldout-compound-wrong_constant-6",
+    "heldout-compound-wrong_constant-8",
+    "heldout-compound-removed_return-0",
+    "heldout-compound-removed_assignment-0",
+    "heldout-compound-removed_assignment-1",
+    "heldout-loan-off_by_one-0",
+    "heldout-loan-off_by_one-1",
+    "heldout-loan-off_by_one-2",
+    "heldout-loan-swapped_operands-0",
+    "heldout-loan-swapped_operands-1",
+    "heldout-loan-swapped_operands-3",
+    "heldout-loan-swapped_operands-6",
+    "heldout-loan-wrong_constant-0",
+    "heldout-loan-wrong_constant-1",
+    "heldout-loan-wrong_constant-2",
+    "heldout-loan-wrong_constant-4",
+    "heldout-loan-wrong_constant-5",
+    "heldout-loan-wrong_constant-6",
+    "heldout-loan-wrong_constant-8",
+    "heldout-loan-wrong_constant-9",
+    "heldout-loan-wrong_constant-10",
+    "heldout-loan-wrong_constant-12",
+    "heldout-loan-wrong_constant-13",
+    "heldout-loan-wrong_constant-14",
+    "heldout-loan-wrong_constant-16",
+    "heldout-loan-wrong_constant-17",
+    "heldout-loan-wrong_constant-18",
+    "heldout-loan-removed_return-0",
+    "heldout-loan-removed_assignment-0",
+    "heldout-loan-removed_assignment-1",
+    "heldout-circle-off_by_one-1",
+    "heldout-circle-off_by_one-3",
+    "heldout-circle-off_by_one-4",
+    "heldout-circle-dropped_condition-1",
+    "heldout-circle-swapped_boolean-0",
+    "heldout-circle-removed_return-0",
+    "heldout-circle-removed_return-1",
+    "heldout-kinetic-off_by_one-1",
+    "heldout-kinetic-off_by_one-2",
+    "heldout-kinetic-off_by_one-4",
+    "heldout-kinetic-off_by_one-5",
+    "heldout-kinetic-swapped_operands-0",
+    "heldout-kinetic-dropped_condition-1",
+    "heldout-kinetic-swapped_boolean-0",
+    "heldout-kinetic-removed_return-0",
+    "heldout-kinetic-removed_return-1",
+    "heldout-days-off_by_one-0",
+    "heldout-days-off_by_one-1",
+    "heldout-days-off_by_one-2",
+    "heldout-days-off_by_one-3",
+    "heldout-days-off_by_one-4",
+    "heldout-days-off_by_one-5",
+    "heldout-days-off_by_one-6",
+    "heldout-days-off_by_one-7",
+    "heldout-days-off_by_one-8",
+    "heldout-days-swapped_operands-0",
+    "heldout-days-removed_return-0",
+    "heldout-days-removed_assignment-0",
+    "heldout-days-removed_assignment-1",
+    "heldout-days-removed_assignment-2",
+    "heldout-variance-swapped_operands-0",
+    "heldout-variance-swapped_operands-3",
+    "heldout-variance-swapped_operands-4",
+    "heldout-variance-swapped_operands-5",
+    "heldout-variance-removed_return-0",
+    "heldout-variance-removed_assignment-0",
+    "heldout-variance-removed_assignment-1",
+    "heldout-variance-removed_assignment-2",
+    "heldout-variance-removed_assignment-3",
+    "heldout-isbn-swapped_operands-0",
+    "heldout-isbn-swapped_operands-3",
+    "heldout-isbn-swapped_operands-4",
+    "heldout-isbn-swapped_operands-5",
+    "heldout-isbn-wrong_comparator-0",
+    "heldout-isbn-removed_return-0",
+    "heldout-isbn-removed_assignment-0",
+    "heldout-isbn-removed_assignment-1",
+    "heldout-isbn-removed_assignment-2",
+    "heldout-roman-swapped_operands-0",
+    "heldout-roman-removed_return-0",
+    "heldout-roman-removed_assignment-0",
+    "heldout-roman-removed_assignment-1",
+    "heldout-roman-removed_assignment-2",
+    "heldout-roman-removed_assignment-3",
+    "heldout-pagination-swapped_operands-0",
+    "heldout-pagination-swapped_operands-1",
+    "heldout-pagination-removed_return-1",
+    "heldout-recipe-swapped_operands-0",
+    "heldout-recipe-removed_return-1",
+    "heldout-dilution-swapped_operands-0",
+    "heldout-dilution-wrong_comparator-0",
+    "heldout-dilution-dropped_condition-1",
+    "heldout-dilution-swapped_boolean-0",
+    "heldout-dilution-removed_return-0",
+    "heldout-dilution-removed_return-1",
+    "heldout-pressure-swapped_operands-0",
+    "heldout-pressure-wrong_comparator-0",
+    "heldout-pressure-dropped_condition-1",
+    "heldout-pressure-swapped_boolean-0",
+    "heldout-pressure-removed_return-0",
+    "heldout-pressure-removed_return-1",
+    "heldout-ohm-removed_return-0",
+    "heldout-kelvin-removed_return-0",
+    "heldout-taxi-dropped_condition-1",
+    "heldout-taxi-swapped_boolean-0",
+    "heldout-taxi-removed_return-0",
+    "heldout-taxi-removed_assignment-0",
+    "heldout-taxi-removed_assignment-1",
+    "heldout-gpa-removed_return-0",
+    "heldout-tax-wrong_comparator-0",
+    "heldout-tax-wrong_comparator-1",
+    "heldout-tax-wrong_comparator-2"
+  ],
+  "n_tasks": 116,
+  "total_candidates_tried": 6713,
+  "candidates_by_inverse": {
+    "off_by_one": 1730,
+    "swapped_operands": 549,
+    "wrong_constant": 4325,
+    "removed_return_reconstruction": 8,
+    "wrong_comparator": 68,
+    "swapped_boolean": 33
+  },
+  "total_fixed_any_inverse": 77,
+  "total_fixed_matched_inverse": 71,
+  "total_gate_accepted": 77,
+  "wilson_95_pooled_any_inverse": [
+    0.57,
+    0.74
+  ],
+  "wilson_95_pooled_matched_inverse": [
+    0.52,
+    0.7
+  ],
+  "by_operator": {
+    "off_by_one": {
+      "n": 20,
+      "fixed_any_inverse": 20,
+      "fixed_matched_inverse": 20,
+      "gate_accepted": 20,
+      "fixed_by_reconstruction_guess": 0,
+      "wilson_95_any_inverse": [
+        0.84,
+        1.0
+      ],
+      "wilson_95_matched_inverse": [
+        0.84,
+        1.0
+      ]
+    },
+    "swapped_operands": {
+      "n": 20,
+      "fixed_any_inverse": 20,
+      "fixed_matched_inverse": 20,
+      "gate_accepted": 20,
+      "fixed_by_reconstruction_guess": 0,
+      "wilson_95_any_inverse": [
+        0.84,
+        1.0
+      ],
+      "wilson_95_matched_inverse": [
+        0.84,
+        1.0
+      ]
+    },
+    "wrong_comparator": {
+      "n": 6,
+      "fixed_any_inverse": 6,
+      "fixed_matched_inverse": 6,
+      "gate_accepted": 6,
+      "fixed_by_reconstruction_guess": 0,
+      "wilson_95_any_inverse": [
+        0.61,
+        1.0
+      ],
+      "wilson_95_matched_inverse": [
+        0.61,
+        1.0
+      ]
+    },
+    "dropped_condition": {
+      "n": 5,
+      "fixed_any_inverse": 5,
+      "fixed_matched_inverse": 0,
+      "gate_accepted": 5,
+      "fixed_by_reconstruction_guess": 0,
+      "wilson_95_any_inverse": [
+        0.57,
+        1.0
+      ],
+      "wilson_95_matched_inverse": [
+        0.0,
+        0.43
+      ]
+    },
+    "swapped_boolean": {
+      "n": 5,
+      "fixed_any_inverse": 5,
+      "fixed_matched_inverse": 5,
+      "gate_accepted": 5,
+      "fixed_by_reconstruction_guess": 0,
+      "wilson_95_any_inverse": [
+        0.57,
+        1.0
+      ],
+      "wilson_95_matched_inverse": [
+        0.57,
+        1.0
+      ]
+    },
+    "wrong_constant": {
+      "n": 20,
+      "fixed_any_inverse": 20,
+      "fixed_matched_inverse": 20,
+      "gate_accepted": 20,
+      "fixed_by_reconstruction_guess": 0,
+      "wilson_95_any_inverse": [
+        0.84,
+        1.0
+      ],
+      "wilson_95_matched_inverse": [
+        0.84,
+        1.0
+      ]
+    },
+    "removed_return": {
+      "n": 20,
+      "fixed_any_inverse": 0,
+      "fixed_matched_inverse": 0,
+      "gate_accepted": 0,
+      "fixed_by_reconstruction_guess": 4,
+      "wilson_95_any_inverse": [
+        0.0,
+        0.16
+      ],
+      "wilson_95_matched_inverse": [
+        0.0,
+        0.16
+      ]
+    },
+    "removed_assignment": {
+      "n": 20,
+      "fixed_any_inverse": 1,
+      "fixed_matched_inverse": 0,
+      "gate_accepted": 1,
+      "fixed_by_reconstruction_guess": 0,
+      "wilson_95_any_inverse": [
+        0.01,
+        0.24
+      ],
+      "wilson_95_matched_inverse": [
+        0.0,
+        0.16
+      ]
+    }
+  },
+  "by_kind": {
+    "singles": {
+      "n": 107,
+      "fixed_any_inverse": 71,
+      "fixed_matched_inverse": 65,
+      "gate_accepted": 71,
+      "fixed_by_reconstruction_guess": 3,
+      "wilson_95_any_inverse": [
+        0.57,
+        0.75
+      ],
+      "wilson_95_matched_inverse": [
+        0.51,
+        0.69
+      ]
+    },
+    "compounds": {
+      "n": 9,
+      "fixed_any_inverse": 6,
+      "fixed_matched_inverse": 6,
+      "gate_accepted": 6,
+      "fixed_by_reconstruction_guess": 1,
+      "wilson_95_any_inverse": [
+        0.35,
+        0.88
+      ],
+      "wilson_95_matched_inverse": [
+        0.35,
+        0.88
+      ]
+    }
+  },
+  "elapsed_secs": 697.2,
+  "dry_run": false,
+  "per_task": [
+    {
+      "task_id": "heldout-compound-off_by_one-0",
+      "bug_class": "off_by_one",
+      "candidates_tried": 18,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "detail": "off_by_one site 0 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-compound-wrong_constant-0",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 18,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -2,
+          "detail": "wrong_constant site 0 param -2",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-compound-wrong_constant-2",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 18,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -4,
+          "detail": "wrong_constant site 0 param -4",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-compound-wrong_constant-4",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 18,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -6,
+          "detail": "wrong_constant site 0 param -6",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-compound-wrong_constant-6",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 18,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -3,
+          "detail": "wrong_constant site 0 param -3",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-compound-wrong_constant-8",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 18,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -5,
+          "detail": "wrong_constant site 0 param -5",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-compound-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 19,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_constant": 10,
+        "removed_return_reconstruction": 1
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "removed_return_reconstruction",
+          "site": 5,
+          "param": "total",
+          "detail": "return total (last assigned local before line 5)",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": true,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-compound-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 18,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-compound-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 9,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 2,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-loan-off_by_one-0",
+      "bug_class": "off_by_one",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "detail": "off_by_one site 0 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-off_by_one-1",
+      "bug_class": "off_by_one",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "detail": "off_by_one site 1 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-off_by_one-2",
+      "bug_class": "off_by_one",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "detail": "off_by_one site 2 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-swapped_operands-1",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 1,
+          "param": null,
+          "detail": "swapped_operands site 1 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-swapped_operands-3",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 3,
+          "param": null,
+          "detail": "swapped_operands site 3 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-swapped_operands-6",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 6,
+          "param": null,
+          "detail": "swapped_operands site 6 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-0",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -2,
+          "detail": "wrong_constant site 0 param -2",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-1",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -3,
+          "detail": "wrong_constant site 1 param -3",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-2",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -4,
+          "detail": "wrong_constant site 2 param -4",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-4",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -6,
+          "detail": "wrong_constant site 0 param -6",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-5",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -2,
+          "detail": "wrong_constant site 1 param -2",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-6",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -3,
+          "detail": "wrong_constant site 2 param -3",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-8",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -5,
+          "detail": "wrong_constant site 0 param -5",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-9",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -6,
+          "detail": "wrong_constant site 1 param -6",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-10",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -2,
+          "detail": "wrong_constant site 2 param -2",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-12",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -4,
+          "detail": "wrong_constant site 0 param -4",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-13",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -5,
+          "detail": "wrong_constant site 1 param -5",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-14",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -6,
+          "detail": "wrong_constant site 2 param -6",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-16",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -3,
+          "detail": "wrong_constant site 0 param -3",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-17",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -4,
+          "detail": "wrong_constant site 1 param -4",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-18",
+      "bug_class": "wrong_constant",
+      "candidates_tried": 36,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 8,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -5,
+          "detail": "wrong_constant site 2 param -5",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-loan-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 26,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_constant": 15,
+        "removed_return_reconstruction": 1
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-loan-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 28,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 7,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-loan-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 27,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 6,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-circle-off_by_one-1",
+      "bug_class": "off_by_one",
+      "candidates_tried": 27,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "detail": "off_by_one site 1 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-circle-off_by_one-3",
+      "bug_class": "off_by_one",
+      "candidates_tried": 27,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "detail": "off_by_one site 0 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_comparator",
+          "site": 0,
+          "param": null,
+          "detail": "wrong_comparator site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-circle-off_by_one-4",
+      "bug_class": "off_by_one",
+      "candidates_tried": 27,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "detail": "off_by_one site 1 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-circle-dropped_condition-1",
+      "bug_class": "dropped_condition",
+      "candidates_tried": 19,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_boolean site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-circle-swapped_boolean-0",
+      "bug_class": "swapped_boolean",
+      "candidates_tried": 27,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_boolean site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-circle-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 20,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-circle-removed_return-1",
+      "bug_class": "removed_return",
+      "candidates_tried": 25,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 2,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-kinetic-off_by_one-1",
+      "bug_class": "off_by_one",
+      "candidates_tried": 27,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "detail": "off_by_one site 1 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-kinetic-off_by_one-2",
+      "bug_class": "off_by_one",
+      "candidates_tried": 27,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "detail": "off_by_one site 2 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-kinetic-off_by_one-4",
+      "bug_class": "off_by_one",
+      "candidates_tried": 27,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "detail": "off_by_one site 1 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-kinetic-off_by_one-5",
+      "bug_class": "off_by_one",
+      "candidates_tried": 27,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": 1,
+          "detail": "off_by_one site 2 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-kinetic-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 27,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-kinetic-dropped_condition-1",
+      "bug_class": "dropped_condition",
+      "candidates_tried": 19,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_boolean site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-kinetic-swapped_boolean-0",
+      "bug_class": "swapped_boolean",
+      "candidates_tried": 27,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_boolean site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-kinetic-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 20,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-kinetic-removed_return-1",
+      "bug_class": "removed_return",
+      "candidates_tried": 17,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 1,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-days-off_by_one-0",
+      "bug_class": "off_by_one",
+      "candidates_tried": 185,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "detail": "off_by_one site 0 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "detail": "off_by_one site 1 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-days-off_by_one-1",
+      "bug_class": "off_by_one",
+      "candidates_tried": 185,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "detail": "off_by_one site 0 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "detail": "off_by_one site 1 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-days-off_by_one-2",
+      "bug_class": "off_by_one",
+      "candidates_tried": 185,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "detail": "off_by_one site 0 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "detail": "off_by_one site 1 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "detail": "off_by_one site 2 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": -1,
+          "detail": "off_by_one site 3 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": -1,
+          "detail": "off_by_one site 4 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": -1,
+          "detail": "off_by_one site 5 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": -1,
+          "detail": "off_by_one site 6 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": -1,
+          "detail": "off_by_one site 7 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": -1,
+          "detail": "off_by_one site 8 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": -1,
+          "detail": "off_by_one site 9 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": -1,
+          "detail": "off_by_one site 10 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-days-off_by_one-3",
+      "bug_class": "off_by_one",
+      "candidates_tried": 185,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "detail": "off_by_one site 0 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "detail": "off_by_one site 1 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": 1,
+          "detail": "off_by_one site 2 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": 1,
+          "detail": "off_by_one site 3 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": 1,
+          "detail": "off_by_one site 4 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": 1,
+          "detail": "off_by_one site 5 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": 1,
+          "detail": "off_by_one site 6 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": 1,
+          "detail": "off_by_one site 7 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": 1,
+          "detail": "off_by_one site 8 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": 1,
+          "detail": "off_by_one site 9 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": 1,
+          "detail": "off_by_one site 10 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-days-off_by_one-4",
+      "bug_class": "off_by_one",
+      "candidates_tried": 185,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "detail": "off_by_one site 0 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "detail": "off_by_one site 1 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "detail": "off_by_one site 2 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": -1,
+          "detail": "off_by_one site 3 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": -1,
+          "detail": "off_by_one site 4 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": -1,
+          "detail": "off_by_one site 5 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": -1,
+          "detail": "off_by_one site 6 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": -1,
+          "detail": "off_by_one site 7 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": -1,
+          "detail": "off_by_one site 8 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": -1,
+          "detail": "off_by_one site 9 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": -1,
+          "detail": "off_by_one site 10 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-days-off_by_one-5",
+      "bug_class": "off_by_one",
+      "candidates_tried": 185,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "detail": "off_by_one site 0 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "detail": "off_by_one site 1 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": 1,
+          "detail": "off_by_one site 2 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": 1,
+          "detail": "off_by_one site 3 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": 1,
+          "detail": "off_by_one site 4 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": 1,
+          "detail": "off_by_one site 5 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": 1,
+          "detail": "off_by_one site 6 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": 1,
+          "detail": "off_by_one site 7 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": 1,
+          "detail": "off_by_one site 8 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": 1,
+          "detail": "off_by_one site 9 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": 1,
+          "detail": "off_by_one site 10 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-days-off_by_one-6",
+      "bug_class": "off_by_one",
+      "candidates_tried": 185,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "detail": "off_by_one site 0 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "detail": "off_by_one site 1 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "detail": "off_by_one site 2 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": -1,
+          "detail": "off_by_one site 3 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": -1,
+          "detail": "off_by_one site 4 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": -1,
+          "detail": "off_by_one site 5 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": -1,
+          "detail": "off_by_one site 6 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": -1,
+          "detail": "off_by_one site 7 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": -1,
+          "detail": "off_by_one site 8 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": -1,
+          "detail": "off_by_one site 9 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": -1,
+          "detail": "off_by_one site 10 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-days-off_by_one-7",
+      "bug_class": "off_by_one",
+      "candidates_tried": 185,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "detail": "off_by_one site 0 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "detail": "off_by_one site 1 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": 1,
+          "detail": "off_by_one site 2 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": 1,
+          "detail": "off_by_one site 3 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": 1,
+          "detail": "off_by_one site 4 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": 1,
+          "detail": "off_by_one site 5 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": 1,
+          "detail": "off_by_one site 6 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": 1,
+          "detail": "off_by_one site 7 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": 1,
+          "detail": "off_by_one site 8 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": 1,
+          "detail": "off_by_one site 9 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": 1,
+          "detail": "off_by_one site 10 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-days-off_by_one-8",
+      "bug_class": "off_by_one",
+      "candidates_tried": 185,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "detail": "off_by_one site 0 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "detail": "off_by_one site 1 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "detail": "off_by_one site 2 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": -1,
+          "detail": "off_by_one site 3 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": -1,
+          "detail": "off_by_one site 4 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": -1,
+          "detail": "off_by_one site 5 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": -1,
+          "detail": "off_by_one site 6 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": -1,
+          "detail": "off_by_one site 7 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": -1,
+          "detail": "off_by_one site 8 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": -1,
+          "detail": "off_by_one site 9 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": -1,
+          "detail": "off_by_one site 10 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-days-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 185,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-days-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 186,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130,
+        "removed_return_reconstruction": 1
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "removed_return_reconstruction",
+          "site": 6,
+          "param": "total",
+          "detail": "return total (last assigned local before line 6)",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": true,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-days-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 101,
+      "candidates_by_inverse": {
+        "off_by_one": 28,
+        "swapped_operands": 3,
+        "wrong_constant": 70
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-days-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 185,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 3,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-days-removed_assignment-2",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 184,
+      "candidates_by_inverse": {
+        "off_by_one": 52,
+        "swapped_operands": 2,
+        "wrong_constant": 130
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-variance-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 13,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 6,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-variance-swapped_operands-3",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 14,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 7,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 3,
+          "param": null,
+          "detail": "swapped_operands site 3 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "swapped_operands",
+          "site": 4,
+          "param": null,
+          "detail": "swapped_operands site 4 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-variance-swapped_operands-4",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 14,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 7,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 3,
+          "param": null,
+          "detail": "swapped_operands site 3 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "swapped_operands",
+          "site": 4,
+          "param": null,
+          "detail": "swapped_operands site 4 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-variance-swapped_operands-5",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 13,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 6,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 5,
+          "param": null,
+          "detail": "swapped_operands site 5 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-variance-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 13,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 5,
+        "wrong_constant": 5,
+        "removed_return_reconstruction": 1
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 13,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 6,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 12,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 5,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-2",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 6,
+      "candidates_by_inverse": {
+        "swapped_operands": 6
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-3",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 10,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 3,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-isbn-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 116,
+      "candidates_by_inverse": {
+        "off_by_one": 30,
+        "swapped_operands": 9,
+        "wrong_comparator": 2,
+        "wrong_constant": 75
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-isbn-swapped_operands-3",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 116,
+      "candidates_by_inverse": {
+        "off_by_one": 30,
+        "swapped_operands": 9,
+        "wrong_comparator": 2,
+        "wrong_constant": 75
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 3,
+          "param": null,
+          "detail": "swapped_operands site 3 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-isbn-swapped_operands-4",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 116,
+      "candidates_by_inverse": {
+        "off_by_one": 30,
+        "swapped_operands": 9,
+        "wrong_comparator": 2,
+        "wrong_constant": 75
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "detail": "off_by_one site 2 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "swapped_operands",
+          "site": 4,
+          "param": null,
+          "detail": "swapped_operands site 4 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -6,
+          "detail": "wrong_constant site 0 param -6",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -5,
+          "detail": "wrong_constant site 1 param -5",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -3,
+          "detail": "wrong_constant site 2 param -3",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 4,
+          "param": -4,
+          "detail": "wrong_constant site 4 param -4",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -2,
+          "detail": "wrong_constant site 5 param -2",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 7,
+          "param": -4,
+          "detail": "wrong_constant site 7 param -4",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-isbn-swapped_operands-5",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 116,
+      "candidates_by_inverse": {
+        "off_by_one": 30,
+        "swapped_operands": 9,
+        "wrong_comparator": 2,
+        "wrong_constant": 75
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 5,
+          "param": null,
+          "detail": "swapped_operands site 5 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -5,
+          "detail": "wrong_constant site 5 param -5",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 6,
+          "param": -3,
+          "detail": "wrong_constant site 6 param -3",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-isbn-wrong_comparator-0",
+      "bug_class": "wrong_comparator",
+      "candidates_tried": 116,
+      "candidates_by_inverse": {
+        "off_by_one": 30,
+        "swapped_operands": 9,
+        "wrong_comparator": 2,
+        "wrong_constant": 75
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": 1,
+          "detail": "off_by_one site 3 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": 1,
+          "detail": "off_by_one site 4 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_comparator",
+          "site": 0,
+          "param": null,
+          "detail": "wrong_comparator site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -2,
+          "detail": "wrong_constant site 0 param -2",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 4,
+          "param": -4,
+          "detail": "wrong_constant site 4 param -4",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-isbn-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 93,
+      "candidates_by_inverse": {
+        "off_by_one": 24,
+        "swapped_operands": 6,
+        "wrong_comparator": 2,
+        "wrong_constant": 60,
+        "removed_return_reconstruction": 1
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-isbn-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 109,
+      "candidates_by_inverse": {
+        "off_by_one": 28,
+        "swapped_operands": 9,
+        "wrong_comparator": 2,
+        "wrong_constant": 70
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-isbn-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 86,
+      "candidates_by_inverse": {
+        "off_by_one": 22,
+        "swapped_operands": 8,
+        "wrong_comparator": 1,
+        "wrong_constant": 55
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-isbn-removed_assignment-2",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 114,
+      "candidates_by_inverse": {
+        "off_by_one": 30,
+        "swapped_operands": 7,
+        "wrong_comparator": 2,
+        "wrong_constant": 75
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 6,
+          "param": -3,
+          "detail": "wrong_constant site 6 param -3",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-roman-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 142,
+      "candidates_by_inverse": {
+        "off_by_one": 40,
+        "swapped_operands": 2,
+        "wrong_constant": 100
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-roman-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 143,
+      "candidates_by_inverse": {
+        "off_by_one": 40,
+        "swapped_operands": 2,
+        "wrong_constant": 100,
+        "removed_return_reconstruction": 1
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "removed_return_reconstruction",
+          "site": 7,
+          "param": "out",
+          "detail": "return out (last assigned local before line 7)",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": true,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-roman-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 51,
+      "candidates_by_inverse": {
+        "off_by_one": 14,
+        "swapped_operands": 2,
+        "wrong_constant": 35
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-roman-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 142,
+      "candidates_by_inverse": {
+        "off_by_one": 40,
+        "swapped_operands": 2,
+        "wrong_constant": 100
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-roman-removed_assignment-2",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 142,
+      "candidates_by_inverse": {
+        "off_by_one": 40,
+        "swapped_operands": 2,
+        "wrong_constant": 100
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-roman-removed_assignment-3",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 140,
+      "candidates_by_inverse": {
+        "off_by_one": 40,
+        "wrong_constant": 100
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-pagination-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 34,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 5,
+        "wrong_comparator": 1,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-pagination-swapped_operands-1",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 34,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 5,
+        "wrong_comparator": 1,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 1,
+          "param": null,
+          "detail": "swapped_operands site 1 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-pagination-removed_return-1",
+      "bug_class": "removed_return",
+      "candidates_tried": 24,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 2,
+        "wrong_comparator": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-recipe-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 25,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 3,
+        "wrong_comparator": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-recipe-removed_return-1",
+      "bug_class": "removed_return",
+      "candidates_tried": 23,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 1,
+        "wrong_comparator": 1,
+        "wrong_constant": 15
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-dilution-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 20,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-dilution-wrong_comparator-0",
+      "bug_class": "wrong_comparator",
+      "candidates_tried": 20,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "detail": "off_by_one site 0 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_comparator",
+          "site": 0,
+          "param": null,
+          "detail": "wrong_comparator site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-dilution-dropped_condition-1",
+      "bug_class": "dropped_condition",
+      "candidates_tried": 12,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 4,
+        "swapped_boolean": 1,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_boolean site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-dilution-swapped_boolean-0",
+      "bug_class": "swapped_boolean",
+      "candidates_tried": 20,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_boolean site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-dilution-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 13,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 4,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-dilution-removed_return-1",
+      "bug_class": "removed_return",
+      "candidates_tried": 18,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 2,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-pressure-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "candidates_tried": 18,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 2,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-pressure-wrong_comparator-0",
+      "bug_class": "wrong_comparator",
+      "candidates_tried": 18,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 2,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "detail": "off_by_one site 0 param 1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_comparator",
+          "site": 0,
+          "param": null,
+          "detail": "wrong_comparator site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-pressure-dropped_condition-1",
+      "bug_class": "dropped_condition",
+      "candidates_tried": 10,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 2,
+        "swapped_boolean": 1,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_boolean site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-pressure-swapped_boolean-0",
+      "bug_class": "swapped_boolean",
+      "candidates_tried": 18,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 2,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_operands site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_boolean site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-pressure-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 11,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 2,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-pressure-removed_return-1",
+      "bug_class": "removed_return",
+      "candidates_tried": 17,
+      "candidates_by_inverse": {
+        "off_by_one": 4,
+        "swapped_operands": 1,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 10
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-ohm-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 1,
+      "candidates_by_inverse": {
+        "swapped_operands": 1
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-kelvin-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 8,
+      "candidates_by_inverse": {
+        "off_by_one": 2,
+        "swapped_operands": 1,
+        "wrong_constant": 5
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-taxi-dropped_condition-1",
+      "bug_class": "dropped_condition",
+      "candidates_tried": 32,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 3,
+        "swapped_boolean": 1,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "detail": "off_by_one site 1 param -1",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_boolean site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -5,
+          "detail": "wrong_constant site 0 param -5",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -5,
+          "detail": "wrong_constant site 2 param -5",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-taxi-swapped_boolean-0",
+      "bug_class": "swapped_boolean",
+      "candidates_tried": 40,
+      "candidates_by_inverse": {
+        "off_by_one": 10,
+        "swapped_operands": 3,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 25
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "detail": "swapped_boolean site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-taxi-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 41,
+      "candidates_by_inverse": {
+        "off_by_one": 10,
+        "swapped_operands": 3,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 25,
+        "removed_return_reconstruction": 1
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "removed_return_reconstruction",
+          "site": 6,
+          "param": "total",
+          "detail": "return total (last assigned local before line 6)",
+          "regressions_passed": true,
+          "regressions_run": 2,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": true,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-taxi-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 33,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 3,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-taxi-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "candidates_tried": 31,
+      "candidates_by_inverse": {
+        "off_by_one": 8,
+        "swapped_operands": 1,
+        "wrong_comparator": 1,
+        "swapped_boolean": 1,
+        "wrong_constant": 20
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-gpa-removed_return-0",
+      "bug_class": "removed_return",
+      "candidates_tried": 26,
+      "candidates_by_inverse": {
+        "off_by_one": 6,
+        "swapped_operands": 4,
+        "wrong_constant": 15,
+        "removed_return_reconstruction": 1
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [],
+      "fixed_by_any_inverse": false,
+      "fixed_by_matched_inverse": false,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": false
+    },
+    {
+      "task_id": "heldout-tax-wrong_comparator-0",
+      "bug_class": "wrong_comparator",
+      "candidates_tried": 131,
+      "candidates_by_inverse": {
+        "off_by_one": 34,
+        "swapped_operands": 6,
+        "wrong_comparator": 6,
+        "wrong_constant": 85
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "detail": "off_by_one site 0 param -1",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_comparator",
+          "site": 0,
+          "param": null,
+          "detail": "wrong_comparator site 0 param None",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -2,
+          "detail": "wrong_constant site 0 param -2",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -3,
+          "detail": "wrong_constant site 0 param -3",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -4,
+          "detail": "wrong_constant site 0 param -4",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -5,
+          "detail": "wrong_constant site 0 param -5",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -6,
+          "detail": "wrong_constant site 0 param -6",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-tax-wrong_comparator-1",
+      "bug_class": "wrong_comparator",
+      "candidates_tried": 131,
+      "candidates_by_inverse": {
+        "off_by_one": 34,
+        "swapped_operands": 6,
+        "wrong_comparator": 6,
+        "wrong_constant": 85
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "detail": "off_by_one site 2 param -1",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_comparator",
+          "site": 1,
+          "param": null,
+          "detail": "wrong_comparator site 1 param None",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -2,
+          "detail": "wrong_constant site 2 param -2",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -3,
+          "detail": "wrong_constant site 2 param -3",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -4,
+          "detail": "wrong_constant site 2 param -4",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -5,
+          "detail": "wrong_constant site 2 param -5",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -6,
+          "detail": "wrong_constant site 2 param -6",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    },
+    {
+      "task_id": "heldout-tax-wrong_comparator-2",
+      "bug_class": "wrong_comparator",
+      "candidates_tried": 131,
+      "candidates_by_inverse": {
+        "off_by_one": 34,
+        "swapped_operands": 6,
+        "wrong_comparator": 6,
+        "wrong_constant": 85
+      },
+      "baseline_failing_passed_on_buggy": false,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": -1,
+          "detail": "off_by_one site 5 param -1",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_comparator",
+          "site": 2,
+          "param": null,
+          "detail": "wrong_comparator site 2 param None",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -2,
+          "detail": "wrong_constant site 5 param -2",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -3,
+          "detail": "wrong_constant site 5 param -3",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -4,
+          "detail": "wrong_constant site 5 param -4",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -5,
+          "detail": "wrong_constant site 5 param -5",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -6,
+          "detail": "wrong_constant site 5 param -6",
+          "regressions_passed": true,
+          "regressions_run": 3,
+          "regressions_failed": []
+        }
+      ],
+      "fixed_by_any_inverse": true,
+      "fixed_by_matched_inverse": true,
+      "fixed_by_reconstruction_guess": false,
+      "gate_accepted": true
+    }
+  ]
+}

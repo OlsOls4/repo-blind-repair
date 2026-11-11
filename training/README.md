@@ -20,16 +20,19 @@ so the training and evaluation method is auditable.
   adapter (or `--no-adapter` for the base-model baseline). Same Kaggle
   GPU requirement. Label every number from it "held-out synthetic".
 
-## Status (honest, 5 Nov 2026)
+## Status (honest, updated 8 Nov 2026)
 
-- v18 retrain completed 1 Nov (10,000 steps, training loss 0.0191,
-  training loss only). Held-out pilots: 0/18 — the model never emits
-  EOS and loops corrupted output to the 512-token cap.
+- v1 training completed 1 Nov (10,000 steps, training loss 0.0191,
+  training loss only). Held-out pilots: 0/18 — the v1 model never
+  emitted EOS and looped corrupted output to the 512-token cap.
 - Gate 1 (adapter attaches, 328/328) PASSED. Gate 2 (serving)
   INCONCLUSIVE; vLLM serving of a trained adapter UNTESTED.
-- GPU quota fully used (30:00/30 h, no reset date shown); the v19
-  retrain and kill test wait for the weekly reset.
-- The trained v18 adapter is NOT in this repo (failed artefact,
-  0/18). If a future adapter passes the kill test it ships as a
-  GitHub Release asset with its evaluation numbers — never in the
-  git tree (see `.gitignore`).
+- v19 retrain + pre-registered kill test ran 7 Nov 2026 (EOS
+  appended, bug-class label dropped): 0/32 fixed, 0 operators,
+  4/32 parsable — the LoRA route was KILLED. The failure is in
+  the training, not the tasks.
+- The trained v1 adapter is NOT in this repo (failed artefact,
+  0/18), and the v19 adapter does not ship either (0/32 on the
+  kill test). A future adapter would ship as a GitHub Release
+  asset with its evaluation numbers only if it passes the kill
+  test — never in the git tree (see `.gitignore`).

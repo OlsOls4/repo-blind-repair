@@ -156,14 +156,19 @@ class _Mutator(ast.NodeTransformer):
 
     def visit_Compare(self, node):
         if self.operator == "wrong_comparator":
-            if self._is_target(node):
-                op_type = type(node.ops[0])
-                if op_type not in _CMP_SWAP:
-                    return self.generic_visit(node)
-                new = copy.copy(node)
-                new.ops = [_CMP_SWAP[op_type]()] + list(node.ops[1:])
-                self._record(node, new)
-                return new
+            # Only swappable operators are candidate sites
+            # (_candidates counts only those). Check swappability
+            # BEFORE counting: an unswappable comparison (is / in /
+            # is not / not in) must not consume a site index, or
+            # the mutation lands on the wrong node or nowhere (D1,
+            # 8 Nov 2026 — same pattern as _Inverter).
+            if node.ops and type(node.ops[0]) in _CMP_SWAP:
+                if self._is_target(node):
+                    op_type = type(node.ops[0])
+                    new = copy.copy(node)
+                    new.ops = [_CMP_SWAP[op_type]()] + list(node.ops[1:])
+                    self._record(node, new)
+                    return new
         return self.generic_visit(node)
 
     def visit_BoolOp(self, node):

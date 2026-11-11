@@ -1,0 +1,3223 @@
+[
+  {
+    "task_id": "heldout-compound-off_by_one-0",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": false,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 9,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.6,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 0,
+      "param": -1,
+      "detail": "off_by_one site 0 param -1",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        total = total * (2 + rate)\n",
+      "new_text": "        total = total * (1 + rate)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-compound-wrong_constant-0",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": false,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 5,
+    "candidates_total": 9,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 0,
+      "param": -2,
+      "detail": "wrong_constant site 0 param -2",
+      "rank": 5,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        total = total * (3 + rate)\n",
+      "new_text": "        total = total * (1 + rate)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-compound-wrong_constant-2",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": false,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 7,
+    "candidates_total": 9,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.8,
+    "wall_secs": 0.9,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 0,
+      "param": -4,
+      "detail": "wrong_constant site 0 param -4",
+      "rank": 7,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        total = total * (5 + rate)\n",
+      "new_text": "        total = total * (1 + rate)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-compound-wrong_constant-4",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": false,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 9,
+    "candidates_total": 9,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.9,
+    "wall_secs": 1.0,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 0,
+      "param": -6,
+      "detail": "wrong_constant site 0 param -6",
+      "rank": 9,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        total = total * (7 + rate)\n",
+      "new_text": "        total = total * (1 + rate)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-compound-wrong_constant-6",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": false,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 6,
+    "candidates_total": 9,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 0,
+      "param": -3,
+      "detail": "wrong_constant site 0 param -3",
+      "rank": 6,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        total = total * (4 + rate)\n",
+      "new_text": "        total = total * (1 + rate)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-compound-wrong_constant-8",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": false,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 8,
+    "candidates_total": 9,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.8,
+    "wall_secs": 0.9,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 0,
+      "param": -5,
+      "detail": "wrong_constant site 0 param -5",
+      "rank": 8,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        total = total * (6 + rate)\n",
+      "new_text": "        total = total * (1 + rate)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-compound-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": false,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 159,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P0-guess",
+      "inverse": "removed_return_reconstruction",
+      "site": 5,
+      "param": "total",
+      "detail": "R0: return total (last assigned local before line 5)",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return\n",
+      "new_text": "    return total\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-compound-removed_assignment-0",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": false,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 11,
+    "candidates_total": 130,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.1,
+    "wall_secs": 1.2,
+    "candidate": {
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "site": 2,
+      "param": "total = principal",
+      "detail": "re-insert total = principal",
+      "rank": 11,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    pass\n",
+      "new_text": "    total = principal\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-compound-removed_assignment-1",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": false,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 121,
+    "candidates_total": 121,
+    "unappliable": 0,
+    "script_elapsed_secs": 8.4,
+    "wall_secs": 8.5,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-loan-off_by_one-0",
+    "bug_class": "off_by_one",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 9,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.9,
+    "wall_secs": 1.0,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 0,
+      "param": -1,
+      "detail": "off_by_one site 0 param -1",
+      "rank": 9,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    r = annual_rate / 13\n",
+      "new_text": "    r = annual_rate / 12\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-off_by_one-1",
+    "bug_class": "off_by_one",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 10,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.0,
+    "wall_secs": 1.0,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 1,
+      "param": 1,
+      "detail": "off_by_one site 1 param 1",
+      "rank": 10,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    factor = (0 + r) ** months\n",
+      "new_text": "    factor = (1 + r) ** months\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-off_by_one-2",
+    "bug_class": "off_by_one",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 13,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.2,
+    "wall_secs": 1.3,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 2,
+      "param": -1,
+      "detail": "off_by_one site 2 param -1",
+      "rank": 13,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return principal * r * factor / (factor - 2)\n",
+      "new_text": "    return principal * r * factor / (factor - 1)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-swapped_operands-0",
+    "bug_class": "swapped_operands",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    r = 12 / annual_rate\n",
+      "new_text": "    r = annual_rate / 12\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-swapped_operands-1",
+    "bug_class": "swapped_operands",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 2,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 1,
+      "param": null,
+      "detail": "swapped_operands site 1 param None",
+      "rank": 2,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    factor = months ** (1 + r)\n",
+      "new_text": "    factor = (1 + r) ** months\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-swapped_operands-3",
+    "bug_class": "swapped_operands",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 3,
+      "param": null,
+      "detail": "swapped_operands site 3 param None",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return (factor - 1) / (principal * r * factor)\n",
+      "new_text": "    return principal * r * factor / (factor - 1)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-swapped_operands-6",
+    "bug_class": "swapped_operands",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 7,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.8,
+    "wall_secs": 0.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 6,
+      "param": null,
+      "detail": "swapped_operands site 6 param None",
+      "rank": 7,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return principal * r * factor / (1 - factor)\n",
+      "new_text": "    return principal * r * factor / (factor - 1)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-0",
+    "bug_class": "wrong_constant",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 14,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.2,
+    "wall_secs": 1.3,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 0,
+      "param": -2,
+      "detail": "wrong_constant site 0 param -2",
+      "rank": 14,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    r = annual_rate / 14\n",
+      "new_text": "    r = annual_rate / 12\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-1",
+    "bug_class": "wrong_constant",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 20,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.7,
+    "wall_secs": 1.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 1,
+      "param": -3,
+      "detail": "wrong_constant site 1 param -3",
+      "rank": 20,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    factor = (4 + r) ** months\n",
+      "new_text": "    factor = (1 + r) ** months\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-2",
+    "bug_class": "wrong_constant",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 26,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 2.1,
+    "wall_secs": 2.1,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 2,
+      "param": -4,
+      "detail": "wrong_constant site 2 param -4",
+      "rank": 26,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return principal * r * factor / (factor - 5)\n",
+      "new_text": "    return principal * r * factor / (factor - 1)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-4",
+    "bug_class": "wrong_constant",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 18,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.6,
+    "wall_secs": 1.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 0,
+      "param": -6,
+      "detail": "wrong_constant site 0 param -6",
+      "rank": 18,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    r = annual_rate / 18\n",
+      "new_text": "    r = annual_rate / 12\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-5",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 19,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.6,
+    "wall_secs": 1.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 1,
+      "param": -2,
+      "detail": "wrong_constant site 1 param -2",
+      "rank": 19,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    factor = (3 + r) ** months\n",
+      "new_text": "    factor = (1 + r) ** months\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-6",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 25,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 2.0,
+    "wall_secs": 2.1,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 2,
+      "param": -3,
+      "detail": "wrong_constant site 2 param -3",
+      "rank": 25,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return principal * r * factor / (factor - 4)\n",
+      "new_text": "    return principal * r * factor / (factor - 1)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-8",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 17,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.5,
+    "wall_secs": 1.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 0,
+      "param": -5,
+      "detail": "wrong_constant site 0 param -5",
+      "rank": 17,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    r = annual_rate / 17\n",
+      "new_text": "    r = annual_rate / 12\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-9",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 23,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.8,
+    "wall_secs": 1.9,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 1,
+      "param": -6,
+      "detail": "wrong_constant site 1 param -6",
+      "rank": 23,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    factor = (7 + r) ** months\n",
+      "new_text": "    factor = (1 + r) ** months\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-10",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 24,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 2.0,
+    "wall_secs": 2.0,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 2,
+      "param": -2,
+      "detail": "wrong_constant site 2 param -2",
+      "rank": 24,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return principal * r * factor / (factor - 3)\n",
+      "new_text": "    return principal * r * factor / (factor - 1)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-12",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 16,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.4,
+    "wall_secs": 1.4,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 0,
+      "param": -4,
+      "detail": "wrong_constant site 0 param -4",
+      "rank": 16,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    r = annual_rate / 16\n",
+      "new_text": "    r = annual_rate / 12\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-13",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 22,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.8,
+    "wall_secs": 1.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 1,
+      "param": -5,
+      "detail": "wrong_constant site 1 param -5",
+      "rank": 22,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    factor = (6 + r) ** months\n",
+      "new_text": "    factor = (1 + r) ** months\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-14",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 28,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 2.2,
+    "wall_secs": 2.3,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 2,
+      "param": -6,
+      "detail": "wrong_constant site 2 param -6",
+      "rank": 28,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return principal * r * factor / (factor - 7)\n",
+      "new_text": "    return principal * r * factor / (factor - 1)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-16",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 15,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.3,
+    "wall_secs": 1.4,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 0,
+      "param": -3,
+      "detail": "wrong_constant site 0 param -3",
+      "rank": 15,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    r = annual_rate / 15\n",
+      "new_text": "    r = annual_rate / 12\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-17",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 21,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.8,
+    "wall_secs": 1.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 1,
+      "param": -4,
+      "detail": "wrong_constant site 1 param -4",
+      "rank": 21,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    factor = (5 + r) ** months\n",
+      "new_text": "    factor = (1 + r) ** months\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-wrong_constant-18",
+    "bug_class": "wrong_constant",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 27,
+    "candidates_total": 28,
+    "unappliable": 0,
+    "script_elapsed_secs": 2.1,
+    "wall_secs": 2.2,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 2,
+      "param": -5,
+      "detail": "wrong_constant site 2 param -5",
+      "rank": 27,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return principal * r * factor / (factor - 6)\n",
+      "new_text": "    return principal * r * factor / (factor - 1)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": true,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 166,
+    "candidates_total": 166,
+    "unappliable": 0,
+    "script_elapsed_secs": 11.3,
+    "wall_secs": 11.4,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-loan-removed_assignment-0",
+    "bug_class": "removed_assignment",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 21,
+    "candidates_total": 118,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.8,
+    "wall_secs": 1.9,
+    "candidate": {
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "site": 2,
+      "param": "r = annual_rate / 12",
+      "detail": "reuse expr from another function in the file: annual_rate / 12",
+      "rank": 21,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    pass\n",
+      "new_text": "    r = annual_rate / 12\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-loan-removed_assignment-1",
+    "bug_class": "removed_assignment",
+    "is_kill": true,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 117,
+    "candidates_total": 117,
+    "unappliable": 0,
+    "script_elapsed_secs": 8.0,
+    "wall_secs": 8.1,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-circle-off_by_one-1",
+    "bug_class": "off_by_one",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 7,
+    "candidates_total": 18,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.8,
+    "wall_secs": 0.9,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 1,
+      "param": 1,
+      "detail": "off_by_one site 1 param 1",
+      "rank": 7,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        return -1\n",
+      "new_text": "        return 0\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-circle-off_by_one-3",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 18,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.4,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_comparator",
+      "site": 0,
+      "param": null,
+      "detail": "wrong_comparator site 0 param None",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    if checked and radius < -1:\n",
+      "new_text": "    if checked and radius <= -1:\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-circle-off_by_one-4",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 8,
+    "candidates_total": 18,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.8,
+    "wall_secs": 0.9,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 1,
+      "param": -1,
+      "detail": "off_by_one site 1 param -1",
+      "rank": 8,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        return 1\n",
+      "new_text": "        return 0\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-circle-dropped_condition-1",
+    "bug_class": "dropped_condition",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 3,
+    "candidates_total": 46,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.5,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_boolean",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_boolean site 0 param None",
+      "rank": 3,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "def circle_area(radius, checked=True):\n",
+      "new_text": "def circle_area(radius, checked=False):\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-circle-swapped_boolean-0",
+    "bug_class": "swapped_boolean",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 18,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.6,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_boolean",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_boolean site 0 param None",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "def circle_area(radius, checked=False):\n",
+      "new_text": "def circle_area(radius, checked=True):\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-circle-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 12,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.4,
+    "candidate": {
+      "phase": "P0-guard-literal",
+      "inverse": "recon_guard_literal",
+      "site": 3,
+      "param": "0",
+      "detail": "R0: guard-branch bare return -> return 0 (failing test expects 0)",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        return\n",
+      "new_text": "        return 0\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-circle-removed_return-1",
+    "bug_class": "removed_return",
+    "is_kill": true,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 26,
+    "candidates_total": 26,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.9,
+    "wall_secs": 2.0,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-kinetic-off_by_one-1",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 8,
+    "candidates_total": 26,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.8,
+    "wall_secs": 0.9,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 1,
+      "param": 1,
+      "detail": "off_by_one site 1 param 1",
+      "rank": 8,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        return -1\n",
+      "new_text": "        return 0\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-kinetic-off_by_one-2",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 11,
+    "candidates_total": 26,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.0,
+    "wall_secs": 1.1,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 2,
+      "param": -1,
+      "detail": "off_by_one site 2 param -1",
+      "rank": 11,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return mass * velocity * velocity / 3\n",
+      "new_text": "    return mass * velocity * velocity / 2\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-kinetic-off_by_one-4",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 9,
+    "candidates_total": 26,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.9,
+    "wall_secs": 1.0,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 1,
+      "param": -1,
+      "detail": "off_by_one site 1 param -1",
+      "rank": 9,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        return 1\n",
+      "new_text": "        return 0\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-kinetic-off_by_one-5",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 10,
+    "candidates_total": 26,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.0,
+    "wall_secs": 1.0,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 2,
+      "param": 1,
+      "detail": "off_by_one site 2 param 1",
+      "rank": 10,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return mass * velocity * velocity / 1\n",
+      "new_text": "    return mass * velocity * velocity / 2\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-kinetic-swapped_operands-0",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 2,
+    "candidates_total": 26,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 2,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return 2 / (mass * velocity * velocity)\n",
+      "new_text": "    return mass * velocity * velocity / 2\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-kinetic-dropped_condition-1",
+    "bug_class": "dropped_condition",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 42,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.6,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_boolean",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_boolean site 0 param None",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "def kinetic_energy(mass, velocity, checked=True):\n",
+      "new_text": "def kinetic_energy(mass, velocity, checked=False):\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-kinetic-swapped_boolean-0",
+    "bug_class": "swapped_boolean",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 5,
+    "candidates_total": 26,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.6,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_boolean",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_boolean site 0 param None",
+      "rank": 5,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "def kinetic_energy(mass, velocity, checked=False):\n",
+      "new_text": "def kinetic_energy(mass, velocity, checked=True):\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-kinetic-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 20,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.4,
+    "candidate": {
+      "phase": "P0-guard-literal",
+      "inverse": "recon_guard_literal",
+      "site": 3,
+      "param": "0",
+      "detail": "R0: guard-branch bare return -> return 0 (failing test expects 0)",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        return\n",
+      "new_text": "        return 0\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-kinetic-removed_return-1",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 26,
+    "candidates_total": 26,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.9,
+    "wall_secs": 2.0,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-days-off_by_one-0",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 93,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 0,
+      "param": -1,
+      "detail": "off_by_one site 0 param -1",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    lengths = [32, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n",
+      "new_text": "    lengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-off_by_one-1",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 3,
+    "candidates_total": 93,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 0,
+      "param": 1,
+      "detail": "off_by_one site 0 param 1",
+      "rank": 3,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    lengths = [31, 27, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n",
+      "new_text": "    lengths = [32, 27, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-off_by_one-2",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 93,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 0,
+      "param": -1,
+      "detail": "off_by_one site 0 param -1",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    lengths = [31, 28, 32, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n",
+      "new_text": "    lengths = [30, 28, 32, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-off_by_one-3",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 3,
+    "candidates_total": 93,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 0,
+      "param": 1,
+      "detail": "off_by_one site 0 param 1",
+      "rank": 3,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    lengths = [31, 28, 31, 29, 31, 30, 31, 31, 30, 31, 30, 31]\n",
+      "new_text": "    lengths = [32, 28, 31, 29, 31, 30, 31, 31, 30, 31, 30, 31]\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-off_by_one-4",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 93,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 0,
+      "param": -1,
+      "detail": "off_by_one site 0 param -1",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    lengths = [31, 28, 31, 30, 32, 30, 31, 31, 30, 31, 30, 31]\n",
+      "new_text": "    lengths = [30, 28, 31, 30, 32, 30, 31, 31, 30, 31, 30, 31]\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-off_by_one-5",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 3,
+    "candidates_total": 93,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 0,
+      "param": 1,
+      "detail": "off_by_one site 0 param 1",
+      "rank": 3,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    lengths = [31, 28, 31, 30, 31, 29, 31, 31, 30, 31, 30, 31]\n",
+      "new_text": "    lengths = [32, 28, 31, 30, 31, 29, 31, 31, 30, 31, 30, 31]\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-off_by_one-6",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 93,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 0,
+      "param": -1,
+      "detail": "off_by_one site 0 param -1",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    lengths = [31, 28, 31, 30, 31, 30, 32, 31, 30, 31, 30, 31]\n",
+      "new_text": "    lengths = [30, 28, 31, 30, 31, 30, 32, 31, 30, 31, 30, 31]\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-off_by_one-7",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 3,
+    "candidates_total": 93,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 0,
+      "param": 1,
+      "detail": "off_by_one site 0 param 1",
+      "rank": 3,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    lengths = [31, 28, 31, 30, 31, 30, 31, 30, 30, 31, 30, 31]\n",
+      "new_text": "    lengths = [32, 28, 31, 30, 31, 30, 31, 30, 30, 31, 30, 31]\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-off_by_one-8",
+    "bug_class": "off_by_one",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 93,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "off_by_one",
+      "site": 0,
+      "param": -1,
+      "detail": "off_by_one site 0 param -1",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    lengths = [31, 28, 31, 30, 31, 30, 31, 31, 31, 31, 30, 31]\n",
+      "new_text": "    lengths = [30, 28, 31, 30, 31, 30, 31, 31, 31, 31, 30, 31]\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-swapped_operands-0",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 93,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.5,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    for m in range(1 - month):\n",
+      "new_text": "    for m in range(month - 1):\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 244,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.6,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P0-guess",
+      "inverse": "removed_return_reconstruction",
+      "site": 6,
+      "param": "total",
+      "detail": "R0: return total (last assigned local before line 6)",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return\n",
+      "new_text": "    return total\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-removed_assignment-0",
+    "bug_class": "removed_assignment",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 10,
+    "candidates_total": 149,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.1,
+    "wall_secs": 1.2,
+    "candidate": {
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "site": 2,
+      "param": "lengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]",
+      "detail": "reuse expr from another function in the file: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]",
+      "rank": 10,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    pass\n",
+      "new_text": "    lengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-removed_assignment-1",
+    "bug_class": "removed_assignment",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 97,
+    "candidates_total": 267,
+    "unappliable": 0,
+    "script_elapsed_secs": 7.2,
+    "wall_secs": 7.3,
+    "candidate": {
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "site": 3,
+      "param": "total = day",
+      "detail": "re-insert total = day",
+      "rank": 97,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    pass\n",
+      "new_text": "    total = day\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-days-removed_assignment-2",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 266,
+    "candidates_total": 266,
+    "unappliable": 0,
+    "script_elapsed_secs": 18.6,
+    "wall_secs": 18.7,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-variance-swapped_operands-0",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 12,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    mean = n / sum(values)\n",
+      "new_text": "    mean = sum(values) / n\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-variance-swapped_operands-3",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 13,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.6,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 3,
+      "param": null,
+      "detail": "swapped_operands site 3 param None",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        total = total + (mean - v) * (v - mean)\n",
+      "new_text": "        total = total + (v - mean) * (v - mean)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-variance-swapped_operands-4",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 13,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.6,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 3,
+      "param": null,
+      "detail": "swapped_operands site 3 param None",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        total = total + (v - mean) * (mean - v)\n",
+      "new_text": "        total = total + (mean - v) * (mean - v)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-variance-swapped_operands-5",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 5,
+    "candidates_total": 12,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.6,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 5,
+      "param": null,
+      "detail": "swapped_operands site 5 param None",
+      "rank": 5,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return n / total\n",
+      "new_text": "    return total / n\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-variance-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 21,
+    "candidates_total": 61,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.8,
+    "wall_secs": 1.9,
+    "candidate": {
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "site": 7,
+      "param": "total / n",
+      "detail": "recomputed return: total / n",
+      "rank": 21,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return\n",
+      "new_text": "    return total / n\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-variance-removed_assignment-0",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 24,
+    "candidates_total": 71,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.9,
+    "wall_secs": 2.0,
+    "candidate": {
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "site": 2,
+      "param": "n = len(values)",
+      "detail": "re-insert n = len(values)",
+      "rank": 24,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    pass\n",
+      "new_text": "    n = len(values)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-variance-removed_assignment-1",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 12,
+    "candidates_total": 70,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.1,
+    "wall_secs": 1.2,
+    "candidate": {
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "site": 3,
+      "param": "mean = sum(values) / len(values)",
+      "detail": "reuse expr from another function in the file: sum(values) / len(values)",
+      "rank": 12,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    pass\n",
+      "new_text": "    mean = sum(values) / len(values)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-variance-removed_assignment-2",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 8,
+    "candidates_total": 82,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.9,
+    "wall_secs": 0.9,
+    "candidate": {
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "site": 4,
+      "param": "total = 0",
+      "detail": "re-insert total = 0",
+      "rank": 8,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    pass\n",
+      "new_text": "    total = 0\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-variance-removed_assignment-3",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 86,
+    "candidates_total": 86,
+    "unappliable": 0,
+    "script_elapsed_secs": 5.9,
+    "wall_secs": 6.0,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-isbn-swapped_operands-0",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 2,
+    "candidates_total": 70,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.6,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 2,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        weight = 1 if 2 % i == 0 else 3\n",
+      "new_text": "        weight = 1 if i % 2 == 0 else 3\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-isbn-swapped_operands-3",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 5,
+    "candidates_total": 70,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.8,
+    "wall_secs": 0.9,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 3,
+      "param": null,
+      "detail": "swapped_operands site 3 param None",
+      "rank": 5,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return 10 % (10 - total % 10)\n",
+      "new_text": "    return (10 - total % 10) % 10\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-isbn-swapped_operands-4",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 6,
+    "candidates_total": 70,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.9,
+    "wall_secs": 1.0,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 4,
+      "param": null,
+      "detail": "swapped_operands site 4 param None",
+      "rank": 6,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return (total % 10 - 10) % 10\n",
+      "new_text": "    return (10 - total % 10) % 10\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-isbn-swapped_operands-5",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 7,
+    "candidates_total": 70,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.9,
+    "wall_secs": 1.0,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 5,
+      "param": null,
+      "detail": "swapped_operands site 5 param None",
+      "rank": 7,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return (10 - 10 % total) % 10\n",
+      "new_text": "    return (10 - total % 10) % 10\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-isbn-wrong_comparator-0",
+    "bug_class": "wrong_comparator",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 70,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.5,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_comparator",
+      "site": 0,
+      "param": null,
+      "detail": "wrong_comparator site 0 param None",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        weight = 1 if i % 2 != 0 else 3\n",
+      "new_text": "        weight = 1 if i % 2 == 0 else 3\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-isbn-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 165,
+    "candidates_total": 165,
+    "unappliable": 0,
+    "script_elapsed_secs": 11.5,
+    "wall_secs": 11.6,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-isbn-removed_assignment-0",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 64,
+    "candidates_total": 203,
+    "unappliable": 0,
+    "script_elapsed_secs": 4.9,
+    "wall_secs": 5.0,
+    "candidate": {
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "site": 2,
+      "param": "total = 0",
+      "detail": "reuse expr from another function in the file: 0",
+      "rank": 64,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    pass\n",
+      "new_text": "    total = 0\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-isbn-removed_assignment-1",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 42,
+    "candidates_total": 145,
+    "unappliable": 0,
+    "script_elapsed_secs": 3.4,
+    "wall_secs": 3.4,
+    "candidate": {
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "site": 4,
+      "param": "weight = 1 if i % 2 == 0 else 3",
+      "detail": "reuse expr from another function in the file: 1 if i % 2 == 0 else 3",
+      "rank": 42,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        pass\n",
+      "new_text": "        weight = 1 if i % 2 == 0 else 3\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-isbn-removed_assignment-2",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 55,
+    "candidates_total": 208,
+    "unappliable": 0,
+    "script_elapsed_secs": 4.2,
+    "wall_secs": 4.3,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_constant",
+      "site": 6,
+      "param": -3,
+      "detail": "wrong_constant site 6 param -3",
+      "rank": 55,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return (10 - total % 10) % 10\n",
+      "new_text": "    return (7 - total % 10) % 10\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-roman-swapped_operands-0",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 93,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.5,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        out = symbol * count + out\n",
+      "new_text": "        out = out + symbol * count\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-roman-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 243,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.8,
+    "wall_secs": 0.8,
+    "candidate": {
+      "phase": "P0-guess",
+      "inverse": "removed_return_reconstruction",
+      "site": 7,
+      "param": "out",
+      "detail": "R0: return out (last assigned local before line 7)",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return\n",
+      "new_text": "    return out\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-roman-removed_assignment-0",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 131,
+    "candidates_total": 131,
+    "unappliable": 0,
+    "script_elapsed_secs": 9.1,
+    "wall_secs": 9.2,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-roman-removed_assignment-1",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 101,
+    "candidates_total": 264,
+    "unappliable": 0,
+    "script_elapsed_secs": 7.7,
+    "wall_secs": 7.8,
+    "candidate": {
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "site": 3,
+      "param": "out = ''",
+      "detail": "re-insert out = ''",
+      "rank": 101,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    pass\n",
+      "new_text": "    out = ''\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-roman-removed_assignment-2",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 222,
+    "candidates_total": 222,
+    "unappliable": 0,
+    "script_elapsed_secs": 16.2,
+    "wall_secs": 16.3,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-roman-removed_assignment-3",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 262,
+    "candidates_total": 262,
+    "unappliable": 0,
+    "script_elapsed_secs": 18.6,
+    "wall_secs": 18.6,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-pagination-swapped_operands-0",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 2,
+    "candidates_total": 25,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.5,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 2,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return per_page // (total + per_page - 1)\n",
+      "new_text": "    return (total + per_page - 1) // per_page\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-pagination-swapped_operands-1",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 3,
+    "candidates_total": 25,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.5,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 1,
+      "param": null,
+      "detail": "swapped_operands site 1 param None",
+      "rank": 3,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return (1 - (total + per_page)) // per_page\n",
+      "new_text": "    return (total + per_page - 1) // per_page\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-pagination-removed_return-1",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 18,
+    "candidates_total": 34,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.5,
+    "wall_secs": 1.6,
+    "candidate": {
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "site": 4,
+      "param": "per_page",
+      "detail": "return per_page",
+      "rank": 18,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return\n",
+      "new_text": "    return per_page\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-recipe-swapped_operands-0",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 2,
+    "candidates_total": 17,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 2,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return servings / (amount * target)\n",
+      "new_text": "    return amount * target / servings\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-recipe-removed_return-1",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 48,
+    "candidates_total": 105,
+    "unappliable": 0,
+    "script_elapsed_secs": 3.6,
+    "wall_secs": 3.7,
+    "candidate": {
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "site": 4,
+      "param": "(amount / servings) * target",
+      "detail": "recomputed return: amount / servings * target",
+      "rank": 48,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return\n",
+      "new_text": "    return amount / servings * target\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-dilution-swapped_operands-0",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 2,
+    "candidates_total": 18,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 2,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return c2 / (c1 * v1)\n",
+      "new_text": "    return c1 * v1 / c2\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-dilution-wrong_comparator-0",
+    "bug_class": "wrong_comparator",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 18,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.4,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_comparator",
+      "site": 0,
+      "param": null,
+      "detail": "wrong_comparator site 0 param None",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    if safe and c2 < 0:\n",
+      "new_text": "    if safe and c2 <= 0:\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-dilution-dropped_condition-1",
+    "bug_class": "dropped_condition",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 3,
+    "candidates_total": 46,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.5,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_boolean",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_boolean site 0 param None",
+      "rank": 3,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "def final_volume(c1, v1, c2, safe=True):\n",
+      "new_text": "def final_volume(c1, v1, c2, safe=False):\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-dilution-swapped_boolean-0",
+    "bug_class": "swapped_boolean",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 2,
+    "candidates_total": 18,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 2,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return c1 * v1 / c2\n",
+      "new_text": "    return c2 / (c1 * v1)\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-dilution-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 12,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.4,
+    "candidate": {
+      "phase": "P0-guard-literal",
+      "inverse": "recon_guard_literal",
+      "site": 3,
+      "param": "0",
+      "detail": "R0: guard-branch bare return -> return 0 (failing test expects 0)",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        return\n",
+      "new_text": "        return 0\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-dilution-removed_return-1",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 46,
+    "candidates_total": 92,
+    "unappliable": 0,
+    "script_elapsed_secs": 3.4,
+    "wall_secs": 3.5,
+    "candidate": {
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "site": 4,
+      "param": "(c1 * v1) / c2",
+      "detail": "recomputed return: c1 * v1 / c2",
+      "rank": 46,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return\n",
+      "new_text": "    return c1 * v1 / c2\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-pressure-swapped_operands-0",
+    "bug_class": "swapped_operands",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 2,
+    "candidates_total": 17,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 2,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return area / force\n",
+      "new_text": "    return force / area\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-pressure-wrong_comparator-0",
+    "bug_class": "wrong_comparator",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 17,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_comparator",
+      "site": 0,
+      "param": null,
+      "detail": "wrong_comparator site 0 param None",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    if safe and area < 0:\n",
+      "new_text": "    if safe and area <= 0:\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-pressure-dropped_condition-1",
+    "bug_class": "dropped_condition",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 2,
+    "candidates_total": 33,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.5,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_boolean",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_boolean site 0 param None",
+      "rank": 2,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "def pressure(force, area, safe=True):\n",
+      "new_text": "def pressure(force, area, safe=False):\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-pressure-swapped_boolean-0",
+    "bug_class": "swapped_boolean",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 2,
+    "candidates_total": 17,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_operands",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_operands site 0 param None",
+      "rank": 2,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return force / area\n",
+      "new_text": "    return area / force\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-pressure-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 11,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.4,
+    "candidate": {
+      "phase": "P0-guard-literal",
+      "inverse": "recon_guard_literal",
+      "site": 3,
+      "param": "0",
+      "detail": "R0: guard-branch bare return -> return 0 (failing test expects 0)",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "        return\n",
+      "new_text": "        return 0\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-pressure-removed_return-1",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 23,
+    "candidates_total": 27,
+    "unappliable": 0,
+    "script_elapsed_secs": 1.9,
+    "wall_secs": 2.0,
+    "candidate": {
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "site": 4,
+      "param": "force / area",
+      "detail": "recomputed return: force / area",
+      "rank": 23,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return\n",
+      "new_text": "    return force / area\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-ohm-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 6,
+    "candidates_total": 11,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.8,
+    "candidate": {
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "site": 2,
+      "param": "current * resistance",
+      "detail": "recomputed return: current * resistance",
+      "rank": 6,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return\n",
+      "new_text": "    return current * resistance\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-kelvin-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 3,
+    "candidates_total": 6,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.5,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "site": 2,
+      "param": "celsius + 273",
+      "detail": "recomputed return: celsius + 273",
+      "rank": 3,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return\n",
+      "new_text": "    return celsius + 273\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-taxi-dropped_condition-1",
+    "bug_class": "dropped_condition",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 4,
+    "candidates_total": 97,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.6,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_boolean",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_boolean site 0 param None",
+      "rank": 4,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "def taxi_fare(distance, surge=True):\n",
+      "new_text": "def taxi_fare(distance, surge=False):\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-taxi-swapped_boolean-0",
+    "bug_class": "swapped_boolean",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 5,
+    "candidates_total": 33,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.6,
+    "wall_secs": 0.7,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "swapped_boolean",
+      "site": 0,
+      "param": null,
+      "detail": "swapped_boolean site 0 param None",
+      "rank": 5,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "def taxi_fare(distance, surge=False):\n",
+      "new_text": "def taxi_fare(distance, surge=True):\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-taxi-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 69,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.4,
+    "wall_secs": 0.5,
+    "candidate": {
+      "phase": "P0-guess",
+      "inverse": "removed_return_reconstruction",
+      "site": 6,
+      "param": "total",
+      "detail": "R0: return total (last assigned local before line 6)",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    return\n",
+      "new_text": "    return total\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-taxi-removed_assignment-0",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 27,
+    "candidates_total": 62,
+    "unappliable": 0,
+    "script_elapsed_secs": 2.1,
+    "wall_secs": 2.2,
+    "candidate": {
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "site": 2,
+      "param": "base = 3",
+      "detail": "reuse expr from another function in the file: 3",
+      "rank": 27,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    pass\n",
+      "new_text": "    base = 3\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-taxi-removed_assignment-1",
+    "bug_class": "removed_assignment",
+    "is_kill": false,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 74,
+    "candidates_total": 74,
+    "unappliable": 0,
+    "script_elapsed_secs": 5.1,
+    "wall_secs": 5.1,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-gpa-removed_return-0",
+    "bug_class": "removed_return",
+    "is_kill": false,
+    "is_single": true,
+    "status": "not_found",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 83,
+    "candidates_total": 83,
+    "unappliable": 0,
+    "script_elapsed_secs": 6.0,
+    "wall_secs": 6.0,
+    "candidate": null,
+    "edit": null,
+    "edit_verified": null,
+    "edit_verify_detail": null
+  },
+  {
+    "task_id": "heldout-tax-wrong_comparator-0",
+    "bug_class": "wrong_comparator",
+    "is_kill": true,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 1,
+    "candidates_total": 79,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.5,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_comparator",
+      "site": 0,
+      "param": null,
+      "detail": "wrong_comparator site 0 param None",
+      "rank": 1,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    if income <= 10000:\n",
+      "new_text": "    if income < 10000:\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-tax-wrong_comparator-1",
+    "bug_class": "wrong_comparator",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 2,
+    "candidates_total": 79,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.5,
+    "wall_secs": 0.6,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_comparator",
+      "site": 1,
+      "param": null,
+      "detail": "wrong_comparator site 1 param None",
+      "rank": 2,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    if income <= 40000:\n",
+      "new_text": "    if income < 40000:\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  },
+  {
+    "task_id": "heldout-tax-wrong_comparator-2",
+    "bug_class": "wrong_comparator",
+    "is_kill": false,
+    "is_single": true,
+    "status": "fixed",
+    "error": null,
+    "timed_out": false,
+    "candidates_tried": 3,
+    "candidates_total": 79,
+    "unappliable": 0,
+    "script_elapsed_secs": 0.7,
+    "wall_secs": 0.8,
+    "candidate": {
+      "phase": "P1-enum",
+      "inverse": "wrong_comparator",
+      "site": 2,
+      "param": null,
+      "detail": "wrong_comparator site 2 param None",
+      "rank": 3,
+      "edit_method": "difflib"
+    },
+    "edit": {
+      "old_text": "    if income <= 100000:\n",
+      "new_text": "    if income < 100000:\n"
+    },
+    "edit_verified": true,
+    "edit_verify_detail": "edit verified end-to-end on a fresh copy"
+  }
+]

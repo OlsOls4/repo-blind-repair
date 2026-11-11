@@ -10,7 +10,9 @@ staging tree that is publish/dataset; for the published repo, download
 the companion Kaggle dataset and place it alongside the repo as
 `dataset/`. (This file is vendored in the repo so the pointer in
 README.md resolves in-tree; the staging original lives at
-publish/reproduce/reproduce.py.)
+publish/reproduce/reproduce.py. Unlike that original, this copy
+resolves the repo to its own directory — in a real clone the
+directory is `repo-blind-repair`, not `repo`.)
 
 Checks:
   1. Dataset file headline counts (20,000 records; 14,000 singles at
@@ -23,8 +25,8 @@ Checks:
      (The FULL 20,000-record regeneration — 0 mismatches — was run
      31 Oct 2026; see data/train_records_20k_REPORT.md in the repo,
      and the staged full-validator run recorded in RESULTS.md.)
-  3. Both unit-test suites from the staged repo: mutation 9/9,
-     harness 32/32.
+  3. Both unit-test suites from the staged repo: mutation 10/10,
+     harness 33/33.
 
 Exit code 0 only if every check passes.
 """
@@ -39,7 +41,9 @@ from collections import Counter
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-REPO = HERE.parent / "repo"
+REPO = HERE  # this file lives at the repo root in a real clone
+# (repo-blind-repair/); the staging original in publish/reproduce/
+# uses HERE.parent / "repo" because it sits one level up.
 DATASET = HERE.parent / "dataset"
 
 sys.path.insert(0, str(REPO / "data_generation"))
@@ -134,9 +138,9 @@ def main() -> int:
         failures.append(f"sample regeneration: {mismatch} mismatches")
     print("full regeneration: 20,000/20,000 exact (0 mismatches) — "
           "31 Oct 2026 full-validator run, see "
-          "repo/data/train_records_20k_REPORT.md")
+          "data/train_records_20k_REPORT.md")
 
-    print("unit tests (staged repo):")
+    print("unit tests (repo):")
     _, ok_m = run_tests(REPO / "mutation", "mutation")
     _, ok_h = run_tests(REPO / "harness", "harness")
     if not ok_m:

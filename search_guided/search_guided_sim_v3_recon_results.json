@@ -1,0 +1,7251 @@
+{
+  "method": "v3 reconstruction arm: v2 (prompt order P, efficient 2-calls/try, cap 27) + R0 symptom-first (failing test returns None -> reconstruction guess first) + reconstruction phase on leftover budget (R1 return expressions, R2 assignment re-insertion, R3 guard re-insertion). All candidates from buggy source + failing test only; fixed harness; every candidate in the combined order tested.",
+  "call_model": {
+    "orient": 4,
+    "failed_candidate": 3,
+    "success_candidate": 2,
+    "gate": 2,
+    "budget": 60,
+    "max_candidates_primary": 18,
+    "max_candidates_efficient": 27
+  },
+  "verification": {
+    "order_p_reproduction": "exact on all 107 singles",
+    "fixing_sets_vs_v2": "every v2 fixing candidate reproduced; extras only from recon phases"
+  },
+  "n_tasks": 116,
+  "n_singles": 107,
+  "n_compounds": 9,
+  "n_kill_tasks": 32,
+  "all_singles": {
+    "fixed_efficient": 87,
+    "n": 107,
+    "fixed_primary": 73,
+    "ranks_of_fix": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      5,
+      6,
+      6,
+      7,
+      7,
+      7,
+      8,
+      8,
+      8,
+      9,
+      9,
+      10,
+      10,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      18,
+      19,
+      20,
+      21,
+      21,
+      21,
+      22,
+      23,
+      23,
+      24,
+      24,
+      25,
+      26,
+      27,
+      27
+    ]
+  },
+  "kill_only": {
+    "fixed_efficient": 28,
+    "n": 32,
+    "fixed_primary": 25,
+    "ranks_of_fix": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      7,
+      7,
+      9,
+      10,
+      10,
+      13,
+      14,
+      18,
+      20,
+      21,
+      26
+    ]
+  },
+  "compounds": {
+    "fixed_efficient": 8,
+    "n": 9,
+    "fixed_primary": 8,
+    "ranks_of_fix": [
+      1,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11
+    ]
+  },
+  "all_116": {
+    "fixed_efficient": 95,
+    "n": 116,
+    "fixed_primary": 81,
+    "ranks_of_fix": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      6,
+      6,
+      6,
+      7,
+      7,
+      7,
+      7,
+      8,
+      8,
+      8,
+      8,
+      9,
+      9,
+      9,
+      10,
+      10,
+      10,
+      11,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      18,
+      19,
+      20,
+      21,
+      21,
+      21,
+      22,
+      23,
+      23,
+      24,
+      24,
+      25,
+      26,
+      27,
+      27
+    ]
+  },
+  "by_class": {
+    "dropped_condition": {
+      "fixed_efficient": 5,
+      "n": 5,
+      "fixed_primary": 5,
+      "ranks_of_fix": [
+        2,
+        3,
+        3,
+        4,
+        4
+      ]
+    },
+    "off_by_one": {
+      "fixed_efficient": 20,
+      "n": 20,
+      "fixed_primary": 20,
+      "ranks_of_fix": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        7,
+        8,
+        8,
+        9,
+        9,
+        10,
+        10,
+        11,
+        13
+      ]
+    },
+    "removed_assignment": {
+      "fixed_efficient": 7,
+      "n": 20,
+      "fixed_primary": 4,
+      "ranks_of_fix": [
+        8,
+        10,
+        11,
+        12,
+        21,
+        24,
+        27
+      ]
+    },
+    "removed_return": {
+      "fixed_efficient": 13,
+      "n": 20,
+      "fixed_primary": 11,
+      "ranks_of_fix": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        6,
+        18,
+        21,
+        23
+      ]
+    },
+    "swapped_boolean": {
+      "fixed_efficient": 5,
+      "n": 5,
+      "fixed_primary": 5,
+      "ranks_of_fix": [
+        2,
+        2,
+        4,
+        5,
+        5
+      ]
+    },
+    "swapped_operands": {
+      "fixed_efficient": 20,
+      "n": 20,
+      "fixed_primary": 20,
+      "ranks_of_fix": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        5,
+        6,
+        7,
+        7
+      ]
+    },
+    "wrong_comparator": {
+      "fixed_efficient": 6,
+      "n": 6,
+      "fixed_primary": 6,
+      "ranks_of_fix": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        3
+      ]
+    },
+    "wrong_constant": {
+      "fixed_efficient": 19,
+      "n": 20,
+      "fixed_primary": 10,
+      "ranks_of_fix": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ]
+    }
+  },
+  "known_guess_fixes": [
+    "heldout-compound-removed_return-0",
+    "heldout-days-removed_return-0",
+    "heldout-roman-removed_return-0",
+    "heldout-taxi-removed_return-0"
+  ],
+  "new_destructive_fixes_beyond_known_guess": [
+    {
+      "task_id": "heldout-compound-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "combined_rank": 11
+    },
+    {
+      "task_id": "heldout-loan-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "combined_rank": 21
+    },
+    {
+      "task_id": "heldout-circle-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "P0-guard-literal",
+      "inverse": "recon_guard_literal",
+      "combined_rank": 1
+    },
+    {
+      "task_id": "heldout-kinetic-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "P0-guard-literal",
+      "inverse": "recon_guard_literal",
+      "combined_rank": 1
+    },
+    {
+      "task_id": "heldout-days-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "combined_rank": 10
+    },
+    {
+      "task_id": "heldout-variance-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "combined_rank": 21
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "combined_rank": 24
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "combined_rank": 12
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-2",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "combined_rank": 8
+    },
+    {
+      "task_id": "heldout-pagination-removed_return-1",
+      "bug_class": "removed_return",
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "combined_rank": 18
+    },
+    {
+      "task_id": "heldout-dilution-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "P0-guard-literal",
+      "inverse": "recon_guard_literal",
+      "combined_rank": 1
+    },
+    {
+      "task_id": "heldout-pressure-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "P0-guard-literal",
+      "inverse": "recon_guard_literal",
+      "combined_rank": 1
+    },
+    {
+      "task_id": "heldout-pressure-removed_return-1",
+      "bug_class": "removed_return",
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "combined_rank": 23
+    },
+    {
+      "task_id": "heldout-ohm-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "combined_rank": 6
+    },
+    {
+      "task_id": "heldout-kelvin-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "R1-return-expr",
+      "inverse": "recon_return_expr",
+      "combined_rank": 3
+    },
+    {
+      "task_id": "heldout-taxi-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "inverse": "recon_assign",
+      "combined_rank": 27
+    }
+  ],
+  "n_new_destructive": 16,
+  "gained_vs_v2_singles": [
+    {
+      "task_id": "heldout-loan-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "combined_rank": 21
+    },
+    {
+      "task_id": "heldout-circle-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "P0-guard-literal",
+      "combined_rank": 1
+    },
+    {
+      "task_id": "heldout-kinetic-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "P0-guard-literal",
+      "combined_rank": 1
+    },
+    {
+      "task_id": "heldout-days-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "P0-guess",
+      "combined_rank": 1
+    },
+    {
+      "task_id": "heldout-days-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "combined_rank": 10
+    },
+    {
+      "task_id": "heldout-variance-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "R1-return-expr",
+      "combined_rank": 21
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "combined_rank": 24
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "combined_rank": 12
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-2",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "combined_rank": 8
+    },
+    {
+      "task_id": "heldout-roman-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "P0-guess",
+      "combined_rank": 1
+    },
+    {
+      "task_id": "heldout-pagination-removed_return-1",
+      "bug_class": "removed_return",
+      "phase": "R1-return-expr",
+      "combined_rank": 18
+    },
+    {
+      "task_id": "heldout-dilution-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "P0-guard-literal",
+      "combined_rank": 1
+    },
+    {
+      "task_id": "heldout-pressure-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "P0-guard-literal",
+      "combined_rank": 1
+    },
+    {
+      "task_id": "heldout-pressure-removed_return-1",
+      "bug_class": "removed_return",
+      "phase": "R1-return-expr",
+      "combined_rank": 23
+    },
+    {
+      "task_id": "heldout-ohm-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "R1-return-expr",
+      "combined_rank": 6
+    },
+    {
+      "task_id": "heldout-kelvin-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "R1-return-expr",
+      "combined_rank": 3
+    },
+    {
+      "task_id": "heldout-taxi-removed_return-0",
+      "bug_class": "removed_return",
+      "phase": "P0-guess",
+      "combined_rank": 1
+    },
+    {
+      "task_id": "heldout-taxi-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "phase": "R2-assign",
+      "combined_rank": 27
+    }
+  ],
+  "lost_vs_v2_singles": [],
+  "acceptance": {
+    "bar_new_destructive_ge_5": true,
+    "bar_no_regression_singles_ge_69": true
+  },
+  "elapsed_secs": 573.3,
+  "per_task": [
+    {
+      "task_id": "heldout-compound-off_by_one-0",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "compound"
+      ],
+      "symptom": {
+        "actual": 8615.125,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1157.625,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 9,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 9,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param -1",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 0.8,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-compound-wrong_constant-0",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "compound"
+      ],
+      "symptom": {
+        "actual": 28372.625,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1157.625,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 9,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 9,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -2,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -2",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 0.8,
+      "combined_rank": 5,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 16,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-compound-wrong_constant-2",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "compound"
+      ],
+      "symptom": {
+        "actual": 128787.625,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1157.625,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 9,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 9,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -4,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -4",
+          "combined_rank": 7,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 0.8,
+      "combined_rank": 7,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 20,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-compound-wrong_constant-4",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "compound"
+      ],
+      "symptom": {
+        "actual": 350402.625,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1157.625,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 9,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 9,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -6,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -6",
+          "combined_rank": 9,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 0.8,
+      "combined_rank": 9,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 24,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-compound-wrong_constant-6",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "compound"
+      ],
+      "symptom": {
+        "actual": 66430.125,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1157.625,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 9,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 9,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -3,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -3",
+          "combined_rank": 6,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 0.8,
+      "combined_rank": 6,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 18,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-compound-wrong_constant-8",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "compound"
+      ],
+      "symptom": {
+        "actual": 221445.125,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1157.625,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 9,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 9,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -5,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -5",
+          "combined_rank": 8,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 0.7,
+      "combined_rank": 8,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 22,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-compound-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "compound"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1157.625,
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 10,
+      "n_recon_r1": 149,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 159,
+      "fixing": [
+        {
+          "inverse": "removed_return_reconstruction",
+          "site": 5,
+          "param": "total",
+          "phase": "P0-guess",
+          "detail": "R0: return total (last assigned local before line 5)",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 5,
+          "param": "total * 1",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: total * 1",
+          "combined_rank": 154,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 5,
+          "param": "total / 1",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: total / 1",
+          "combined_rank": 155,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 11.3,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P0-guess",
+      "fixed_by_inverse": "removed_return_reconstruction",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-compound-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "compound"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "UnboundLocalError",
+        "name_error": "total",
+        "expected": 1157.625,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 9,
+      "n_recon_r1": 0,
+      "n_recon_r2": 121,
+      "n_recon_r3": 0,
+      "n_combined": 130,
+      "fixing": [
+        {
+          "inverse": "recon_assign",
+          "site": 2,
+          "param": "total = principal",
+          "phase": "R2-assign",
+          "detail": "re-insert total = principal",
+          "combined_rank": 11,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 2,
+          "param": "total = principal * 1",
+          "phase": "R2-assign",
+          "detail": "re-insert total = principal * 1",
+          "combined_rank": 113,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 2,
+          "param": "total = principal / 1",
+          "phase": "R2-assign",
+          "detail": "re-insert total = principal / 1",
+          "combined_rank": 114,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 9.2,
+      "combined_rank": 11,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 28,
+      "fixed_by_phase": "R2-assign",
+      "fixed_by_inverse": "recon_assign",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-compound-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "compound"
+      ],
+      "symptom": {
+        "actual": 1000,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1157.625,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 0,
+      "n_recon_r1": 0,
+      "n_recon_r2": 121,
+      "n_recon_r3": 0,
+      "n_combined": 121,
+      "fixing": [],
+      "test_secs": 8.2,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-loan-off_by_one-0",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 1061.010520704708,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param -1",
+          "combined_rank": 9,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 9,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 24,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 9
+    },
+    {
+      "task_id": "heldout-loan-off_by_one-1",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": -1.2000000000000002e-22,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param 1",
+          "combined_rank": 10,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 10,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 26,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 10
+    },
+    {
+      "task_id": "heldout-loan-off_by_one-2",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": -154.8590010960496,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param -1",
+          "combined_rank": 13,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 13,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 32,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 13
+    },
+    {
+      "task_id": "heldout-loan-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 1200000.0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 1
+    },
+    {
+      "task_id": "heldout-loan-swapped_operands-1",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 130.61766070399364,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 1,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 1 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 2,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 10,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 2
+    },
+    {
+      "task_id": "heldout-loan-swapped_operands-3",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 0.0009379231227903862,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 3,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 3 param None",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 4
+    },
+    {
+      "task_id": "heldout-loan-swapped_operands-6",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": -1066.1854641401003,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 6,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 6 param None",
+          "combined_rank": 7,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 7,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 20,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 7
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-0",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 1056.5859116053362,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -2,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -2",
+          "combined_rank": 14,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 14,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 34,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 14
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-1",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 120.00000694142763,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -3,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 1 param -3",
+          "combined_rank": 20,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 20,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 46,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 20
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-2",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": -34.91166928109207,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -4,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -4",
+          "combined_rank": 26,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 26,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 58,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 26
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-4",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 1043.861149025064,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -6,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -6",
+          "combined_rank": 18,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 18,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 42,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 18
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-5",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 120.00021696220409,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -2,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 1 param -2",
+          "combined_rank": 19,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 19,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 44,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 19
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-6",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": -47.06257190527009,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -3,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -3",
+          "combined_rank": 25,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 25,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 56,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 25
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-8",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 1046.4739679766599,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -5,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -5",
+          "combined_rank": 17,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 17,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 40,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 17
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-9",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 120.00000000852246,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -6,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 1 param -6",
+          "combined_rank": 23,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 23,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 52,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 23
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-10",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": -72.1870651652808,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -2,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -2",
+          "combined_rank": 24,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 24,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 54,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 24
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-12",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 1049.4177212390496,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -4,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -4",
+          "combined_rank": 16,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 16,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 38,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 16
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-13",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 120.00000005403655,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -5,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 1 param -5",
+          "combined_rank": 22,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.1,
+      "combined_rank": 22,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 50,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 22
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-14",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": -23.023152606481048,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -6,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -6",
+          "combined_rank": 28,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 28,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": 62,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 28
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-16",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 1052.7595156418886,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -3,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -3",
+          "combined_rank": 15,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 15,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 36,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 15
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-17",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": 120.00000047987545,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -4,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 1 param -4",
+          "combined_rank": 21,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 21,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 48,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 21
+    },
+    {
+      "task_id": "heldout-loan-wrong_constant-18",
+      "bug_class": "wrong_constant",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": -27.747619252730882,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 28,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 28,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -5,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -5",
+          "combined_rank": 27,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 27,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 60,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 27
+    },
+    {
+      "task_id": "heldout-loan-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1066.1854641401003,
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 18,
+      "n_recon_r1": 148,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 166,
+      "fixing": [],
+      "test_secs": 11.3,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-loan-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "NameError",
+        "name_error": "r",
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 20,
+      "n_recon_r1": 0,
+      "n_recon_r2": 98,
+      "n_recon_r3": 0,
+      "n_combined": 118,
+      "fixing": [
+        {
+          "inverse": "recon_assign",
+          "site": 2,
+          "param": "r = annual_rate / 12",
+          "phase": "R2-assign",
+          "detail": "reuse expr from another function in the file: annual_rate / 12",
+          "combined_rank": 21,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 2,
+          "param": "r = annual_rate / months",
+          "phase": "R2-assign",
+          "detail": "re-insert r = annual_rate / months",
+          "combined_rank": 75,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 8.3,
+      "combined_rank": 21,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 48,
+      "fixed_by_phase": "R2-assign",
+      "fixed_by_inverse": "recon_assign",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-loan-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "monthly_payment"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "NameError",
+        "name_error": "factor",
+        "expected": 1066.1854641401003,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 19,
+      "n_recon_r1": 0,
+      "n_recon_r2": 98,
+      "n_recon_r3": 0,
+      "n_combined": 117,
+      "fixing": [],
+      "test_secs": 8.3,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-circle-off_by_one-1",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "circle_area"
+      ],
+      "symptom": {
+        "actual": -1,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 18,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 18,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param 1",
+          "combined_rank": 7,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.5,
+      "combined_rank": 7,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 20,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 7
+    },
+    {
+      "task_id": "heldout-circle-off_by_one-3",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "circle_area"
+      ],
+      "symptom": {
+        "actual": 3.14159,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 18,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 18,
+      "fixing": [
+        {
+          "inverse": "wrong_comparator",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "wrong_comparator site 0 param None",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param 1",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.6,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_comparator",
+      "order_p_rank_v2keys": 1
+    },
+    {
+      "task_id": "heldout-circle-off_by_one-4",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "circle_area"
+      ],
+      "symptom": {
+        "actual": 1,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 18,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 18,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param -1",
+          "combined_rank": 8,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.5,
+      "combined_rank": 8,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 22,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 8
+    },
+    {
+      "task_id": "heldout-circle-dropped_condition-1",
+      "bug_class": "dropped_condition",
+      "implicated_functions": [
+        "circle_area"
+      ],
+      "symptom": {
+        "actual": 0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 78.53975,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 10,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 36,
+      "n_combined": 46,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_boolean site 0 param None",
+          "combined_rank": 3,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and radius < 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and radius < 0",
+          "combined_rank": 11,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and radius < 2",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and radius < 2",
+          "combined_rank": 12,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and radius < 3.14159",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and radius < 3.14159",
+          "combined_rank": 13,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and radius <= 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and radius <= 0",
+          "combined_rank": 14,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and radius <= 2",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and radius <= 2",
+          "combined_rank": 15,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and radius <= 3.14159",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and radius <= 3.14159",
+          "combined_rank": 16,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and radius == 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and radius == 0",
+          "combined_rank": 23,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and radius == 2",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and radius == 2",
+          "combined_rank": 24,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and radius == 3.14159",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and radius == 3.14159",
+          "combined_rank": 25,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 4.6,
+      "combined_rank": 3,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 12,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_boolean",
+      "order_p_rank_v2keys": 3
+    },
+    {
+      "task_id": "heldout-circle-swapped_boolean-0",
+      "bug_class": "swapped_boolean",
+      "implicated_functions": [
+        "circle_area"
+      ],
+      "symptom": {
+        "actual": 3.14159,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 18,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 18,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_boolean site 0 param None",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.3,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_boolean",
+      "order_p_rank_v2keys": 4
+    },
+    {
+      "task_id": "heldout-circle-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "circle_area"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 0,
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 11,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 12,
+      "fixing": [
+        {
+          "inverse": "recon_guard_literal",
+          "site": 3,
+          "param": "0",
+          "phase": "P0-guard-literal",
+          "detail": "R0: guard-branch bare return -> return 0 (failing test expects 0)",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.0,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P0-guard-literal",
+      "fixed_by_inverse": "recon_guard_literal",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-circle-removed_return-1",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "circle_area"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 78.53975,
+        "returns_none": true
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 16,
+      "n_recon_r1": 10,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 26,
+      "fixing": [],
+      "test_secs": 1.9,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-kinetic-off_by_one-1",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "kinetic_energy"
+      ],
+      "symptom": {
+        "actual": -1,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 26,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 26,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param 1",
+          "combined_rank": 8,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.9,
+      "combined_rank": 8,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 22,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 8
+    },
+    {
+      "task_id": "heldout-kinetic-off_by_one-2",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "kinetic_energy"
+      ],
+      "symptom": {
+        "actual": 53.333333333333336,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 80.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 26,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 26,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param -1",
+          "combined_rank": 11,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.1,
+      "combined_rank": 11,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 28,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 11
+    },
+    {
+      "task_id": "heldout-kinetic-off_by_one-4",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "kinetic_energy"
+      ],
+      "symptom": {
+        "actual": 1,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 26,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 26,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param -1",
+          "combined_rank": 9,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.9,
+      "combined_rank": 9,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 24,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 9
+    },
+    {
+      "task_id": "heldout-kinetic-off_by_one-5",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "kinetic_energy"
+      ],
+      "symptom": {
+        "actual": 160.0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 80.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 26,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 26,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param 1",
+          "combined_rank": 10,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 10,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 26,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 10
+    },
+    {
+      "task_id": "heldout-kinetic-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "kinetic_energy"
+      ],
+      "symptom": {
+        "actual": 0.0125,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 80.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 26,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 26,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 2,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 10,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 2
+    },
+    {
+      "task_id": "heldout-kinetic-dropped_condition-1",
+      "bug_class": "dropped_condition",
+      "implicated_functions": [
+        "kinetic_energy"
+      ],
+      "symptom": {
+        "actual": 0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 80.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 18,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 24,
+      "n_combined": 42,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_boolean site 0 param None",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and mass < 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and mass < 0",
+          "combined_rank": 19,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and mass <= 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and mass <= 0",
+          "combined_rank": 20,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and mass == 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and mass == 0",
+          "combined_rank": 23,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and velocity < 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and velocity < 0",
+          "combined_rank": 25,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and velocity <= 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and velocity <= 0",
+          "combined_rank": 26,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "checked and velocity == 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: checked and velocity == 0",
+          "combined_rank": 29,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 3.9,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_boolean",
+      "order_p_rank_v2keys": 4
+    },
+    {
+      "task_id": "heldout-kinetic-swapped_boolean-0",
+      "bug_class": "swapped_boolean",
+      "implicated_functions": [
+        "kinetic_energy"
+      ],
+      "symptom": {
+        "actual": -40.0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 26,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 26,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_boolean site 0 param None",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.9,
+      "combined_rank": 5,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 16,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_boolean",
+      "order_p_rank_v2keys": 5
+    },
+    {
+      "task_id": "heldout-kinetic-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "kinetic_energy"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 0,
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 19,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 20,
+      "fixing": [
+        {
+          "inverse": "recon_guard_literal",
+          "site": 3,
+          "param": "0",
+          "phase": "P0-guard-literal",
+          "detail": "R0: guard-branch bare return -> return 0 (failing test expects 0)",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.5,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P0-guard-literal",
+      "fixed_by_inverse": "recon_guard_literal",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-kinetic-removed_return-1",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "kinetic_energy"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 80.0,
+        "returns_none": true
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 16,
+      "n_recon_r1": 10,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 26,
+      "fixing": [],
+      "test_secs": 1.8,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-days-off_by_one-0",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": 75,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 74,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 93,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param -1",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param -1",
+          "combined_rank": 6,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 7.0,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 4
+    },
+    {
+      "task_id": "heldout-days-off_by_one-1",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": 73,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 74,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 93,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param 1",
+          "combined_rank": 3,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param 1",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 6.8,
+      "combined_rank": 3,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 12,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 3
+    },
+    {
+      "task_id": "heldout-days-off_by_one-2",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": 366,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 365,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 93,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param -1",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param -1",
+          "combined_rank": 6,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param -1",
+          "combined_rank": 8,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 3 param -1",
+          "combined_rank": 10,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 4 param -1",
+          "combined_rank": 12,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 5 param -1",
+          "combined_rank": 14,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 6 param -1",
+          "combined_rank": 16,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 7 param -1",
+          "combined_rank": 18,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 8 param -1",
+          "combined_rank": 20,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 9 param -1",
+          "combined_rank": 22,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 10 param -1",
+          "combined_rank": 24,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 8.1,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 4
+    },
+    {
+      "task_id": "heldout-days-off_by_one-3",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": 364,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 365,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 93,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param 1",
+          "combined_rank": 3,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param 1",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param 1",
+          "combined_rank": 7,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 3 param 1",
+          "combined_rank": 9,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 4 param 1",
+          "combined_rank": 11,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 5 param 1",
+          "combined_rank": 13,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 6 param 1",
+          "combined_rank": 15,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 7 param 1",
+          "combined_rank": 17,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 8 param 1",
+          "combined_rank": 19,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 9 param 1",
+          "combined_rank": 21,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 10 param 1",
+          "combined_rank": 23,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 8.2,
+      "combined_rank": 3,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 12,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 3
+    },
+    {
+      "task_id": "heldout-days-off_by_one-4",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": 366,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 365,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 93,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param -1",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param -1",
+          "combined_rank": 6,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param -1",
+          "combined_rank": 8,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 3 param -1",
+          "combined_rank": 10,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 4 param -1",
+          "combined_rank": 12,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 5 param -1",
+          "combined_rank": 14,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 6 param -1",
+          "combined_rank": 16,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 7 param -1",
+          "combined_rank": 18,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 8 param -1",
+          "combined_rank": 20,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 9 param -1",
+          "combined_rank": 22,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 10 param -1",
+          "combined_rank": 24,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 7.7,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 4
+    },
+    {
+      "task_id": "heldout-days-off_by_one-5",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": 364,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 365,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 93,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param 1",
+          "combined_rank": 3,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param 1",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param 1",
+          "combined_rank": 7,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 3 param 1",
+          "combined_rank": 9,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 4 param 1",
+          "combined_rank": 11,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 5 param 1",
+          "combined_rank": 13,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 6 param 1",
+          "combined_rank": 15,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 7 param 1",
+          "combined_rank": 17,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 8 param 1",
+          "combined_rank": 19,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 9 param 1",
+          "combined_rank": 21,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 10 param 1",
+          "combined_rank": 23,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 7.8,
+      "combined_rank": 3,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 12,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 3
+    },
+    {
+      "task_id": "heldout-days-off_by_one-6",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": 366,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 365,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 93,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param -1",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param -1",
+          "combined_rank": 6,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param -1",
+          "combined_rank": 8,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 3 param -1",
+          "combined_rank": 10,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 4 param -1",
+          "combined_rank": 12,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 5 param -1",
+          "combined_rank": 14,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 6 param -1",
+          "combined_rank": 16,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 7 param -1",
+          "combined_rank": 18,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 8 param -1",
+          "combined_rank": 20,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 9 param -1",
+          "combined_rank": 22,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 10 param -1",
+          "combined_rank": 24,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 8.1,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 4
+    },
+    {
+      "task_id": "heldout-days-off_by_one-7",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": 364,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 365,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 93,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param 1",
+          "combined_rank": 3,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param 1",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param 1",
+          "combined_rank": 7,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 3 param 1",
+          "combined_rank": 9,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 4 param 1",
+          "combined_rank": 11,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 5 param 1",
+          "combined_rank": 13,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 6 param 1",
+          "combined_rank": 15,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 7 param 1",
+          "combined_rank": 17,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 8 param 1",
+          "combined_rank": 19,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 9 param 1",
+          "combined_rank": 21,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 10 param 1",
+          "combined_rank": 23,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 7.8,
+      "combined_rank": 3,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 12,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 3
+    },
+    {
+      "task_id": "heldout-days-off_by_one-8",
+      "bug_class": "off_by_one",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": 366,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 365,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 93,
+      "fixing": [
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param -1",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param -1",
+          "combined_rank": 6,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param -1",
+          "combined_rank": 8,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 3 param -1",
+          "combined_rank": 10,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 4 param -1",
+          "combined_rank": 12,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 5 param -1",
+          "combined_rank": 14,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 6,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 6 param -1",
+          "combined_rank": 16,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 7,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 7 param -1",
+          "combined_rank": 18,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 8,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 8 param -1",
+          "combined_rank": 20,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 9,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 9 param -1",
+          "combined_rank": 22,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 10,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 10 param -1",
+          "combined_rank": 24,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 7.8,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "off_by_one",
+      "order_p_rank_v2keys": 4
+    },
+    {
+      "task_id": "heldout-days-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": 15,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 74,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 93,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 6.3,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 1
+    },
+    {
+      "task_id": "heldout-days-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 74,
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 94,
+      "n_recon_r1": 150,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 244,
+      "fixing": [
+        {
+          "inverse": "removed_return_reconstruction",
+          "site": 6,
+          "param": "total",
+          "phase": "P0-guess",
+          "detail": "R0: return total (last assigned local before line 6)",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 6,
+          "param": "total * m",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: total * m",
+          "combined_rank": 111,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 6,
+          "param": "total / m",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: total / m",
+          "combined_rank": 112,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 6,
+          "param": "total * 1",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: total * 1",
+          "combined_rank": 239,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 6,
+          "param": "total / 1",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: total / 1",
+          "combined_rank": 240,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 17.2,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P0-guess",
+      "fixed_by_inverse": "removed_return_reconstruction",
+      "order_p_rank_v2keys": 94
+    },
+    {
+      "task_id": "heldout-days-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "NameError",
+        "name_error": "lengths",
+        "expected": 74,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 9,
+      "n_recon_r1": 0,
+      "n_recon_r2": 140,
+      "n_recon_r3": 0,
+      "n_combined": 149,
+      "fixing": [
+        {
+          "inverse": "recon_assign",
+          "site": 2,
+          "param": "lengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]",
+          "phase": "R2-assign",
+          "detail": "reuse expr from another function in the file: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]",
+          "combined_rank": 10,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 10.5,
+      "combined_rank": 10,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 26,
+      "fixed_by_phase": "R2-assign",
+      "fixed_by_inverse": "recon_assign",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-days-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "UnboundLocalError",
+        "name_error": "total",
+        "expected": 74,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 174,
+      "n_recon_r3": 0,
+      "n_combined": 267,
+      "fixing": [
+        {
+          "inverse": "recon_assign",
+          "site": 3,
+          "param": "total = day",
+          "phase": "R2-assign",
+          "detail": "re-insert total = day",
+          "combined_rank": 97,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 3,
+          "param": "total = day * 1",
+          "phase": "R2-assign",
+          "detail": "re-insert total = day * 1",
+          "combined_rank": 254,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 3,
+          "param": "total = day / 1",
+          "phase": "R2-assign",
+          "detail": "re-insert total = day / 1",
+          "combined_rank": 255,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 18.9,
+      "combined_rank": 97,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": 200,
+      "fixed_by_phase": "R2-assign",
+      "fixed_by_inverse": "recon_assign",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-days-removed_assignment-2",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "day_of_year"
+      ],
+      "symptom": {
+        "actual": 15,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 74,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 92,
+      "n_recon_r1": 0,
+      "n_recon_r2": 174,
+      "n_recon_r3": 0,
+      "n_combined": 266,
+      "fixing": [],
+      "test_secs": 17.8,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-variance-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "variance"
+      ],
+      "symptom": {
+        "actual": 27.04,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 4.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 12,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 12,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 0.9,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 1
+    },
+    {
+      "task_id": "heldout-variance-swapped_operands-3",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "variance"
+      ],
+      "symptom": {
+        "actual": -4.0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 4.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 13,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 13,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 3,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 3 param None",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "swapped_operands",
+          "site": 4,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 4 param None",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.1,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 4
+    },
+    {
+      "task_id": "heldout-variance-swapped_operands-4",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "variance"
+      ],
+      "symptom": {
+        "actual": -4.0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 4.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 13,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 13,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 3,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 3 param None",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "swapped_operands",
+          "site": 4,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 4 param None",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.2,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 4
+    },
+    {
+      "task_id": "heldout-variance-swapped_operands-5",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "variance"
+      ],
+      "symptom": {
+        "actual": 0.25,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 4.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 12,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 12,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 5,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 5 param None",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 0.9,
+      "combined_rank": 5,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 16,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 5
+    },
+    {
+      "task_id": "heldout-variance-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "variance"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 4.0,
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 12,
+      "n_recon_r1": 49,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 61,
+      "fixing": [
+        {
+          "inverse": "recon_return_expr",
+          "site": 7,
+          "param": "total / n",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: total / n",
+          "combined_rank": 21,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 4.3,
+      "combined_rank": 21,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 48,
+      "fixed_by_phase": "R1-return-expr",
+      "fixed_by_inverse": "recon_return_expr",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "variance"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "NameError",
+        "name_error": "n",
+        "expected": 4.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 12,
+      "n_recon_r1": 0,
+      "n_recon_r2": 59,
+      "n_recon_r3": 0,
+      "n_combined": 71,
+      "fixing": [
+        {
+          "inverse": "recon_assign",
+          "site": 2,
+          "param": "n = len(values)",
+          "phase": "R2-assign",
+          "detail": "re-insert n = len(values)",
+          "combined_rank": 24,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 2,
+          "param": "n = sum(values)",
+          "phase": "R2-assign",
+          "detail": "re-insert n = sum(values)",
+          "combined_rank": 25,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 5.1,
+      "combined_rank": 24,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 54,
+      "fixed_by_phase": "R2-assign",
+      "fixed_by_inverse": "recon_assign",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "variance"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "TypeError",
+        "name_error": null,
+        "expected": 4.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 11,
+      "n_recon_r1": 0,
+      "n_recon_r2": 59,
+      "n_recon_r3": 0,
+      "n_combined": 70,
+      "fixing": [
+        {
+          "inverse": "recon_assign",
+          "site": 3,
+          "param": "mean = sum(values) / len(values)",
+          "phase": "R2-assign",
+          "detail": "reuse expr from another function in the file: sum(values) / len(values)",
+          "combined_rank": 12,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 4.9,
+      "combined_rank": 12,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 30,
+      "fixed_by_phase": "R2-assign",
+      "fixed_by_inverse": "recon_assign",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-2",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "variance"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "UnboundLocalError",
+        "name_error": "total",
+        "expected": 4.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 5,
+      "n_recon_r1": 0,
+      "n_recon_r2": 77,
+      "n_recon_r3": 0,
+      "n_combined": 82,
+      "fixing": [
+        {
+          "inverse": "recon_assign",
+          "site": 4,
+          "param": "total = 0",
+          "phase": "R2-assign",
+          "detail": "re-insert total = 0",
+          "combined_rank": 8,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 5.7,
+      "combined_rank": 8,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 22,
+      "fixed_by_phase": "R2-assign",
+      "fixed_by_inverse": "recon_assign",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-variance-removed_assignment-3",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "variance"
+      ],
+      "symptom": {
+        "actual": 0.0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 4.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 9,
+      "n_recon_r1": 0,
+      "n_recon_r2": 77,
+      "n_recon_r3": 0,
+      "n_combined": 86,
+      "fixing": [],
+      "test_secs": 5.8,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-isbn-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "isbn_check_digit"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "ZeroDivisionError",
+        "name_error": null,
+        "expected": 7,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 70,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 70,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 4.8,
+      "combined_rank": 2,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 10,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 2
+    },
+    {
+      "task_id": "heldout-isbn-swapped_operands-3",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "isbn_check_digit"
+      ],
+      "symptom": {
+        "actual": 3,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 7,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 70,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 70,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 3,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 3 param None",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 4.8,
+      "combined_rank": 5,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 16,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 5
+    },
+    {
+      "task_id": "heldout-isbn-swapped_operands-4",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "isbn_check_digit"
+      ],
+      "symptom": {
+        "actual": 3,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 7,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 70,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 70,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 4,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 4 param None",
+          "combined_rank": 6,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param -1",
+          "combined_rank": 13,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -6,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -6",
+          "combined_rank": 30,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 1,
+          "param": -5,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 1 param -5",
+          "combined_rank": 34,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -3,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -3",
+          "combined_rank": 37,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 4,
+          "param": -4,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 4 param -4",
+          "combined_rank": 48,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -2,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 5 param -2",
+          "combined_rank": 51,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 7,
+          "param": -4,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 7 param -4",
+          "combined_rank": 63,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 5.7,
+      "combined_rank": 6,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 18,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 6
+    },
+    {
+      "task_id": "heldout-isbn-swapped_operands-5",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "isbn_check_digit"
+      ],
+      "symptom": {
+        "actual": 0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 7,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 70,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 70,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 5,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 5 param None",
+          "combined_rank": 7,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -5,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 5 param -5",
+          "combined_rank": 54,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 6,
+          "param": -3,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 6 param -3",
+          "combined_rank": 57,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 5.1,
+      "combined_rank": 7,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 20,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 7
+    },
+    {
+      "task_id": "heldout-isbn-wrong_comparator-0",
+      "bug_class": "wrong_comparator",
+      "implicated_functions": [
+        "isbn_check_digit"
+      ],
+      "symptom": {
+        "actual": 5,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 7,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 70,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 70,
+      "fixing": [
+        {
+          "inverse": "wrong_comparator",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "wrong_comparator site 0 param None",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 3,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 3 param 1",
+          "combined_rank": 14,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 4,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 4 param 1",
+          "combined_rank": 16,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -2,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -2",
+          "combined_rank": 26,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 4,
+          "param": -4,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 4 param -4",
+          "combined_rank": 48,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 5.4,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_comparator",
+      "order_p_rank_v2keys": 1
+    },
+    {
+      "task_id": "heldout-isbn-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "isbn_check_digit"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 7,
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 47,
+      "n_recon_r1": 119,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 165,
+      "fixing": [],
+      "test_secs": 11.2,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-isbn-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "isbn_check_digit"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "UnboundLocalError",
+        "name_error": "total",
+        "expected": 7,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 63,
+      "n_recon_r1": 0,
+      "n_recon_r2": 140,
+      "n_recon_r3": 0,
+      "n_combined": 203,
+      "fixing": [
+        {
+          "inverse": "recon_assign",
+          "site": 2,
+          "param": "total = 0",
+          "phase": "R2-assign",
+          "detail": "reuse expr from another function in the file: 0",
+          "combined_rank": 64,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 13.9,
+      "combined_rank": 64,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": 134,
+      "fixed_by_phase": "R2-assign",
+      "fixed_by_inverse": "recon_assign",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-isbn-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "isbn_check_digit"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "NameError",
+        "name_error": "weight",
+        "expected": 7,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 40,
+      "n_recon_r1": 0,
+      "n_recon_r2": 105,
+      "n_recon_r3": 0,
+      "n_combined": 145,
+      "fixing": [
+        {
+          "inverse": "recon_assign",
+          "site": 4,
+          "param": "weight = 1 if i % 2 == 0 else 3",
+          "phase": "R2-assign",
+          "detail": "reuse expr from another function in the file: 1 if i % 2 == 0 else 3",
+          "combined_rank": 42,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 4,
+          "param": "weight = i + 1",
+          "phase": "R2-assign",
+          "detail": "re-insert weight = i + 1",
+          "combined_rank": 130,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 4,
+          "param": "weight = total - 3",
+          "phase": "R2-assign",
+          "detail": "re-insert weight = total - 3",
+          "combined_rank": 139,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 10.3,
+      "combined_rank": 42,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": 90,
+      "fixed_by_phase": "R2-assign",
+      "fixed_by_inverse": "recon_assign",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-isbn-removed_assignment-2",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "isbn_check_digit"
+      ],
+      "symptom": {
+        "actual": 0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 7,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 68,
+      "n_recon_r1": 0,
+      "n_recon_r2": 140,
+      "n_recon_r3": 0,
+      "n_combined": 208,
+      "fixing": [
+        {
+          "inverse": "wrong_constant",
+          "site": 6,
+          "param": -3,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 6 param -3",
+          "combined_rank": 55,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 5,
+          "param": "total = 1 if i % 2 == 0 else 3",
+          "phase": "R2-assign",
+          "detail": "reuse expr from another function in the file: 1 if i % 2 == 0 else 3",
+          "combined_rank": 70,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 5,
+          "param": "total = total + digits[i] * weight",
+          "phase": "R2-assign",
+          "detail": "reuse expr from another function in the file: total + digits[i] * weight",
+          "combined_rank": 71,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 5,
+          "param": "total = 3",
+          "phase": "R2-assign",
+          "detail": "re-insert total = 3",
+          "combined_rank": 76,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 5,
+          "param": "total = weight",
+          "phase": "R2-assign",
+          "detail": "re-insert total = weight",
+          "combined_rank": 80,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 5,
+          "param": "total = weight + 0",
+          "phase": "R2-assign",
+          "detail": "re-insert total = weight + 0",
+          "combined_rank": 141,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 5,
+          "param": "total = weight - 0",
+          "phase": "R2-assign",
+          "detail": "re-insert total = weight - 0",
+          "combined_rank": 142,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 5,
+          "param": "total = i + 12",
+          "phase": "R2-assign",
+          "detail": "re-insert total = i + 12",
+          "combined_rank": 153,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 5,
+          "param": "total = i + 2",
+          "phase": "R2-assign",
+          "detail": "re-insert total = i + 2",
+          "combined_rank": 169,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 5,
+          "param": "total = weight * 1",
+          "phase": "R2-assign",
+          "detail": "re-insert total = weight * 1",
+          "combined_rank": 191,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 5,
+          "param": "total = weight / 1",
+          "phase": "R2-assign",
+          "detail": "re-insert total = weight / 1",
+          "combined_rank": 192,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_assign",
+          "site": 5,
+          "param": "total = i * 3",
+          "phase": "R2-assign",
+          "detail": "re-insert total = i * 3",
+          "combined_rank": 203,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 15.7,
+      "combined_rank": 55,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": 116,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_constant",
+      "order_p_rank_v2keys": 55
+    },
+    {
+      "task_id": "heldout-roman-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "int_to_roman"
+      ],
+      "symptom": {
+        "actual": "IVXCCMM",
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": "MCMXCIV",
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 93,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 6.4,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 1
+    },
+    {
+      "task_id": "heldout-roman-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "int_to_roman"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": "MCMXCIV",
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 94,
+      "n_recon_r1": 149,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 243,
+      "fixing": [
+        {
+          "inverse": "removed_return_reconstruction",
+          "site": 7,
+          "param": "out",
+          "phase": "P0-guess",
+          "detail": "R0: return out (last assigned local before line 7)",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 7,
+          "param": "out * 1",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: out * 1",
+          "combined_rank": 142,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 16.9,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P0-guess",
+      "fixed_by_inverse": "removed_return_reconstruction",
+      "order_p_rank_v2keys": 94
+    },
+    {
+      "task_id": "heldout-roman-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "int_to_roman"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "NameError",
+        "name_error": "table",
+        "expected": "MCMXCIV",
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 2,
+      "n_recon_r1": 0,
+      "n_recon_r2": 129,
+      "n_recon_r3": 0,
+      "n_combined": 131,
+      "fixing": [],
+      "test_secs": 8.9,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-roman-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "int_to_roman"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "UnboundLocalError",
+        "name_error": "out",
+        "expected": "MCMXCIV",
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 171,
+      "n_recon_r3": 0,
+      "n_combined": 264,
+      "fixing": [
+        {
+          "inverse": "recon_assign",
+          "site": 3,
+          "param": "out = ''",
+          "phase": "R2-assign",
+          "detail": "re-insert out = ''",
+          "combined_rank": 101,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 18.0,
+      "combined_rank": 101,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": 208,
+      "fixed_by_phase": "R2-assign",
+      "fixed_by_inverse": "recon_assign",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-roman-removed_assignment-2",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "int_to_roman"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "NameError",
+        "name_error": "count",
+        "expected": "MCMXCIV",
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 93,
+      "n_recon_r1": 0,
+      "n_recon_r2": 129,
+      "n_recon_r3": 0,
+      "n_combined": 222,
+      "fixing": [],
+      "test_secs": 16.0,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-roman-removed_assignment-3",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "int_to_roman"
+      ],
+      "symptom": {
+        "actual": "",
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": "MCMXCIV",
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 91,
+      "n_recon_r1": 0,
+      "n_recon_r2": 171,
+      "n_recon_r3": 0,
+      "n_combined": 262,
+      "fixing": [],
+      "test_secs": 17.9,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-pagination-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "page_count"
+      ],
+      "symptom": {
+        "actual": 0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 10,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 25,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 25,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.9,
+      "combined_rank": 2,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 10,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 2
+    },
+    {
+      "task_id": "heldout-pagination-swapped_operands-1",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "page_count"
+      ],
+      "symptom": {
+        "actual": -11,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 10,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 25,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 25,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 1,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 1 param None",
+          "combined_rank": 3,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.9,
+      "combined_rank": 3,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 12,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 3
+    },
+    {
+      "task_id": "heldout-pagination-removed_return-1",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "page_count"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 10,
+        "returns_none": true
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 15,
+      "n_recon_r1": 19,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 34,
+      "fixing": [
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "per_page",
+          "phase": "R1-return-expr",
+          "detail": "return per_page",
+          "combined_rank": 18,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "per_page * 1",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: per_page * 1",
+          "combined_rank": 33,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "per_page / 1",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: per_page / 1",
+          "combined_rank": 34,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.7,
+      "combined_rank": 18,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 42,
+      "fixed_by_phase": "R1-return-expr",
+      "fixed_by_inverse": "recon_return_expr",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-recipe-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "scale_amount"
+      ],
+      "symptom": {
+        "actual": 0.0033333333333333335,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 300.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 17,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 17,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.3,
+      "combined_rank": 2,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 10,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 2
+    },
+    {
+      "task_id": "heldout-recipe-removed_return-1",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "scale_amount"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 300.0,
+        "returns_none": true
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 15,
+      "n_recon_r1": 90,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 105,
+      "fixing": [
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "(amount / servings) * target",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: amount / servings * target",
+          "combined_rank": 48,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "(amount * target) / servings",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: amount * target / servings",
+          "combined_rank": 55,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "(target * amount) / servings",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: target * amount / servings",
+          "combined_rank": 79,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "(target / servings) * amount",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: target / servings * amount",
+          "combined_rank": 88,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 7.7,
+      "combined_rank": 48,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": 102,
+      "fixed_by_phase": "R1-return-expr",
+      "fixed_by_inverse": "recon_return_expr",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-dilution-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "final_volume"
+      ],
+      "symptom": {
+        "actual": 0.002,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 500.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 18,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 18,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.3,
+      "combined_rank": 2,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 10,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 2
+    },
+    {
+      "task_id": "heldout-dilution-wrong_comparator-0",
+      "bug_class": "wrong_comparator",
+      "implicated_functions": [
+        "final_volume"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "ZeroDivisionError",
+        "name_error": null,
+        "expected": 0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 18,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 18,
+      "fixing": [
+        {
+          "inverse": "wrong_comparator",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "wrong_comparator site 0 param None",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param 1",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.6,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_comparator",
+      "order_p_rank_v2keys": 1
+    },
+    {
+      "task_id": "heldout-dilution-dropped_condition-1",
+      "bug_class": "dropped_condition",
+      "implicated_functions": [
+        "final_volume"
+      ],
+      "symptom": {
+        "actual": 0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 500.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 10,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 36,
+      "n_combined": 46,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_boolean site 0 param None",
+          "combined_rank": 3,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and c1 < 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and c1 < 0",
+          "combined_rank": 11,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and c1 <= 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and c1 <= 0",
+          "combined_rank": 12,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and c1 == 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and c1 == 0",
+          "combined_rank": 15,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and v1 < 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and v1 < 0",
+          "combined_rank": 17,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and v1 <= 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and v1 <= 0",
+          "combined_rank": 18,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and v1 == 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and v1 == 0",
+          "combined_rank": 21,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and c2 < 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and c2 < 0",
+          "combined_rank": 23,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and c2 <= 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and c2 <= 0",
+          "combined_rank": 24,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and c2 == 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and c2 == 0",
+          "combined_rank": 27,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 4.5,
+      "combined_rank": 3,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 12,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_boolean",
+      "order_p_rank_v2keys": 3
+    },
+    {
+      "task_id": "heldout-dilution-swapped_boolean-0",
+      "bug_class": "swapped_boolean",
+      "implicated_functions": [
+        "final_volume"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "ZeroDivisionError",
+        "name_error": null,
+        "expected": 0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 18,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 18,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_boolean site 0 param None",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.5,
+      "combined_rank": 2,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 10,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 2
+    },
+    {
+      "task_id": "heldout-dilution-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "final_volume"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 0,
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 11,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 12,
+      "fixing": [
+        {
+          "inverse": "recon_guard_literal",
+          "site": 3,
+          "param": "0",
+          "phase": "P0-guard-literal",
+          "detail": "R0: guard-branch bare return -> return 0 (failing test expects 0)",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 0.9,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P0-guard-literal",
+      "fixed_by_inverse": "recon_guard_literal",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-dilution-removed_return-1",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "final_volume"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 500.0,
+        "returns_none": true
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 16,
+      "n_recon_r1": 76,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 92,
+      "fixing": [
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "(c1 * v1) / c2",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: c1 * v1 / c2",
+          "combined_rank": 46,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "(c1 / c2) * v1",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: c1 / c2 * v1",
+          "combined_rank": 55,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "(v1 * c1) / c2",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: v1 * c1 / c2",
+          "combined_rank": 62,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "(v1 / c2) * c1",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: v1 / c2 * c1",
+          "combined_rank": 71,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 6.8,
+      "combined_rank": 46,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": 98,
+      "fixed_by_phase": "R1-return-expr",
+      "fixed_by_inverse": "recon_return_expr",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-pressure-swapped_operands-0",
+      "bug_class": "swapped_operands",
+      "implicated_functions": [
+        "pressure"
+      ],
+      "symptom": {
+        "actual": 0.05,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 20.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 17,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 17,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.3,
+      "combined_rank": 2,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 10,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 2
+    },
+    {
+      "task_id": "heldout-pressure-wrong_comparator-0",
+      "bug_class": "wrong_comparator",
+      "implicated_functions": [
+        "pressure"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "ZeroDivisionError",
+        "name_error": null,
+        "expected": 0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 17,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 17,
+      "fixing": [
+        {
+          "inverse": "wrong_comparator",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "wrong_comparator site 0 param None",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": 1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param 1",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.5,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_comparator",
+      "order_p_rank_v2keys": 1
+    },
+    {
+      "task_id": "heldout-pressure-dropped_condition-1",
+      "bug_class": "dropped_condition",
+      "implicated_functions": [
+        "pressure"
+      ],
+      "symptom": {
+        "actual": 0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 20.0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 9,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 24,
+      "n_combined": 33,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_boolean site 0 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and force < 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and force < 0",
+          "combined_rank": 10,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and force <= 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and force <= 0",
+          "combined_rank": 11,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and force == 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and force == 0",
+          "combined_rank": 14,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and area < 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and area < 0",
+          "combined_rank": 16,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and area <= 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and area <= 0",
+          "combined_rank": 17,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 2,
+          "param": "safe and area == 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: safe and area == 0",
+          "combined_rank": 20,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 3.2,
+      "combined_rank": 2,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 10,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_boolean",
+      "order_p_rank_v2keys": 2
+    },
+    {
+      "task_id": "heldout-pressure-swapped_boolean-0",
+      "bug_class": "swapped_boolean",
+      "implicated_functions": [
+        "pressure"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "ZeroDivisionError",
+        "name_error": null,
+        "expected": 0,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 17,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 17,
+      "fixing": [
+        {
+          "inverse": "swapped_operands",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_operands site 0 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_boolean site 0 param None",
+          "combined_rank": 3,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.4,
+      "combined_rank": 2,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 10,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_operands",
+      "order_p_rank_v2keys": 2
+    },
+    {
+      "task_id": "heldout-pressure-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "pressure"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 0,
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 10,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 11,
+      "fixing": [
+        {
+          "inverse": "recon_guard_literal",
+          "site": 3,
+          "param": "0",
+          "phase": "P0-guard-literal",
+          "detail": "R0: guard-branch bare return -> return 0 (failing test expects 0)",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 0.9,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P0-guard-literal",
+      "fixed_by_inverse": "recon_guard_literal",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-pressure-removed_return-1",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "pressure"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 20.0,
+        "returns_none": true
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 16,
+      "n_recon_r1": 11,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 27,
+      "fixing": [
+        {
+          "inverse": "recon_return_expr",
+          "site": 4,
+          "param": "force / area",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: force / area",
+          "combined_rank": 23,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.0,
+      "combined_rank": 23,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 52,
+      "fixed_by_phase": "R1-return-expr",
+      "fixed_by_inverse": "recon_return_expr",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-ohm-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "voltage"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 20,
+        "returns_none": true
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 0,
+      "n_recon_r1": 11,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 11,
+      "fixing": [
+        {
+          "inverse": "recon_return_expr",
+          "site": 2,
+          "param": "current * resistance",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: current * resistance",
+          "combined_rank": 6,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_return_expr",
+          "site": 2,
+          "param": "resistance * current",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: resistance * current",
+          "combined_rank": 10,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 1.0,
+      "combined_rank": 6,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 18,
+      "fixed_by_phase": "R1-return-expr",
+      "fixed_by_inverse": "recon_return_expr",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-kelvin-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "celsius_to_kelvin"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 298,
+        "returns_none": true
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 0,
+      "n_recon_r1": 6,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 6,
+      "fixing": [
+        {
+          "inverse": "recon_return_expr",
+          "site": 2,
+          "param": "celsius + 273",
+          "phase": "R1-return-expr",
+          "detail": "recomputed return: celsius + 273",
+          "combined_rank": 3,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 0.5,
+      "combined_rank": 3,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 12,
+      "fixed_by_phase": "R1-return-expr",
+      "fixed_by_inverse": "recon_return_expr",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-taxi-dropped_condition-1",
+      "bug_class": "dropped_condition",
+      "implicated_functions": [
+        "taxi_fare"
+      ],
+      "symptom": {
+        "actual": 18,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 13,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 25,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 72,
+      "n_combined": 97,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_boolean site 0 param None",
+          "combined_rank": 4,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 1,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 1 param -1",
+          "combined_rank": 8,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -5,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -5",
+          "combined_rank": 14,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -5,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -5",
+          "combined_rank": 24,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and distance < 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and distance < 0",
+          "combined_rank": 26,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and distance < 3",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and distance < 3",
+          "combined_rank": 27,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and distance <= 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and distance <= 0",
+          "combined_rank": 28,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and distance <= 3",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and distance <= 3",
+          "combined_rank": 29,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and distance == 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and distance == 0",
+          "combined_rank": 34,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and distance == 3",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and distance == 3",
+          "combined_rank": 35,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and base < 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and base < 0",
+          "combined_rank": 38,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and base < 3",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and base < 3",
+          "combined_rank": 39,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and base <= 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and base <= 0",
+          "combined_rank": 40,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and base > 3",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and base > 3",
+          "combined_rank": 43,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and base == 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and base == 0",
+          "combined_rank": 46,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and base != 3",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and base != 3",
+          "combined_rank": 49,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and total < 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and total < 0",
+          "combined_rank": 50,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and total < 3",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and total < 3",
+          "combined_rank": 51,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and total <= 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and total <= 0",
+          "combined_rank": 52,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and total <= 3",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and total <= 3",
+          "combined_rank": 53,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and total == 0",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and total == 0",
+          "combined_rank": 58,
+          "regressions_passed": true,
+          "regressions_run": 2
+        },
+        {
+          "inverse": "recon_guard",
+          "site": 4,
+          "param": "surge and total == 3",
+          "phase": "R3-guard",
+          "detail": "re-insert guard: surge and total == 3",
+          "combined_rank": 59,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 9.5,
+      "combined_rank": 4,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 14,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_boolean",
+      "order_p_rank_v2keys": 4
+    },
+    {
+      "task_id": "heldout-taxi-swapped_boolean-0",
+      "bug_class": "swapped_boolean",
+      "implicated_functions": [
+        "taxi_fare"
+      ],
+      "symptom": {
+        "actual": 33,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 38,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 33,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 33,
+      "fixing": [
+        {
+          "inverse": "swapped_boolean",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "swapped_boolean site 0 param None",
+          "combined_rank": 5,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 2.3,
+      "combined_rank": 5,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 16,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "swapped_boolean",
+      "order_p_rank_v2keys": 5
+    },
+    {
+      "task_id": "heldout-taxi-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "taxi_fare"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 38,
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 34,
+      "n_recon_r1": 35,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 69,
+      "fixing": [
+        {
+          "inverse": "removed_return_reconstruction",
+          "site": 6,
+          "param": "total",
+          "phase": "P0-guess",
+          "detail": "R0: return total (last assigned local before line 6)",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 4.7,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P0-guess",
+      "fixed_by_inverse": "removed_return_reconstruction",
+      "order_p_rank_v2keys": 34
+    },
+    {
+      "task_id": "heldout-taxi-removed_assignment-0",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "taxi_fare"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "NameError",
+        "name_error": "base",
+        "expected": 38,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 26,
+      "n_recon_r1": 0,
+      "n_recon_r2": 36,
+      "n_recon_r3": 0,
+      "n_combined": 62,
+      "fixing": [
+        {
+          "inverse": "recon_assign",
+          "site": 2,
+          "param": "base = 3",
+          "phase": "R2-assign",
+          "detail": "reuse expr from another function in the file: 3",
+          "combined_rank": 27,
+          "regressions_passed": true,
+          "regressions_run": 2
+        }
+      ],
+      "test_secs": 4.3,
+      "combined_rank": 27,
+      "fixed_efficient": true,
+      "fixed_primary": false,
+      "calls_efficient": 60,
+      "fixed_by_phase": "R2-assign",
+      "fixed_by_inverse": "recon_assign",
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-taxi-removed_assignment-1",
+      "bug_class": "removed_assignment",
+      "implicated_functions": [
+        "taxi_fare"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": true,
+        "exception": "UnboundLocalError",
+        "name_error": "total",
+        "expected": 38,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 24,
+      "n_recon_r1": 0,
+      "n_recon_r2": 50,
+      "n_recon_r3": 0,
+      "n_combined": 74,
+      "fixing": [],
+      "test_secs": 5.0,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-gpa-removed_return-0",
+      "bug_class": "removed_return",
+      "implicated_functions": [
+        "gpa"
+      ],
+      "symptom": {
+        "actual": null,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 3.125,
+        "returns_none": true
+      },
+      "n_phase0": 1,
+      "n_enum_in_region": 18,
+      "n_recon_r1": 65,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 83,
+      "fixing": [],
+      "test_secs": 5.6,
+      "combined_rank": null,
+      "fixed_efficient": false,
+      "fixed_primary": false,
+      "calls_efficient": null,
+      "fixed_by_phase": null,
+      "fixed_by_inverse": null,
+      "order_p_rank_v2keys": null
+    },
+    {
+      "task_id": "heldout-tax-wrong_comparator-0",
+      "bug_class": "wrong_comparator",
+      "implicated_functions": [
+        "tax_owed"
+      ],
+      "symptom": {
+        "actual": 0,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 1000,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 79,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 79,
+      "fixing": [
+        {
+          "inverse": "wrong_comparator",
+          "site": 0,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "wrong_comparator site 0 param None",
+          "combined_rank": 1,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 0,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 0 param -1",
+          "combined_rank": 11,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -2,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -2",
+          "combined_rank": 30,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -3,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -3",
+          "combined_rank": 31,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -4,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -4",
+          "combined_rank": 32,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -5,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -5",
+          "combined_rank": 33,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 0,
+          "param": -6,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 0 param -6",
+          "combined_rank": 34,
+          "regressions_passed": true,
+          "regressions_run": 3
+        }
+      ],
+      "test_secs": 6.8,
+      "combined_rank": 1,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 8,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_comparator",
+      "order_p_rank_v2keys": 1
+    },
+    {
+      "task_id": "heldout-tax-wrong_comparator-1",
+      "bug_class": "wrong_comparator",
+      "implicated_functions": [
+        "tax_owed"
+      ],
+      "symptom": {
+        "actual": 4000,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 8000,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 79,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 79,
+      "fixing": [
+        {
+          "inverse": "wrong_comparator",
+          "site": 1,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "wrong_comparator site 1 param None",
+          "combined_rank": 2,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 2,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 2 param -1",
+          "combined_rank": 15,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -2,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -2",
+          "combined_rank": 40,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -3,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -3",
+          "combined_rank": 41,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -4,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -4",
+          "combined_rank": 42,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -5,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -5",
+          "combined_rank": 43,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 2,
+          "param": -6,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 2 param -6",
+          "combined_rank": 44,
+          "regressions_passed": true,
+          "regressions_run": 3
+        }
+      ],
+      "test_secs": 6.7,
+      "combined_rank": 2,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 10,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_comparator",
+      "order_p_rank_v2keys": 2
+    },
+    {
+      "task_id": "heldout-tax-wrong_comparator-2",
+      "bug_class": "wrong_comparator",
+      "implicated_functions": [
+        "tax_owed"
+      ],
+      "symptom": {
+        "actual": 20000,
+        "raised": false,
+        "exception": null,
+        "name_error": null,
+        "expected": 30000,
+        "returns_none": false
+      },
+      "n_phase0": 0,
+      "n_enum_in_region": 79,
+      "n_recon_r1": 0,
+      "n_recon_r2": 0,
+      "n_recon_r3": 0,
+      "n_combined": 79,
+      "fixing": [
+        {
+          "inverse": "wrong_comparator",
+          "site": 2,
+          "param": null,
+          "phase": "P1-enum",
+          "detail": "wrong_comparator site 2 param None",
+          "combined_rank": 3,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "off_by_one",
+          "site": 5,
+          "param": -1,
+          "phase": "P1-enum",
+          "detail": "off_by_one site 5 param -1",
+          "combined_rank": 21,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -2,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 5 param -2",
+          "combined_rank": 55,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -3,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 5 param -3",
+          "combined_rank": 56,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -4,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 5 param -4",
+          "combined_rank": 57,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -5,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 5 param -5",
+          "combined_rank": 58,
+          "regressions_passed": true,
+          "regressions_run": 3
+        },
+        {
+          "inverse": "wrong_constant",
+          "site": 5,
+          "param": -6,
+          "phase": "P1-enum",
+          "detail": "wrong_constant site 5 param -6",
+          "combined_rank": 59,
+          "regressions_passed": true,
+          "regressions_run": 3
+        }
+      ],
+      "test_secs": 6.7,
+      "combined_rank": 3,
+      "fixed_efficient": true,
+      "fixed_primary": true,
+      "calls_efficient": 12,
+      "fixed_by_phase": "P1-enum",
+      "fixed_by_inverse": "wrong_comparator",
+      "order_p_rank_v2keys": 3
+    }
+  ]
+}

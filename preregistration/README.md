@@ -23,12 +23,15 @@ result existed).
 Baseline base model 0/32; Stage 1 v19 epoch-1 adapter kill pilot
 **0/32** (parsable 4/32, 12.5%, 0 operators) — all three kill
 conditions met. **Verdict: KILL the LoRA route.** No epoch 2, no
-Gate 2 probe. The EOS fix works (pilot median 13.8 s/task vs
-baseline 130.9 s) — the adapter simply fixes nothing. Notebook:
+Gate 2 probe. The EOS fix works (kill-pilot mean 22.4 s/task vs
+baseline 130.9 s/task) — the adapter simply fixes nothing. Notebook:
 https://www.kaggle.com/code/olsols4/first-gpu-session-gemma-4-baseline-stage-1-v19/edit
 (3 saved versions).
 
-Caveat (also in the paper): the saved run log does not prove the
-kill pilot ran with the cache fix, so 0/32 may include false
-negatives. The parsable rate (12.5%) is generation-side and
+Caveat (also in the paper): the bytecode path is verified — the
+kill pilot ran the fixed harness (cache-clearing verified, Kaggle
+copy byte-identical to the fixed file; see MEASUREMENT_PLAN.md §1
+in the workspace) — but no per-task kill log was retained in the
+repo, so 0/32 rests on the notebook record, not a checked-in
+results file. The parsable rate (12.5%) is generation-side and
 unaffected.

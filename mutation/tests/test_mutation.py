@@ -44,6 +44,28 @@ class TestOperators(unittest.TestCase):
         with self.assertRaises(MutationNotApplicable):
             apply_mutation("x = 1\n", "swapped_boolean", 0)
 
+    def test_wrong_comparator_skips_unswappable_compares(self):
+        # D1 regression (8 Nov 2026): _Mutator.visit_Compare used
+        # to count every Compare node before checking the operator
+        # is swappable, while _candidates counts only swappable
+        # ones — so with an `is`/`in` compare before the target,
+        # the mutation landed on the wrong node or nowhere. The
+        # target here is the only swappable compare; seed 0 must
+        # flip `a < b` to `a <= b`, not touch the `is` check.
+        src = (
+            "def f(x, a, b):\n"
+            "    if x is None:\n"
+            "        return 0\n"
+            "    if a < b:\n"
+            "        return 1\n"
+            "    return 0\n"
+        )
+        rec = apply_mutation(src, "wrong_comparator", 0, filename="probe.py")
+        self.assertEqual(rec["original_code"], "a < b")
+        self.assertEqual(rec["mutated_code"], "a <= b")
+        self.assertIn("a <= b", rec["mutated_source"])
+        self.assertIn("x is None", rec["mutated_source"])
+
 
 class TestGenerator(unittest.TestCase):
     def test_single_record_restores_original(self):
