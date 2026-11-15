@@ -25,8 +25,8 @@ and none is claimed here.
 | Repo | URL | Licence | Licence file location | Status |
 |---|---|---|---|---|
 | requests | https://github.com/psf/requests | Apache-2.0 | https://github.com/psf/requests/blob/main/LICENSE | UNVERIFIED — verify licence file before use |
-| flask | https://github.com/pallets/flask | BSD-3-Clause | https://github.com/pallets/flask/blob/main/LICENSE | UNVERIFIED — verify licence file before use |
-| click | https://github.com/pallets/click | BSD-3-Clause | https://github.com/pallets/click/blob/main/LICENSE | UNVERIFIED — verify licence file before use |
+| flask | https://github.com/pallets/flask | BSD-3-Clause | https://github.com/pallets/flask/blob/main/LICENSE.txt | UNVERIFIED — verify licence file before use |
+| click | https://github.com/pallets/click | BSD-3-Clause | https://github.com/pallets/click/blob/main/LICENSE.txt | UNVERIFIED — verify licence file before use |
 
 ## Download outcomes
 

@@ -1,9 +1,13 @@
 # Skill-script arm — `repo-blind-repair-skill-script`
 
-**Status: EARNS Day I (Sat 14 Nov).** Simulated 103/116 (kill 29/32,
+**Status: ran Day I (Sat 14 Nov) — SUCCEEDED, Public Score 0.00.** Simulated 103/116 (kill 29/32,
 singles 95/107) with verified minimal edits — beats v3 (95/116,
 28/32, 87/107) on every comparable set, AND with strictly lower
 cost (8 model round-trips/task vs ~27, latency-proof to 8 s/call).
+Outcome: the arm fixes nothing publicly, so it did not earn a final
+slot; Pick 1 fell back to the live scaffold (see `submission/`
+ladder). The 0.00 also leaves SkillToolset attachment unproven —
+it cannot distinguish "tools absent" from "tools present, no fixes".
 Package: `submission-skill-script.zip`, md5
 `691f9a94f564339c9b41ad81e805257b`, 7 files, 99,782 bytes unpacked,
 12B, inference-only, budgets unchanged (120 s / 60 calls / 5 min /
@@ -140,9 +144,8 @@ The bar was: beat v3 where comparable (kill >28/32 or singles
 call/time cost. The arm clears BOTH prongs: it beats v3 on all
 three sets (29 > 28, 95 > 87, 103 > 95) AND it costs 8 model
 round-trips per task instead of ~27 and is flat across the
-latency range. **It earns Day I (Sat 14 Nov).** The parent owns
-Day I scheduling (cron + manifest/ladder entries) — not done
-here.
+latency range. **It earned Day I (Sat 14 Nov); the daily ran and
+  scored 0.00 (see Status above).**
 
 ## Design decisions (the ones that could have gone wrong)
 
@@ -242,7 +245,8 @@ skills and nothing else was weakened:
   real scorer adds model behaviour neither sim measures:
   orient errors (wrong implicated function), skill-call
   failures, edit-application errors, and the model ignoring the
-  skill result. The Day I daily is the measurement.
+  skill result. The Day I daily was the measurement: it scored
+  0.00 (SUCCEEDED, 15 Nov re-check).
 - The script can only find fixes in its fixed candidate order.
   A bug needing a genuinely novel expression outside that order
   is not found (13/116 not_found, all destructive-class).
@@ -256,7 +260,9 @@ skills and nothing else was weakened:
   been observed at the real scorer. If the tools are absent, the
   arm degrades to the v3 manual procedure — it cannot score
   WORSE than v3 in expectation, only equal. The Day I daily
-  tests this.
+  tested this and scored 0.00, which does not resolve attachment
+  either way (a 0.00 cannot distinguish "tools absent" from
+  "tools present, no fixes").
 - No GPU, no Kaggle, no submissions were involved in building or
   measuring this arm. Nothing here edits any existing submission
   package or the paper.

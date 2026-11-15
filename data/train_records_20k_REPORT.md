@@ -38,6 +38,13 @@ verification was needed and no external licence is claimed.
     through the unchanged mutation pipeline match the file exactly
     (0 mismatches).
 
+    Addendum (15 Nov 2026): check 10 was verified 31 Oct 2026 with
+    the pipeline as it then stood. Re-running the full validator
+    with the current pipeline (after the 8 Nov D1 comparator-inverter
+    fix) reports 107 regeneration mismatches out of 20,000 (0.5%),
+    all involving wrong_comparator (34 singles, 73 composites); the
+    counts/schema/parse checks still pass. See VERIFICATION_LOG.md.
+
 ## Token-length survey (ESTIMATE — read the caveat)
 Method: chars/4 on the training-text format
 (`Fix this Python bug (bug class: ...)` + buggy + `Fixed code:` +

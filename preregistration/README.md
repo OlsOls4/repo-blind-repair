@@ -26,7 +26,8 @@ conditions met. **Verdict: KILL the LoRA route.** No epoch 2, no
 Gate 2 probe. The EOS fix works (kill-pilot mean 22.4 s/task vs
 baseline 130.9 s/task) — the adapter simply fixes nothing. Notebook:
 https://www.kaggle.com/code/olsols4/first-gpu-session-gemma-4-baseline-stage-1-v19/edit
-(3 saved versions).
+(3 saved versions; link resolves for the notebook owner only —
+the notebook is private, so it returns 404 to anyone else).
 
 Caveat (also in the paper): the bytecode path is verified — the
 kill pilot ran the fixed harness (cache-clearing verified, Kaggle
@@ -35,3 +36,21 @@ in the workspace) — but no per-task kill log was retained in the
 repo, so 0/32 rests on the notebook record, not a checked-in
 results file. The parsable rate (12.5%) is generation-side and
 unaffected.
+
+What is missing, exactly (15 Nov 2026): the per-task log files
+(`baseline_n32.json`, `kill_pilot_n32.json`) and the per-task
+printed lines — which of the 32 frozen tasks (see
+`kill_test_task_ids.txt`) each outcome belongs to, and per-task
+timings. Why: the run's outputs lived in the Kaggle session's
+`/kaggle/working`, which is wiped when an interactive session stops
+("No persistence"), and the JSON files were never committed to a
+notebook version; an exhaustive search of this machine (repo,
+workspace, memory, transcripts, `/tmp`) on 15 Nov 2026 found no
+copy, and no Kaggle CLI/API is available here to fetch notebook
+outputs. What is retained instead: the aggregates above, the frozen
+task IDs, the checkpoint reference
+(`full_train_output/run-20261107T113316Z/checkpoint-opt-5000/`),
+and the per-task lines as printed cell output inside the notebook's
+saved versions — recoverable only by authenticated access to the
+notebook (owner browser read, or `kaggle kernels output` with an
+API token). Nothing was invented to fill the gap.

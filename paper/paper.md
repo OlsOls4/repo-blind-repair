@@ -2,6 +2,14 @@
      regenerated 2026-11-11 from the 2,798/2,846-word body (recount.py methods
      1/2; verified against SUBMISSION.md). Source of truth is paper/SUBMISSION.md
      — do not edit this copy directly. -->
+<!-- REPO NOTE (15 Nov 2026, post-submission): the scorer-daily counts
+     below were updated from x7 to x10 to reflect Days G-I (basis: the
+     5 Nov E4B daily + Days A-I, all Public Score 0.00). The paper as
+     submitted to Kaggle on 11 Nov 2026 still reads x7; only the counts
+     were changed, not the paper's claims. Day J (E4B skill-script,
+     submitted 15 Nov 09:19 GMT) is still running at the time of this
+     edit - its outcome is recorded in README.md (placeholder line)
+     and will replace this note's Day J sentence once scored. -->
 ## Abstract
 
 **KILL RESULT (7 Nov): retrained LoRA (low-rank adaptation) fixes 0/32; end-of-sequence fix works but repairs nothing. LoRA route killed.**
@@ -88,7 +96,7 @@ The intended model is a Gemma 4 12B LoRA (quantisation-aware training (QAT) chec
 | Search baseline (model-free) | 24/32 frozen; 77/116 full |
 | Search-guided v3 (simulator) | 28/32 kill; 87/107 singles; 95/116 overall |
 | Skill-script arm (simulator) | 29/32 kill; 95/107 singles; 103/116 overall |
-| Scorer dailies | 0.00 ×7 |
+| Scorer dailies | 0.00 ×10 |
 
 *Numbers: 0/18 = LoRA pilots (v1), 0/32 = kill pilot (v19), 24/32 = model-free search (not the model), 33/33 = harness unit tests (not repair).*
 
@@ -145,7 +153,7 @@ Three path failures fixed (rung-2 empty context, format mismatch, missing end-of
 
 ## What remains unmeasured and why
 
-Quota: 18h30m remains after the 7 Nov session. Measured now: base-model baseline 0/32, kill pilot 0/32, scorer dailies 0.00 ×7. Still **TO BE MEASURED**: a real-fix baseline, the dev-set fix rate, and full-run training sizing.
+Quota: 18h30m remains after the 7 Nov session. Measured now: base-model baseline 0/32, kill pilot 0/32, scorer dailies 0.00 ×10. Still **TO BE MEASURED**: a real-fix baseline, the dev-set fix rate, and full-run training sizing.
 
 **Kill test — what falsified this.** Designed 1 Nov, frozen 5 Nov (see preregistration/ in the repo): retrain with end-of-sequence appended, then 32 held-out singles. It killed the LoRA route — 0/32 fixed, 0 operators, parsable (syntactically valid Python) 12.5% — so the failure is in the training, not the tasks. The kill pilot ran the fixed harness (MEASUREMENT_PLAN.md §1: cache-clearing verified, Kaggle copy byte-identical), but no per-task kill log was retained, so 0/32 rests on the notebook record, not a checked-in results file.
 
@@ -183,7 +191,7 @@ Repo-Blind Repair asks whether an agent can learn to fix bugs from bugs it made 
 
 ## Data and code availability
 
-Data and code availability: code, corpus, and scripts are at https://github.com/OlsOls4/repo-blind-repair (commit 486744a, Apache-2.0); the corpus is also on Kaggle at https://www.kaggle.com/datasets/olsols4/repo-blind-repair-synthetic-corpus-20k (v2, CC BY 4.0); the corpus regenerates byte-identically from its provenance sidecar. Reuse: `python3 data_generation/generate_scaled_dataset.py` regenerates the 20,000 records; `python3 search_baseline/search_baseline.py --task-set all116` reruns the 116-task search. It does NOT cover: toy programs only; no multi-file, API, or requirements bugs; failing_test is empty.
+Data and code availability: code, corpus, and scripts are at https://github.com/OlsOls4/repo-blind-repair (commit 1bf60f4b, Apache-2.0); the corpus is also on Kaggle at https://www.kaggle.com/datasets/olsols4/repo-blind-repair-synthetic-corpus-20k (v2, CC BY 4.0); the corpus regenerates byte-identically from its provenance sidecar. Reuse: `python3 data_generation/generate_scaled_dataset.py` regenerates the 20,000 records; `python3 search_baseline/search_baseline.py --task-set all116` reruns the 116-task search. It does NOT cover: toy programs only; no multi-file, API, or requirements bugs; failing_test is empty.
 
 ## References
 

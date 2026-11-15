@@ -12,9 +12,16 @@ written for this task, so the fixed code is exactly the original code
 by construction. The guarantee covers the fine-tuning data only — not
 the base model's pre-training. A provenance sidecar
 (`data/train_records_20k_provenance.jsonl`) records
-`(source_index, operators, seed)` per record, so anyone can regenerate
-all 20,000 records byte-identically (0 mismatches, verified 31 Oct 2026;
-see `data/train_records_20k_REPORT.md`).
+`(source_index, operators, seed)` per record. The 31 Oct 2026 full
+validation regenerated all 20,000 records byte-identically
+(0 mismatches) with the pipeline as it then stood; a 15 Nov 2026
+re-check with the current pipeline finds 107 mismatches (0.5%),
+all involving the `wrong_comparator` operator — the 8 Nov D1 fix
+corrected the comparator inverter after the dataset was generated,
+changing which candidate a seed selects. The affected records
+remain valid (buggy ≠ fixed, both parse); only the byte-exact
+claim is narrowed. See "Regenerate the corpus" below and
+`VERIFICATION_LOG.md`.
 
 **What this resource is not:** it does not claim synthetic training
 transfers to real bugs. The paper's headline finding is a diagnosed
@@ -61,9 +68,15 @@ python3 data_generation/validate_scaled_dataset.py --data-dir /tmp/regen
 ```
 
 Expected: 20,000 records (14,000 singles at exactly 1,750 per operator,
-6,000 composites), every record regenerating exactly from the sidecar
-(0 mismatches). Full run takes a few minutes on CPU. See
-`data_generation/README.md`. A lighter check is
+6,000 composites). NOTE (15 Nov 2026): the full regeneration no longer
+matches byte-exactly — 107/20,000 records differ, all involving
+`wrong_comparator` (34 singles, 73 composites), because the 8 Nov D1
+fix corrected the comparator inverter after the dataset was generated.
+`reproduce.py` reports this (sample 998/1,000). Counts, schema, and
+parse checks still pass. See `VERIFICATION_LOG.md` for the full
+verification record and the decision this leaves open (disclose as-is
+vs regenerate the dataset with the fixed pipeline). Full run takes a
+few minutes on CPU. See `data_generation/README.md`. A lighter check is
 `reproduce.py` in this repo (sample regeneration +
 headline counts + both test suites) — run it from the repo root; it
 expects the dataset in a sibling `dataset/` directory (the staging
@@ -99,6 +112,11 @@ Agent Competition, Paper Track.
 
 ## Honest limits (read before using)
 
+- **Regeneration gap (15 Nov 2026).** The staged pipeline
+  regenerates 19,893/20,000 records exactly; 107 (0.5%) differ, all
+  involving `wrong_comparator`, after the 8 Nov D1 comparator-inverter
+  fix. The 31 Oct "0 mismatches" verification predates that fix.
+  See `VERIFICATION_LOG.md`.
 - **Synthetic only.** Single-operator mutations are shallow: no missing
   logic, wrong API use, or multi-file faults. Composites narrow the gap;
   they do not close it.
@@ -116,6 +134,11 @@ Agent Competition, Paper Track.
   compiled and ran at the scorer (E4B daily, 5 Nov 2026, status
   SUCCEEDED, Public Score 0.00 — it fixed nothing, as expected for
   inference-only). vLLM serving of a trained adapter remains untested.
+  Scorer-daily tally, current as of 15 Nov 2026: ten scored dailies
+  (the 5 Nov E4B daily + Days A–I) all read Public Score 0.00.
+  [Day J update, 15 Nov 12:30 check: E4B skill-script daily submitted
+  15 Nov 09:19 GMT, still running with no Public Score yet; re-check
+  Mon 16 Nov ~09:30. Tally stays ×10 until it scores.]
 - **Dev-set converter output is not publishable as-is.** The derived
   dev-set tasks embed competition data by construction (full repository
   trees + problem statements). The converter script is published; its
