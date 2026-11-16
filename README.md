@@ -138,7 +138,7 @@ Agent Competition, Paper Track.
   (the 5 Nov E4B daily + Days A–J) all read Public Score 0.00.
   [Day J outcome, checked Mon 16 Nov ~09:27: E4B skill-script daily
   submitted 15 Nov 09:19 GMT, status SUCCEEDED, Public Score 0.00 —
-  the tenth consecutive 0.00. Per the pre-set rule, Pick 2 locks to
+  the eleventh consecutive 0.00. Per the pre-set rule, Pick 2 locks to
   E4B v2, not the E4B skill-script.]
 - **Dev-set converter output is not publishable as-is.** The derived
   dev-set tasks embed competition data by construction (full repository
