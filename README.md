@@ -134,11 +134,12 @@ Agent Competition, Paper Track.
   compiled and ran at the scorer (E4B daily, 5 Nov 2026, status
   SUCCEEDED, Public Score 0.00 — it fixed nothing, as expected for
   inference-only). vLLM serving of a trained adapter remains untested.
-  Scorer-daily tally, current as of 15 Nov 2026: ten scored dailies
-  (the 5 Nov E4B daily + Days A–I) all read Public Score 0.00.
-  [Day J update, 15 Nov 12:30 check: E4B skill-script daily submitted
-  15 Nov 09:19 GMT, still running with no Public Score yet; re-check
-  Mon 16 Nov ~09:30. Tally stays ×10 until it scores.]
+  Scorer-daily tally, current as of 16 Nov 2026: eleven scored dailies
+  (the 5 Nov E4B daily + Days A–J) all read Public Score 0.00.
+  [Day J outcome, checked Mon 16 Nov ~09:27: E4B skill-script daily
+  submitted 15 Nov 09:19 GMT, status SUCCEEDED, Public Score 0.00 —
+  the tenth consecutive 0.00. Per the pre-set rule, Pick 2 locks to
+  E4B v2, not the E4B skill-script.]
 - **Dev-set converter output is not publishable as-is.** The derived
   dev-set tasks embed competition data by construction (full repository
   trees + problem statements). The converter script is published; its

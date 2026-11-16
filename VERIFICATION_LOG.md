@@ -83,5 +83,6 @@ no longer reproducible with the current pipeline.
   retrievable solely by authenticated access. Full disclosure is in
   `preregistration/README.md` (and, in shorter form, in the paper).
   No log was invented.
-- Day J daily outcome (still running at the 15 Nov 12:30 check; see
-  the `[Day J update, 15 Nov 12:30 check]` line in `README.md`).
+- Day J daily outcome (SUCCEEDED, Public Score 0.00, checked Mon
+  16 Nov ~09:27; see the `[Day J outcome, checked Mon 16 Nov ~09:27]`
+  line in `README.md`).

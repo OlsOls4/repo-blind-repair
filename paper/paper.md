@@ -2,14 +2,13 @@
      regenerated 2026-11-11 from the 2,798/2,846-word body (recount.py methods
      1/2; verified against SUBMISSION.md). Source of truth is paper/SUBMISSION.md
      — do not edit this copy directly. -->
-<!-- REPO NOTE (15 Nov 2026, post-submission): the scorer-daily counts
-     below were updated from x7 to x10 to reflect Days G-I (basis: the
-     5 Nov E4B daily + Days A-I, all Public Score 0.00). The paper as
+<!-- REPO NOTE (16 Nov 2026, post-submission): the scorer-daily counts
+     below were updated from x7 to x11 to reflect Days G-J (basis: the
+     5 Nov E4B daily + Days A-J, all Public Score 0.00). The paper as
      submitted to Kaggle on 11 Nov 2026 still reads x7; only the counts
      were changed, not the paper's claims. Day J (E4B skill-script,
-     submitted 15 Nov 09:19 GMT) is still running at the time of this
-     edit - its outcome is recorded in README.md (placeholder line)
-     and will replace this note's Day J sentence once scored. -->
+     submitted 15 Nov 09:19 GMT) scored 0.00 (SUCCEEDED, checked
+     16 Nov ~09:27); per the pre-set rule Pick 2 locks to E4B v2. -->
 ## Abstract
 
 **KILL RESULT (7 Nov): retrained LoRA (low-rank adaptation) fixes 0/32; end-of-sequence fix works but repairs nothing. LoRA route killed.**
