@@ -74,6 +74,8 @@ no longer reproducible with the current pipeline.
   (new dataset version, re-validation, Kaggle re-upload, paper
   numbers stale — a material change, not taken here).
 
+Decision (15 Nov): disclose as-is; regeneration deferred (new dataset version + re-upload + stale paper numbers).
+
 ## What was NOT verified in this run
 
 - Kill-test per-task log: NOT RECOVERABLE (verdict 15 Nov 2026).

@@ -1,7 +1,7 @@
 # Skill-script arm — `repo-blind-repair-skill-script`
 
 **Status: ran Day I (Sat 14 Nov) — SUCCEEDED, Public Score 0.00.** Simulated 103/116 (kill 29/32,
-singles 95/107) with verified minimal edits — beats v3 (95/116,
+singles 95/107) with gate-accepted edits — beats v3 (95/116,
 28/32, 87/107) on every comparable set, AND with strictly lower
 cost (8 model round-trips/task vs ~27, latency-proof to 8 s/call).
 Outcome: the arm fixes nothing publicly, so it did not earn a final
@@ -17,7 +17,7 @@ unchanged (103/116, kill 29/32, singles 95/107).
 
 ## Why this arm exists
 
-The mock scorer (`kaggle/MOCK_SCORER.md`) found LATENCY is the
+The mock scorer (`MOCK_SCORER.md` — competition workspace, not in this repo) found LATENCY is the
 binding risk for the prompt arms: the v2 prompt spends ~27 model
 round-trips per task, so at 5 s/call it drops to 68/107 and at
 8 s/call to 57/107 (from 69/107 at 4 s). A skill script collapses
@@ -77,11 +77,11 @@ invocation contract in `skills/enumerate-inverses/SKILL.md`.
 
 ## Measured numbers (simulator drives the REAL script)
 
-`kaggle/simulate_skill_script.py` runs the actual script as a
+`simulate_skill_script.py` (competition workspace, not in this repo) runs the actual script as a
 subprocess on every held-out task (live `--time-budget 210`
 default), then independently re-verifies each returned edit on a
 FRESH copy of the buggy file. Results:
-`kaggle/simulate_skill_script_results.json` (116 tasks, 266 s).
+`../simulate_skill_script_results.json` (116 tasks, 266 s).
 
 | set | skill-script arm | v3 prompt sim | v2 prompt (mock scorer) |
 |---|---|---|---|

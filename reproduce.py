@@ -22,9 +22,11 @@ Checks:
   2. Sample regeneration: 1,000 records (first 500 + 500 evenly
      spaced) regenerated from the provenance sidecar through the
      staged mutation pipeline and compared field-for-field.
-     (The FULL 20,000-record regeneration — 0 mismatches — was run
-     31 Oct 2026; see data/train_records_20k_REPORT.md in the repo,
-     and the staged full-validator run recorded in RESULTS.md.)
+     (The FULL 20,000-record regeneration was run 31 Oct 2026 with
+     the pipeline as it then stood: 20,000/20,000 exact at that date.
+     With the current pipeline (after the 8 Nov D1 comparator-inverter
+     fix) expect 107/20,000 mismatches, all wrong_comparator — see
+     VERIFICATION_LOG.md. The sample check below is the live test.)
   3. Both unit-test suites from the staged repo: mutation 10/10,
      harness 33/33.
 
@@ -136,9 +138,13 @@ def main() -> int:
           f"({mismatch} mismatches)")
     if mismatch:
         failures.append(f"sample regeneration: {mismatch} mismatches")
-    print("full regeneration: 20,000/20,000 exact (0 mismatches) — "
-          "31 Oct 2026 full-validator run, see "
-          "data/train_records_20k_REPORT.md")
+    print("full regeneration (31 Oct 2026, pre-D1 pipeline): "
+          "20,000/20,000 exact; with the current pipeline expect "
+          "107/20,000 mismatches, all wrong_comparator — see "
+          "VERIFICATION_LOG.md")
+    if mismatch:
+        print("  (the sample mismatches above are that known gap, "
+              "not a new failure — see VERIFICATION_LOG.md)")
 
     print("unit tests (repo):")
     _, ok_m = run_tests(REPO / "mutation", "mutation")

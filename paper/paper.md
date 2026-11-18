@@ -14,7 +14,18 @@
      12B, submitted 17 Nov 11:00 GMT) also scored 0.00 (SUCCEEDED,
      checked 18 Nov ~09:30) — the thirteenth consecutive 0.00; the
      ladder stop rule now triggers and prompt variants stop. Next
-     daily is the fixed skill arm. -->
+     daily is the fixed skill arm.
+     STALE CLAIMS FLAGGED (18 Nov 2026, post-submission working copy
+     only — the submitted text is frozen in SUBMISSION.md): the body
+     below still read scorer dailies x7 on 11 Nov; the live tally is
+     x13 in the repo README (the two x10 cells in the body were
+     corrected to x13 here). "Quota: 18h30m remains after the 7 Nov
+     session" is stale — later GPU sessions (V5–V7 replica runs)
+     consumed quota; the live meter was not re-verified, so no current
+     figure is stated here. "0 mismatches" in Methods and
+     "byte-exactly regenerable" in the Conclusion are narrowed to
+     19,893/20,000 with the current pipeline (20,000/20,000 with the
+     31 Oct 2026 pipeline) — see VERIFICATION_LOG.md. -->
 ## Abstract
 
 **KILL RESULT (7 Nov): retrained LoRA (low-rank adaptation) fixes 0/32; end-of-sequence fix works but repairs nothing. LoRA route killed.**
@@ -69,7 +80,7 @@ Eight operators, each reproducible from an (operator, seed) pair:
 
 Singles teach localisation of one fault; composites hypothesise a narrower realism gap.
 
-Corpus inventory (offline, from the validation report). Dataset v18: 82 parameterised shapes (62 general + 20 boolean-rich), rebuilt into 2,126 sources, 1,166 in the 20,000 records — 14,000 singles at 1,750 per operator, plus 6,000 composites across 14 pairs (25–709 per pair). No real human bug fix, no teacher-model output, and no third-party code was used. A provenance sidecar records (source_index, operators, seed) per record; regenerating all 20,000 records matches exactly (0 mismatches). Every record parses, buggy differs from fixed, and `failing_test` is empty. A token-trigram containment audit of the 116 held-out tasks against the 1,166 unique clean sources finds no near-duplicates: max 0.39, none above 0.50 (kaggle/audit_near_dup.py, sha256 6192d2f1). Above 0.50, a held-out task shares over half its token trigrams with a training source.
+Corpus inventory (offline, from the validation report). Dataset v18: 82 parameterised shapes (62 general + 20 boolean-rich), rebuilt into 2,126 sources, 1,166 in the 20,000 records — 14,000 singles at 1,750 per operator, plus 6,000 composites across 14 pairs (25–709 per pair). No real human bug fix, no teacher-model output, and no third-party code was used. A provenance sidecar records (source_index, operators, seed) per record; regenerating all 20,000 records matched exactly (0 mismatches) with the 31 Oct 2026 pipeline; the current pipeline finds 107 mismatches, all wrong_comparator (see VERIFICATION_LOG.md). Every record parses, buggy differs from fixed, and `failing_test` is empty. A token-trigram containment audit of the 116 held-out tasks against the 1,166 unique clean sources finds no near-duplicates: max 0.39, none above 0.50 (data_generation/audit_near_dup.py, sha256 6192d2f1). Above 0.50, a held-out task shares over half its token trigrams with a training source.
 
 ### Repair harness: scope ladder, context packer, regression gate
 
@@ -101,7 +112,7 @@ The intended model is a Gemma 4 12B LoRA (quantisation-aware training (QAT) chec
 | Search baseline (model-free) | 24/32 frozen; 77/116 full |
 | Search-guided v3 (simulator) | 28/32 kill; 87/107 singles; 95/116 overall |
 | Skill-script arm (simulator) | 29/32 kill; 95/107 singles; 103/116 overall |
-| Scorer dailies | 0.00 ×10 |
+| Scorer dailies | 0.00 ×13 |
 
 *Numbers: 0/18 = LoRA pilots (v1), 0/32 = kill pilot (v19), 24/32 = model-free search (not the model), 33/33 = harness unit tests (not repair).*
 
@@ -131,7 +142,7 @@ A model-free simulator shows what a test-guided agent could do with the same inv
 
 ### Kill test
 
-The pre-registered kill test ran 7 Nov 2026 (v19: end-of-sequence appended, label dropped). The retrained adapter fixes 0/32 (Wilson 95% 0.00–0.11); 4/32 are parsable (12.5%, Wilson ~0.05–0.28), in 0 operators; the base model also fixes 0/32 (1/32 parsable). All three kill conditions were met. End-of-sequence now works (22.4 vs 130.9 s/task, means; kaggle/MEASUREMENT_PLAN.md §3) but repair does not follow.
+The pre-registered kill test ran 7 Nov 2026 (v19: end-of-sequence appended, label dropped). The retrained adapter fixes 0/32 (Wilson 95% 0.00–0.11); 4/32 are parsable (12.5%, Wilson ~0.05–0.28), in 0 operators; the base model also fixes 0/32 (1/32 parsable). All three kill conditions were met. End-of-sequence now works (22.4 vs 130.9 s/task, means; MEASUREMENT_PLAN.md §3 — not in this repo) but repair does not follow.
 
 ### Worked example
 
@@ -158,7 +169,7 @@ Three path failures fixed (rung-2 empty context, format mismatch, missing end-of
 
 ## What remains unmeasured and why
 
-Quota: 18h30m remains after the 7 Nov session. Measured now: base-model baseline 0/32, kill pilot 0/32, scorer dailies 0.00 ×10. Still **TO BE MEASURED**: a real-fix baseline, the dev-set fix rate, and full-run training sizing.
+Quota: 18h30m remains after the 7 Nov session. Measured now: base-model baseline 0/32, kill pilot 0/32, scorer dailies 0.00 ×13. Still **TO BE MEASURED**: a real-fix baseline, the dev-set fix rate, and full-run training sizing.
 
 **Kill test — what falsified this.** Designed 1 Nov, frozen 5 Nov (see preregistration/ in the repo): retrain with end-of-sequence appended, then 32 held-out singles. It killed the LoRA route — 0/32 fixed, 0 operators, parsable (syntactically valid Python) 12.5% — so the failure is in the training, not the tasks. The kill pilot ran the fixed harness (MEASUREMENT_PLAN.md §1: cache-clearing verified, Kaggle copy byte-identical), but no per-task kill log was retained, so 0/32 rests on the notebook record, not a checked-in results file.
 
@@ -168,7 +179,7 @@ First, benchmark-driven repair evaluation (SWE-bench [1]): patches pass held-out
 
 | Approach | Real code? | Teacher model? | Deterministic? | Byte-exact regeneration? |
 |---|---|---|---|---|
-| This work | No | No | Yes | Yes |
+| This work | No | No | Yes | 99.5% (19,893/20,000) |
 | SWE-smith [5] | Yes | Yes | No | No |
 | BugLab [6] | Yes | No | No | No |
 | BugPilot [7] | Yes | Yes | No | No |
@@ -192,11 +203,11 @@ Fifth, cost: zero — free Kaggle notebooks, open weights, CPU-only data prepara
 
 ## Conclusion
 
-Repo-Blind Repair asks whether an agent can learn to fix bugs from bugs it made itself, with provenance holding by construction. The harness is built and locally verified (33/33 harness tests, 10/10 mutation tests); the training path passed its timing pilot (20/20 steps, 65.19s; Gate 1 328/328), but Gate 2 is INCONCLUSIVE, and scorer serving is proven for inference-only packages. Pilots fix 0/18. The kill test settles the gap question for this recipe: clean-room training as run here does not transfer to repair; the dev-set fix rate and any leaderboard outcome are still **TO BE MEASURED**. The durable contribution is the resource (public; see Data and code availability): a fully synthetic, byte-exactly regenerable corpus with harness and dev-set converter. The harness is itself the application — a scope-ladder agent with a minimal-diff regression gate for any Python repository with tests.
+Repo-Blind Repair asks whether an agent can learn to fix bugs from bugs it made itself, with provenance holding by construction. The harness is built and locally verified (33/33 harness tests, 10/10 mutation tests); the training path passed its timing pilot (20/20 steps, 65.19s; Gate 1 328/328), but Gate 2 is INCONCLUSIVE, and scorer serving is proven for inference-only packages. Pilots fix 0/18. The kill test settles the gap question for this recipe: clean-room training as run here does not transfer to repair; the dev-set fix rate and any leaderboard outcome are still **TO BE MEASURED**. The durable contribution is the resource (public; see Data and code availability): a fully synthetic, 99.5%-exactly regenerable corpus (19,893/20,000 with the current pipeline; 20,000/20,000 with the 31 Oct 2026 pipeline) with harness and dev-set converter. The harness is itself the application — a scope-ladder agent with a minimal-diff regression gate for any Python repository with tests.
 
 ## Data and code availability
 
-Data and code availability: code, corpus, and scripts are at https://github.com/OlsOls4/repo-blind-repair (commit 1bf60f4b, Apache-2.0); the corpus is also on Kaggle at https://www.kaggle.com/datasets/olsols4/repo-blind-repair-synthetic-corpus-20k (v2, CC BY 4.0); the corpus regenerates byte-identically from its provenance sidecar. Reuse: `python3 data_generation/generate_scaled_dataset.py` regenerates the 20,000 records; `python3 search_baseline/search_baseline.py --task-set all116` reruns the 116-task search. It does NOT cover: toy programs only; no multi-file, API, or requirements bugs; failing_test is empty.
+Data and code availability: code, corpus, and scripts are at https://github.com/OlsOls4/repo-blind-repair (commit 1bf60f4b, Apache-2.0); the corpus is also on Kaggle at https://www.kaggle.com/datasets/olsols4/repo-blind-repair-synthetic-corpus-20k (v2, CC BY 4.0); the corpus regenerates 19,893/20,000 exactly from its provenance sidecar with the current pipeline (20,000/20,000 with the 31 Oct 2026 pipeline; see VERIFICATION_LOG.md). Reuse: `python3 data_generation/generate_scaled_dataset.py` regenerates the 20,000 records; `python3 search_baseline/search_baseline.py --task-set all116` reruns the 116-task search. It does NOT cover: toy programs only; no multi-file, API, or requirements bugs; failing_test is empty.
 
 ## References
 

@@ -22,7 +22,9 @@ validator accepts `--data-dir`.
   bug-class consistency, exact singles/composites counts, distinctness
   (including against the pilot), every `fixed_code` one of the rebuilt
   sources, and FULL determinism (every record regenerated from the
-  provenance sidecar and compared field-for-field: 0 mismatches).
+  provenance sidecar and compared field-for-field: 0 mismatches
+  (31 Oct pipeline; current pipeline: 107 mismatches, all
+  wrong_comparator — see VERIFICATION_LOG.md).
   Run: `python3 validate_scaled_dataset.py [--data-dir DIR]` (default:
   this directory). Writes `train_records_20k_REPORT.md` next to the
   dataset. A few minutes on CPU.

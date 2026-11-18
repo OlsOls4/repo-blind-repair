@@ -147,7 +147,11 @@ verification was needed and no external licence is claimed.
    rebuilt sources.
 10. FULL determinism: all 20,000 records regenerated from provenance
     through the unchanged mutation pipeline match the file exactly
-    (0 mismatches).
+    (0 mismatches on this run; the 31 Oct 2026 full validation also
+    read 0 with the pipeline as it then stood — with the pipeline as
+    it stands on 18 Nov 2026, after the 8 Nov D1 comparator-inverter
+    fix, a re-run reports 107 mismatches, all wrong_comparator —
+    see VERIFICATION_LOG.md).
 
 ## Token-length survey (ESTIMATE — read the caveat)
 Method: chars/4 on the training-text format
@@ -177,7 +181,7 @@ fixed), because no Gemma tokenizer exists in this VM.
     print(f"records: {len(records)} (14,000 single, 6,000 composite)")
     print(f"singles per operator: {json.dumps(singles, sort_keys=True)}")
     print(f"sources rebuilt: {len(sources)}")
-    print(f"determinism: 20,000/20,000 regenerated exactly (0 mismatches)")
+    print(f"determinism: 20,000/20,000 regenerated exactly (0 mismatches) (31 Oct pipeline; current pipeline: 107 mismatches, all wrong_comparator — see VERIFICATION_LOG.md)")
     print(f"token survey (chars/4 estimate): {json.dumps(survey)}")
     print("validation: ALL PASSED; report: train_records_20k_REPORT.md")
 
