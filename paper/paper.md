@@ -2,16 +2,19 @@
      regenerated 2026-11-11 from the 2,798/2,846-word body (recount.py methods
      1/2; verified against SUBMISSION.md). Source of truth is paper/SUBMISSION.md
      — do not edit this copy directly. -->
-<!-- REPO NOTE (17 Nov 2026, post-submission): the scorer-daily counts
-     below were updated from x7 to x12 to reflect Days G-K1 (basis: the
-     5 Nov E4B daily + Days A-J + K1, all Public Score 0.00). The paper as
+<!-- REPO NOTE (18 Nov 2026, post-submission): the scorer-daily counts
+     below were updated from x7 to x13 to reflect Days G-K2 (basis: the
+     5 Nov E4B daily + Days A-J + K1 + K2, all Public Score 0.00). The paper as
      submitted to Kaggle on 11 Nov 2026 still reads x7; only the counts
      were changed, not the paper's claims. Day J (E4B skill-script,
      submitted 15 Nov 09:19 GMT) scored 0.00 (SUCCEEDED, checked
      16 Nov ~09:27); per the pre-set rule Pick 2 locks to E4B v2. K1
      (Toeda-exact minimal 12B, submitted 16 Nov 09:20 GMT) also scored
-     0.00 (SUCCEEDED, checked 17 Nov ~09:30); next daily is K2 pure
-     Toeda min. -->
+     0.00 (SUCCEEDED, checked 17 Nov ~09:30). K2 (pure Toeda minimal
+     12B, submitted 17 Nov 11:00 GMT) also scored 0.00 (SUCCEEDED,
+     checked 18 Nov ~09:30) — the thirteenth consecutive 0.00; the
+     ladder stop rule now triggers and prompt variants stop. Next
+     daily is the fixed skill arm. -->
 ## Abstract
 
 **KILL RESULT (7 Nov): retrained LoRA (low-rank adaptation) fixes 0/32; end-of-sequence fix works but repairs nothing. LoRA route killed.**

@@ -134,8 +134,8 @@ Agent Competition, Paper Track.
   compiled and ran at the scorer (E4B daily, 5 Nov 2026, status
   SUCCEEDED, Public Score 0.00 — it fixed nothing, as expected for
   inference-only). vLLM serving of a trained adapter remains untested.
-  Scorer-daily tally, current as of 17 Nov 2026: twelve scored dailies
-  (the 5 Nov E4B daily + Days A–J + K1) all read Public Score 0.00.
+  Scorer-daily tally, current as of 18 Nov 2026: thirteen scored dailies
+  (the 5 Nov E4B daily + Days A–J + K1 + K2) all read Public Score 0.00.
   [Day J outcome, checked Mon 16 Nov ~09:27: E4B skill-script daily
   submitted 15 Nov 09:19 GMT, status SUCCEEDED, Public Score 0.00 —
   the eleventh consecutive 0.00. Per the pre-set rule, Pick 2 locks to
@@ -144,6 +144,11 @@ Agent Competition, Paper Track.
   daily submitted 16 Nov 09:20 GMT, status SUCCEEDED, Public Score
   0.00 — the twelfth consecutive 0.00. The loop hypothesis is not
   confirmed; next daily is K2 pure Toeda min.]
+  [K2 outcome, checked Wed 18 Nov ~09:30: pure Toeda minimal 12B
+  daily submitted 17 Nov 11:00 GMT, status SUCCEEDED, Public Score
+  0.00 — the thirteenth consecutive 0.00. K1 = 0 and K2 = 0 triggers
+  the ladder stop rule: prompt variants stop. Next daily is the fixed
+  skill arm.]
 - **Dev-set converter output is not publishable as-is.** The derived
   dev-set tasks embed competition data by construction (full repository
   trees + problem statements). The converter script is published; its
