@@ -5,7 +5,7 @@ Python bug repair — plus the harness and dev-set converter from the
 paper *"Repo-Blind Repair: Fixing Python Bugs Without Ever Seeing a Real
 Fix"* (McBride, 2026; see `paper/paper.md`).
 
-> **Current status — 18 Nov 2026.** Local replica, real 12B, frozen 32 synthetic tasks: 25/32 as-graded by the 3 visible tests, 17/32 gold-equivalent — all 8 guard tasks (4 dropped_condition, 4 swapped_boolean) pass only by deleting/weakening the guard the hidden tests would check. Same package scored 0.00 on Kaggle (K2). Replica ≠ scorer: transformers, not vLLM; synthetic single-file tasks, not real repos. Dominant failure: repetition attractor — 5/7 failures are strict identical-call loops (runs of 14–28) until the 5-min budget died; a 6th (isbn) repeats only inside one 16,384-token generation and a 7th is a distinct fixation mode (see attribution). Gold-equivalence re-graded by script (`docs/gold-equivalence/grade_gold_equivalence.py`, exit 0): sibling-consensus gold + probe tests reproduce 17/32. Full analysis: `docs/wave11-attribution-2026-11-18.md`.
+> **Current status — 20 Nov 2026.** First nonzero Kaggle score: Day P, a faithful clone of the public Patchsmith E010/V6 recipe (31B, Apache 2.0), scored **Public Score 0.15** (SUCCEEDED, 20 Nov) — the only nonzero of 15 scored dailies; the other 14 are all 0.00. 0.15 is below the 0.24 leaderboard top: it joins the block, it does not lead. The corpus did not produce this score — Day P is an inference-only clone of a public recipe run on real dev tasks, with no training on this corpus. The local replica headline is corrected: attempt 7's 25/32 as-graded (17/32 gold-equivalent) is **retired** — the replica parser unescaped literal backslash-n in tool-call strings, which the scorer's parsers keep raw; replaying the same outputs through the corrected parser gives **11/32 as-graded, 9/32 gold-equivalent** (a fixed-output replay, not a fresh run and not a lower bound). Real-issue serve traces (20 Nov) confirmed the repetition attractor on a published issue and showed the agent never emitted a source edit at all — a policy choice, not parser loss. Full analysis: `docs/wave11-attribution-2026-11-18.md`.
 
 **The guarantee, stated precisely:** the fine-tuning data contains no
 real human bug fix, no teacher-model output, and no third-party code.
@@ -30,9 +30,9 @@ claim is narrowed. See "Regenerate the corpus" below and
 - **Claim:** repair without recall.
 - **Corpus:** 20,000 records (19,893/20,000 exactly regenerable with the current pipeline).
 - **Harness (unit tests, not repair):** 33/33, 10/10.
-- **Headline (scorer):** 0/18 pilots; kill test 7 Nov — LoRA 0/32, route KILLED; scorer dailies 0.00 ×13.
+- **Headline (scorer):** 0/18 pilots; kill test 7 Nov — LoRA 0/32, route KILLED; scorer dailies: 14 × 0.00, then Day P **0.15** (first nonzero, 20 Nov).
 - **Repair (simulator, upper bound):** skill-script 29/32 kill, 103/116 overall.
-- **Replica diagnostic (18 Nov, not a scorer result):** 25/32 as-graded, 17/32 gold-equivalent.
+- **Replica diagnostic (19 Nov, not a scorer result):** attempt-7 headline 25/32 retired; corrected-parser replay 11/32 as-graded, 9/32 gold-equivalent.
 - **Resource:** https://github.com/OlsOls4/repo-blind-repair; data https://www.kaggle.com/datasets/olsols4/repo-blind-repair-synthetic-corpus-20k
 
 **Measurement kinds:** Search = exhaustive model-free enumeration, measured CPU. Simulator = perfect enumeration, no model in the loop, upper bound. Scorer = Kaggle Public Score, the only leaderboard number.
@@ -71,6 +71,9 @@ are not hard, the trained model is.
 | `reproduce.py` | CPU reproduce: headline counts + 1,000-record sample regeneration + both unit suites (expects the dataset in a sibling `dataset/` directory). |
 | `reproduce_search.py` | CPU re-run of the 116-task search baseline (~12 min). |
 | `VERIFICATION_LOG.md` | Clean-clone verification record (15 Nov 2026) + the regeneration-gap decision. |
+| `CHECKSUMS.md` | SHA-256 checksums for the dataset files + the Day P archive, and the release state (20 Nov 2026). |
+| `examples/load_and_validate.py` | Short reproducible load/validation example (stdlib only, CPU): loads the sibling `dataset/`, checks counts, schema and provenance. |
+| `docs/release-2026-11-20.md` | Release notes for dataset v3 + repo state at 20 Nov 2026. |
 | `PATCHES.md` | The mechanical code changes vs the originals (repo-relative paths, `--data-dir`). |
 | `LICENSE` / `DATA_LICENSE` | Code: Apache-2.0. Corpus data: CC BY 4.0. |
 
@@ -119,8 +122,9 @@ layout, or a Kaggle dataset download placed alongside the repo).
 
 - **Corpus v18** — the 20,000-record dataset ("Dataset v18" in the
   paper): templates + mutation pipeline, frozen.
-- **Kaggle dataset upload v2** — the versioned upload of that corpus
-  at the dataset URL above.
+- **Kaggle dataset v3** — the versioned upload of that corpus at the
+  dataset URL above (current; the v3 update is the honest 19,893/20,000
+  regeneration disclosure — see `CHECKSUMS.md`).
 - **Adapter v1** — the 1 Nov training run (checkpoint-opt-10000,
   10,000 steps); 0/18 held-out, never emitted end-of-sequence.
 - **Adapter v19** — the 7 Nov retrain (end-of-sequence appended,
@@ -142,7 +146,7 @@ Agent Competition, Paper Track.
   fix. The 31 Oct "0 mismatches" verification predates that fix.
   See `VERIFICATION_LOG.md`.
 - **Net effect for a judge:** reproduce.py exits 1 on the sample check (998/1,000); counts, schema, parse, both unit suites, and reproduce_search.py (77/116) all still pass — the gap is confined to regeneration exactness, not validity.
-- **Replica diagnostic (18 Nov 2026, not a scorer result).** Local replica, real 12B, frozen 32 synthetic tasks: 25/32 as-graded by the 3 visible tests, 17/32 gold-equivalent — all 8 guard tasks (4 dropped_condition, 4 swapped_boolean) pass only by deleting/weakening the guard the hidden tests would check. Same package scored 0.00 on Kaggle (K2). Replica ≠ scorer: transformers, not vLLM; synthetic single-file tasks, not real repos. Dominant failure: repetition attractor — 5/7 failures are strict identical-call loops (runs of 14–28) until the 5-min budget died; a 6th (isbn) repeats only inside one 16,384-token generation and a 7th is a distinct fixation mode. Gold-equivalence re-graded by script (`docs/gold-equivalence/grade_gold_equivalence.py`, exit 0): sibling-consensus gold + probe tests reproduce 17/32. Full analysis: `docs/wave11-attribution-2026-11-18.md`.
+- **Replica diagnostic (19 Nov 2026, not a scorer result).** Local replica, real 12B, frozen 32 synthetic tasks. Attempt 7's headline — 25/32 as-graded, 17/32 gold-equivalent — is **retired**: the replica parser unescaped literal backslash-n in tool-call strings, which the scorer's parsers keep raw. Replaying the same outputs through the corrected parser gives **11/32 as-graded, 9/32 gold-equivalent** (a fixed-output replay, not a fresh run and not a lower bound). All 8 guard tasks (4 dropped_condition, 4 swapped_boolean) pass only by deleting/weakening the guard the hidden tests would check. Replica ≠ scorer: transformers, not vLLM; synthetic single-file tasks, not real repos. Dominant failure: repetition attractor — 5/7 failures are strict identical-call loops (runs of 14–28) until the 5-min budget died; a 6th (isbn) repeats only inside one 16,384-token generation and a 7th is a distinct fixation mode. Gold-equivalence re-graded by script (`docs/gold-equivalence/grade_gold_equivalence.py`, exit 0). Full analysis: `docs/wave11-attribution-2026-11-18.md`.
 - **Synthetic only.** Single-operator mutations are shallow: no missing
   logic, wrong API use, or multi-file faults. Composites narrow the gap;
   they do not close it.
@@ -160,8 +164,9 @@ Agent Competition, Paper Track.
   compiled and ran at the scorer (E4B daily, 5 Nov 2026, status
   SUCCEEDED, Public Score 0.00 — it fixed nothing, as expected for
   inference-only). vLLM serving of a trained adapter remains untested.
-  Scorer-daily tally, current as of 18 Nov 2026: thirteen scored dailies
-  (the 5 Nov E4B daily + Days A–J + K1 + K2) all read Public Score 0.00.
+  Scorer-daily tally, current as of 20 Nov 2026: fifteen scored dailies
+  (the 5 Nov E4B daily + Days A–J + K1 + K2 + Day S + Day P). Fourteen
+  read Public Score 0.00; Day P reads 0.15 (first nonzero).
   [Day J outcome, checked Mon 16 Nov ~09:27: E4B skill-script daily
   submitted 15 Nov 09:19 GMT, status SUCCEEDED, Public Score 0.00 —
   the eleventh consecutive 0.00. Per the pre-set rule, Pick 2 locks to
@@ -175,6 +180,36 @@ Agent Competition, Paper Track.
   0.00 — the thirteenth consecutive 0.00. K1 = 0 and K2 = 0 triggers
   the ladder stop rule: prompt variants stop. Next daily is the fixed
   skill arm.]
+  [Day S outcome, checked Thu 19 Nov ~10:00: fixed skill-script daily
+  submitted 18 Nov ~11:00 GMT, status SUCCEEDED, Public Score 0.00 —
+  the fourteenth consecutive 0.00. The skill mechanism is NOT the
+  breaker: this package declares the skills: field the earlier
+  skill-script dailies lacked, and still fixes nothing publicly.]
+  [Day P outcome, checked Fri 20 Nov 18:00–18:01 GMT: 31B Patchsmith
+  clone daily submitted 19 Nov 14:49:15 GMT, status SUCCEEDED, Public
+  Score 0.15 — the first nonzero, and the only nonzero of 15. The
+  package is a faithful clone of the public Patchsmith E010/V6 recipe
+  (Apache 2.0), byte-identical to the published archive (archive
+  SHA-256 e07535bdf469e399c80f0c7d846b55fcd763186760f0ac5072aa4ee61a8277c5;
+  6 tools, temp 0.2, 28 calls). 0.15 is below the 0.24 leaderboard top:
+  it joins the block, it does not lead. The corpus did not produce this
+  score — no training on it; Day P is the Pick 1 candidate ahead of the
+  25 Nov selection.]
+- **Three kinds of results — do not mix them.** (1) *Synthetic*
+  (simulator / replica): model-free search and perfect-enumeration
+  upper bounds on toy tasks, plus the local replica diagnostic —
+  attempt 7's 25/32 headline is retired; the corrected-parser replay
+  is 11/32 as-graded, 9/32 gold-equivalent. None of these is a
+  leaderboard number. (2) *Kaggle scorer*: the only leaderboard
+  numbers — fourteen 0.00s and one 0.15 (Day P). (3) *Real-issue
+  serve traces*: the exact K2 package run against a published FastAPI
+  issue under the scorer's serving stack (a proxy verifier, not the
+  scorer) — the repetition attractor is confirmed on a real issue,
+  and the agent never emitted a source edit in any of four runs. No
+  scored package was trained on this corpus: the 12B dailies are
+  inference-only prompts and Day P is an inference-only clone of a
+  public recipe. Nothing here shows synthetic training transferring
+  to real bugs.
 - **Dev-set converter output is not publishable as-is.** The derived
   dev-set tasks embed competition data by construction (full repository
   trees + problem statements). The converter script is published; its
